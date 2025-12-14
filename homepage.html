@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <title>PiperHub</title>
+    <style>
+        /* --- TEMA VS CODE DARK+ --- */
+        :root {
+            --bg-color: #1e1e1e;
+            --card-bg: #252526;
+            --input-bg: #3c3c3c;
+            --text-color: #cccccc;
+            --accent-color: #007acc;
+            --hover-bg: #2a2d2e;
+            --border-color: #3e3e42;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            overflow-y: auto;
+        }
+
+        /* --- CABEÇALHO & PESQUISA --- */
+        .header-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 25px;
+            width: 100%;
+        }
+
+        h1 {
+            font-weight: 300;
+            letter-spacing: 4px;
+            font-size: 24px;
+            color: #fff;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .search-box {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 12px 20px;
+            padding-left: 45px;
+            font-size: 16px;
+            background-color: var(--input-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 24px;
+            color: white;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .search-input:focus {
+            border-color: var(--accent-color);
+            background-color: #454545;
+            box-shadow: 0 0 0 2px rgba(0, 122, 204, 0.2);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            fill: #aaa;
+            width: 18px;
+            height: 18px;
+        }
+
+        /* --- DASHBOARD (MASONRY) --- */
+        .dashboard {
+            column-count: 4;
+            column-gap: 20px;
+            width: 100%;
+            max-width: 1800px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 1400px) {
+            .dashboard {
+                column-count: 3;
+            }
+        }
+
+        @media (max-width: 1000px) {
+            .dashboard {
+                column-count: 2;
+            }
+        }
+
+        @media (max-width: 700px) {
+            .dashboard {
+                column-count: 1;
+            }
+        }
+
+        .category-block {
+            break-inside: avoid;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 15px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .category-title {
+            color: var(--accent-color);
+            font-size: 13px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
+            padding-bottom: 5px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(85px, 1fr));
+            gap: 10px;
+        }
+
+        .app-card {
+            background-color: var(--card-bg);
+            height: 80px;
+            border-radius: 6px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: var(--text-color);
+            font-size: 11px;
+            border: 1px solid transparent;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        .app-card:hover {
+            background-color: var(--hover-bg);
+            border-color: var(--accent-color);
+            transform: translateY(-3px);
+            color: #fff;
+            z-index: 2;
+        }
+
+        .icon {
+            width: 28px;
+            height: 28px;
+            margin-bottom: 8px;
+            object-fit: contain;
+            border-radius: 4px;
+        }
+
+        /* Inverte ícones pretos para branco */
+        .invert {
+            filter: invert(1) brightness(200%);
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: var(--bg-color);
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #424242;
+            border-radius: 4px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="header-container">
+        <h1>PIPER HUB</h1>
+        <form action="https://www.google.com/search" method="get" class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24">
+                <path
+                    d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" />
+            </svg>
+            <input type="text" name="q" class="search-input" placeholder="Pesquisar na web..." autocomplete="off"
+                autofocus>
+        </form>
+    </div>
+
+    <div class="dashboard">
+
+        <div class="category-block">
+            <div class="category-title">Office & Docs</div>
+            <div class="app-grid">
+                <a href="https://word.office.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=microsoft.com" class="icon">
+                    <span>Word</span>
+                </a>
+                <a href="https://excel.office.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=microsoft.com" class="icon">
+                    <span>Excel</span>
+                </a>
+                <a href="https://powerpoint.office.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=microsoft.com" class="icon">
+                    <span>PowerPoint</span>
+                </a>
+                <a href="https://docs.google.com/document" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=docs.google.com" class="icon">
+                    <span>Docs</span>
+                </a>
+                <a href="https://docs.google.com/spreadsheets" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=sheets.google.com" class="icon">
+                    <span>Sheets</span>
+                </a>
+                <a href="https://drive.google.com/drive/my-drive" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=drive.google.com" class="icon">
+                    <span>Drive</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="category-block">
+            <div class="category-title">Criação & Edição</div>
+            <div class="app-grid">
+                <a href="https://www.capcut.com/editor" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=capcut.com" class="icon">
+                    <span>CapCut</span>
+                </a>
+                <a href="https://app.clipchamp.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=clipchamp.com" class="icon">
+                    <span>Clipchamp</span>
+                </a>
+                <a href="https://www.canva.com/projects" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=canva.com" class="icon">
+                    <span>Canva</span>
+                </a>
+                <a href="https://www.figma.com/files/recents" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=figma.com" class="icon">
+                    <span>Figma</span>
+                </a>
+                <a href="https://app.diagrams.net" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=draw.io" class="icon">
+                    <span>Draw.io</span>
+                </a>
+                <a href="https://trello.com/boards" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=trello.com" class="icon">
+                    <span>Trello</span>
+                </a>
+                <a href="https://www.notion.so" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=notion.so" class="icon">
+                    <span>Notion</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="category-block">
+            <div class="category-title">Dev Studio</div>
+            <div class="app-grid">
+                <a href="https://replit.com/~" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=replit.com" class="icon">
+                    <span>Replit</span>
+                </a>
+                <a href="https://stackblitz.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=stackblitz.com" class="icon">
+                    <span>StackBlitz</span>
+                </a>
+                <a href="https://vscode.dev" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=vscode.dev" class="icon">
+                    <span>VS Code</span>
+                </a>
+                <a href="https://sqliteonline.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=sqliteonline.com" class="icon">
+                    <span>SQL Online</span>
+                </a>
+                <a href="https://github.com/dashboard" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=github.com" class="icon invert">
+                    <span>GitHub</span>
+                </a>
+                <a href="https://console.firebase.google.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=firebase.google.com" class="icon">
+                    <span>Firebase</span>
+                </a>
+                <a href="https://supabase.com/dashboard/projects" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=supabase.com" class="icon">
+                    <span>Supabase</span>
+                </a>
+                <a href="https://cloud.mongodb.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=mongodb.com" class="icon">
+                    <span>MongoDB</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="category-block">
+            <div class="category-title">Hospedagem & Deploy</div>
+            <div class="app-grid">
+                <a href="https://vercel.com/dashboard" class="app-card">
+                    <img src="https://assets.vercel.com/image/upload/q_auto/front/favicon/vercel/180x180.png"
+                        class="icon invert">
+                    <span>Vercel</span>
+                </a>
+                <a href="https://app.netlify.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=netlify.com" class="icon">
+                    <span>Netlify</span>
+                </a>
+                <a href="https://dashboard.render.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=render.com" class="icon invert">
+                    <span>Render</span>
+                </a>
+                <a href="https://fly.io/dashboard" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=fly.io" class="icon">
+                    <span>Fly.io</span>
+                </a>
+                <a href="https://dashboard.heroku.com/apps" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=heroku.com" class="icon">
+                    <span>Heroku</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="category-block">
+            <div class="category-title">Inteligência Artificial</div>
+            <div class="app-grid">
+                <a href="https://gemini.google.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=gemini.google.com" class="icon">
+                    <span>Gemini</span>
+                </a>
+                <a href="https://chat.openai.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=openai.com" class="icon invert">
+                    <span>ChatGPT</span>
+                </a>
+                <a href="https://grok.x.ai" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=x.ai" class="icon invert">
+                    <span>Grok</span>
+                </a>
+                <a href="https://copilot.microsoft.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=microsoft.com" class="icon">
+                    <span>Copilot</span>
+                </a>
+                <a href="https://chat.deepseek.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=deepseek.com" class="icon">
+                    <span>DeepSeek</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="category-block">
+            <div class="category-title">Social</div>
+            <div class="app-grid">
+                <a href="https://web.whatsapp.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=whatsapp.com" class="icon">
+                    <span>WhatsApp</span>
+                </a>
+                <a href="https://x.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=x.com" class="icon invert">
+                    <span>X</span>
+                </a>
+                <a href="https://instagram.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=instagram.com" class="icon">
+                    <span>Instagram</span>
+                </a>
+                <a href="https://discord.com/app" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=discord.com" class="icon">
+                    <span>Discord</span>
+                </a>
+                <a href="https://mail.google.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=gmail.com" class="icon">
+                    <span>Gmail</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="category-block">
+            <div class="category-title">Lojas Confiáveis</div>
+            <div class="app-grid">
+                <a href="https://mercadolivre.com.br" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=mercadolivre.com.br" class="icon">
+                    <span>M.Livre</span>
+                </a>
+                <a href="https://shopee.com.br" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=shopee.com.br" class="icon">
+                    <span>Shopee</span>
+                </a>
+                <a href="https://www.kabum.com.br" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=kabum.com.br" class="icon">
+                    <span>KaBuM!</span>
+                </a>
+                <a href="https://www.kalunga.com.br" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=kalunga.com.br" class="icon">
+                    <span>Kalunga</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="category-block">
+            <div class="category-title">Games & Lazer</div>
+            <div class="app-grid">
+                <a href="https://animesonlinecc.to/" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=animesonlinecc.to" class="icon">
+                    <span>Animes</span>
+                </a>
+
+                <a href="https://kbhgames.com/game/one-night-at-flumptys" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=kbhgames.com" class="icon">
+                    <span>Flumpty's</span>
+                </a>
+
+                <a href="https://poki.com/en/g/red-ball-4" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=poki.com" class="icon">
+                    <span>Red Ball 4</span>
+                </a>
+                <a href="https://gulper.io" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=gulper.io" class="icon">
+                    <span>Snake IO</span>
+                </a>
+                <a href="https://agar.io" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=agar.io" class="icon">
+                    <span>Agar.io</span>
+                </a>
+                <a href="https://slither.io" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=slither.io" class="icon">
+                    <span>Slither.io</span>
+                </a>
+                <a href="https://paper-io.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=paper-io.com" class="icon">
+                    <span>Paper.io 2</span>
+                </a>
+
+                <a href="https://classic.minecraft.net/" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=minecraft.net" class="icon">
+                    <span>Minecraft</span>
+                </a>
+                <a href="https://davidprograma.itch.io/celeste" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=itch.io" class="icon">
+                    <span>Celeste</span>
+                </a>
+                <a href="https://yancharkin.github.io/SpelunkyClassicHDhtml5/" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=github.io" class="icon">
+                    <span>Spelunky</span>
+                </a>
+                <a href="https://scratch.mit.edu/projects/67503778/" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=terraria.org" class="icon">
+                    <span>Scratcharia</span>
+                </a>
+
+                <a href="https://play-cs.com/en/servers" class="app-card">
+                    <img src="https://img.icons8.com/color/48/counter-strike.png" class="icon">
+                    <span>CS 1.6</span>
+                </a>
+                <a href="https://krunker.io" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=krunker.io" class="icon">
+                    <span>Krunker</span>
+                </a>
+                <a href="https://kirka.io" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=kirka.io" class="icon">
+                    <span>Kirka</span>
+                </a>
+                <a href="https://shellshockers.io" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=shellshockers.io" class="icon">
+                    <span>ShellShock</span>
+                </a>
+                <a href="https://2048game.com" class="app-card">
+                    <img src="https://www.google.com/s2/favicons?sz=64&domain=2048game.com" class="icon">
+                    <span>2048</span>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
