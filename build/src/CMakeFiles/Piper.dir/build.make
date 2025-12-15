@@ -75,13 +75,25 @@ src/Piper_autogen/timestamp: src/CMakeFiles/Piper.dir/compiler_depend.ts
 	cd /home/kayogs/Piper/build/src && /usr/bin/cmake -E cmake_autogen /home/kayogs/Piper/build/src/CMakeFiles/Piper_autogen.dir/AutogenInfo.json ""
 	cd /home/kayogs/Piper/build/src && /usr/bin/cmake -E touch /home/kayogs/Piper/build/src/Piper_autogen/timestamp
 
+src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp: /home/kayogs/Piper/res/resources.qrc
+src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp: src/CMakeFiles/Piper_autogen.dir/AutoRcc_resources_DQCCZ5YITF_Info.json
+src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp: /home/kayogs/Piper/res/icons/history.png
+src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp: /home/kayogs/Piper/res/icons/incognito.png
+src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp: /home/kayogs/Piper/res/icons/lock.png
+src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp: /home/kayogs/Piper/res/icons/piperos.png
+src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp: /home/kayogs/Piper/res/icons/home.png
+src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp: /usr/lib/qt6/libexec/rcc
+src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp: /usr/lib/qt6/libexec/rcc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/kayogs/Piper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Automatic RCC for ../res/resources.qrc"
+	cd /home/kayogs/Piper/build/src && /usr/bin/cmake -E cmake_autorcc /home/kayogs/Piper/build/src/CMakeFiles/Piper_autogen.dir/AutoRcc_resources_DQCCZ5YITF_Info.json 
+
 src/CMakeFiles/Piper.dir/codegen:
 .PHONY : src/CMakeFiles/Piper.dir/codegen
 
 src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: src/CMakeFiles/Piper.dir/flags.make
 src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: src/Piper_autogen/mocs_compilation.cpp
 src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: src/CMakeFiles/Piper.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kayogs/Piper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kayogs/Piper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o"
 	cd /home/kayogs/Piper/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o -MF CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o -c /home/kayogs/Piper/build/src/Piper_autogen/mocs_compilation.cpp
 
 src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.i: cmake_force
@@ -95,7 +107,7 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.s: cmake_force
 src/CMakeFiles/Piper.dir/main.cpp.o: src/CMakeFiles/Piper.dir/flags.make
 src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp
 src/CMakeFiles/Piper.dir/main.cpp.o: src/CMakeFiles/Piper.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kayogs/Piper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src/CMakeFiles/Piper.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kayogs/Piper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/Piper.dir/main.cpp.o"
 	cd /home/kayogs/Piper/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Piper.dir/main.cpp.o -MF CMakeFiles/Piper.dir/main.cpp.o.d -o CMakeFiles/Piper.dir/main.cpp.o -c /home/kayogs/Piper/src/main.cpp
 
 src/CMakeFiles/Piper.dir/main.cpp.i: cmake_force
@@ -109,7 +121,7 @@ src/CMakeFiles/Piper.dir/main.cpp.s: cmake_force
 src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: src/CMakeFiles/Piper.dir/flags.make
 src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/browserwindow.cpp
 src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: src/CMakeFiles/Piper.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kayogs/Piper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kayogs/Piper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o"
 	cd /home/kayogs/Piper/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o -MF CMakeFiles/Piper.dir/ui/browserwindow.cpp.o.d -o CMakeFiles/Piper.dir/ui/browserwindow.cpp.o -c /home/kayogs/Piper/src/ui/browserwindow.cpp
 
 src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.i: cmake_force
@@ -120,11 +132,26 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Piper.dir/ui/browserwindow.cpp.s"
 	cd /home/kayogs/Piper/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayogs/Piper/src/ui/browserwindow.cpp -o CMakeFiles/Piper.dir/ui/browserwindow.cpp.s
 
+src/CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o: src/CMakeFiles/Piper.dir/flags.make
+src/CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o: src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp
+src/CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o: src/CMakeFiles/Piper.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/kayogs/Piper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src/CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o"
+	cd /home/kayogs/Piper/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src/CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o -MF CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o.d -o CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o -c /home/kayogs/Piper/build/src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp
+
+src/CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.i"
+	cd /home/kayogs/Piper/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kayogs/Piper/build/src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp > CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.i
+
+src/CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.s"
+	cd /home/kayogs/Piper/build/src && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kayogs/Piper/build/src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp -o CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.s
+
 # Object files for target Piper
 Piper_OBJECTS = \
 "CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/Piper.dir/main.cpp.o" \
-"CMakeFiles/Piper.dir/ui/browserwindow.cpp.o"
+"CMakeFiles/Piper.dir/ui/browserwindow.cpp.o" \
+"CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o"
 
 # External object files for target Piper
 Piper_EXTERNAL_OBJECTS =
@@ -132,6 +159,7 @@ Piper_EXTERNAL_OBJECTS =
 bin/Piper: src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o
 bin/Piper: src/CMakeFiles/Piper.dir/main.cpp.o
 bin/Piper: src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
+bin/Piper: src/CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o
 bin/Piper: src/CMakeFiles/Piper.dir/build.make
 bin/Piper: src/CMakeFiles/Piper.dir/compiler_depend.ts
 bin/Piper: /usr/lib/x86_64-linux-gnu/libQt6WebEngineWidgets.so.6.8.2
@@ -152,7 +180,7 @@ bin/Piper: /usr/lib/x86_64-linux-gnu/libQt6Qml.so.6.8.2
 bin/Piper: /usr/lib/x86_64-linux-gnu/libQt6Network.so.6.8.2
 bin/Piper: /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.8.2
 bin/Piper: src/CMakeFiles/Piper.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kayogs/Piper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable ../bin/Piper"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/kayogs/Piper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable ../bin/Piper"
 	cd /home/kayogs/Piper/build/src && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Piper.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -163,6 +191,7 @@ src/CMakeFiles/Piper.dir/clean:
 	cd /home/kayogs/Piper/build/src && $(CMAKE_COMMAND) -P CMakeFiles/Piper.dir/cmake_clean.cmake
 .PHONY : src/CMakeFiles/Piper.dir/clean
 
+src/CMakeFiles/Piper.dir/depend: src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp
 src/CMakeFiles/Piper.dir/depend: src/Piper_autogen/timestamp
 	cd /home/kayogs/Piper/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kayogs/Piper /home/kayogs/Piper/src /home/kayogs/Piper/build /home/kayogs/Piper/build/src /home/kayogs/Piper/build/src/CMakeFiles/Piper.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : src/CMakeFiles/Piper.dir/depend

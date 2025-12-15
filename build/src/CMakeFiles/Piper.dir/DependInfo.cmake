@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "" "src/Piper_autogen/timestamp" "custom" "src/Piper_autogen/deps"
+  "/home/kayogs/Piper/build/src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp" "src/CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o" "gcc" "src/CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o.d"
   "/home/kayogs/Piper/build/src/Piper_autogen/mocs_compilation.cpp" "src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o" "gcc" "src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o.d"
   "/home/kayogs/Piper/src/main.cpp" "src/CMakeFiles/Piper.dir/main.cpp.o" "gcc" "src/CMakeFiles/Piper.dir/main.cpp.o.d"
   "/home/kayogs/Piper/src/ui/browserwindow.cpp" "src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o" "gcc" "src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o.d"

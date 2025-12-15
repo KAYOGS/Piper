@@ -432,6 +432,15 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qsharedpointer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginepermission.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpagelayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineProfile \
+ /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineprofile.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QListWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistview.h \
@@ -450,12 +459,9 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyle.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl \
@@ -490,4 +496,10 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimezone.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QIcon \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qicon.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QListWidgetItem
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QListWidgetItem \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QDesktopServices \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qdesktopservices.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEnginePage \
+ /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginepage.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringLiteral \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringliteral.h

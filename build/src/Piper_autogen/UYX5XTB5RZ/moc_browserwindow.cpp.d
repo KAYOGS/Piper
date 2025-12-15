@@ -435,6 +435,7 @@
   /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlexports.h \
   /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtQmlIntegration/qqmlintegration.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineProfile \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qtwebenginecore-config.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qtwebenginecoreglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineclientcertificateselection.h \
@@ -442,6 +443,7 @@
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineframe.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginepage.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginepermission.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineprofile.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginequotarequest.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/QWebEngineView \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qtwebenginewidgetsglobal.h \
@@ -449,6 +451,10 @@
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QListWidget \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemdelegate.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemview.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h \
@@ -462,6 +468,7 @@
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistview.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistwidget.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h \

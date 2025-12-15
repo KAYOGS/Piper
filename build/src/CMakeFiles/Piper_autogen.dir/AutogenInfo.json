@@ -4,7 +4,11 @@
 	"CMAKE_CURRENT_BINARY_DIR" : "/home/kayogs/Piper/build/src",
 	"CMAKE_CURRENT_SOURCE_DIR" : "/home/kayogs/Piper/src",
 	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
-	"CMAKE_LIST_FILES" : [ "/home/kayogs/Piper/src/CMakeLists.txt" ],
+	"CMAKE_LIST_FILES" : 
+	[
+		"/home/kayogs/Piper/src/CMakeLists.txt",
+		"/home/kayogs/Piper/res/resources.qrc"
+	],
 	"CMAKE_SOURCE_DIR" : "/home/kayogs/Piper",
 	"CROSS_CONFIG" : false,
 	"DEP_FILE" : "/home/kayogs/Piper/build/src/Piper_autogen/deps",

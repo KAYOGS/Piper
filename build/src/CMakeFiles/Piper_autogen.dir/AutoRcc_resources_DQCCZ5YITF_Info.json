@@ -1,0 +1,29 @@
+{
+	"BUILD_DIR" : "/home/kayogs/Piper/build/src/Piper_autogen",
+	"CMAKE_BINARY_DIR" : "/home/kayogs/Piper/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/kayogs/Piper/build/src",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/kayogs/Piper/src",
+	"CMAKE_SOURCE_DIR" : "/home/kayogs/Piper",
+	"CROSS_CONFIG" : false,
+	"GENERATOR" : "Unix Makefiles",
+	"INCLUDE_DIR" : "/home/kayogs/Piper/build/src/Piper_autogen/include",
+	"INPUTS" : 
+	[
+		"/home/kayogs/Piper/res/icons/history.png",
+		"/home/kayogs/Piper/res/icons/incognito.png",
+		"/home/kayogs/Piper/res/icons/lock.png",
+		"/home/kayogs/Piper/res/icons/piperos.png",
+		"/home/kayogs/Piper/res/icons/home.png"
+	],
+	"LOCK_FILE" : "/home/kayogs/Piper/build/src/CMakeFiles/Piper_autogen.dir/AutoRcc_resources_DQCCZ5YITF_Lock.lock",
+	"MULTI_CONFIG" : false,
+	"OPTIONS" : [ "-name", "resources" ],
+	"OUTPUT_CHECKSUM" : "DQCCZ5YITF",
+	"OUTPUT_NAME" : "qrc_resources.cpp",
+	"RCC_EXECUTABLE" : "/usr/lib/qt6/libexec/rcc",
+	"RCC_LIST_OPTIONS" : [ "--list" ],
+	"SETTINGS_FILE" : "/home/kayogs/Piper/build/src/CMakeFiles/Piper_autogen.dir/AutoRcc_resources_DQCCZ5YITF_Used.txt",
+	"SOURCE" : "/home/kayogs/Piper/res/resources.qrc",
+	"USE_BETTER_GRAPH" : true,
+	"VERBOSITY" : 0
+}

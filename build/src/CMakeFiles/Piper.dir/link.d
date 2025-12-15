@@ -5,6 +5,7 @@
   CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o \
   CMakeFiles/Piper.dir/main.cpp.o \
   CMakeFiles/Piper.dir/ui/browserwindow.cpp.o \
+  CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o \
   /usr/lib/x86_64-linux-gnu/libQt6WebEngineWidgets.so.6.8.2 \
   /usr/lib/x86_64-linux-gnu/libQt6WebEngineCore.so.6.8.2 \
   /usr/lib/x86_64-linux-gnu/libQt6WebChannel.so.6.8.2 \
@@ -50,20 +51,8 @@
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../x86_64-linux-gnu/crtn.o \
   /lib/x86_64-linux-gnu/libQt6QuickWidgets.so.6 \
   /usr/lib/x86_64-linux-gnu/libQt6PrintSupport.so.6.8.2 \
-  /usr/lib/x86_64-linux-gnu/libQt6WebEngineCore.so.6.8.2 \
   /usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.8.2 \
   /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.8.2 \
-  /lib/x86_64-linux-gnu/libm.so.6 \
-  /lib/x86_64-linux-gnu/libicui18n.so.76 \
-  /lib/x86_64-linux-gnu/libicuuc.so.76 \
-  /lib/x86_64-linux-gnu/libglib-2.0.so.0 \
-  /lib/x86_64-linux-gnu/libz.so.1 \
-  /lib/x86_64-linux-gnu/libdouble-conversion.so.3 \
-  /lib/x86_64-linux-gnu/libb2.so.1 \
-  /lib/x86_64-linux-gnu/libpcre2-16.so.0 \
-  /lib/x86_64-linux-gnu/libzstd.so.1 \
-  /lib64/ld-linux-x86-64.so.2 \
-  /usr/lib/x86_64-linux-gnu/libQt6Qml.so.6.8.2 \
   /usr/lib/x86_64-linux-gnu/libQt6WebChannel.so.6.8.2 \
   /usr/lib/x86_64-linux-gnu/libQt6Positioning.so.6.8.2 \
   /lib/x86_64-linux-gnu/libnss3.so \
@@ -71,6 +60,7 @@
   /lib/x86_64-linux-gnu/libsmime3.so \
   /lib/x86_64-linux-gnu/libnspr4.so \
   /lib/x86_64-linux-gnu/libevent-2.1.so.7 \
+  /lib/x86_64-linux-gnu/libz.so.1 \
   /lib/x86_64-linux-gnu/libjpeg.so.62 \
   /lib/x86_64-linux-gnu/libopus.so.0 \
   /lib/x86_64-linux-gnu/libX11.so.6 \
@@ -101,7 +91,17 @@
   /lib/x86_64-linux-gnu/libopenjp2.so.7 \
   /lib/x86_64-linux-gnu/libtiff.so.6 \
   /lib/x86_64-linux-gnu/libxkbfile.so.1 \
+  /usr/lib/x86_64-linux-gnu/libQt6Qml.so.6.8.2 \
   /usr/lib/x86_64-linux-gnu/libQt6Network.so.6.8.2 \
+  /lib/x86_64-linux-gnu/libm.so.6 \
+  /lib64/ld-linux-x86-64.so.2 \
+  /lib/x86_64-linux-gnu/libicui18n.so.76 \
+  /lib/x86_64-linux-gnu/libicuuc.so.76 \
+  /lib/x86_64-linux-gnu/libglib-2.0.so.0 \
+  /lib/x86_64-linux-gnu/libdouble-conversion.so.3 \
+  /lib/x86_64-linux-gnu/libb2.so.1 \
+  /lib/x86_64-linux-gnu/libpcre2-16.so.0 \
+  /lib/x86_64-linux-gnu/libzstd.so.1 \
   /usr/lib/x86_64-linux-gnu/libQt6QmlMeta.so.6.8.2 \
   /usr/lib/x86_64-linux-gnu/libQt6QmlModels.so.6.8.2 \
   /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.8.2 \
@@ -110,10 +110,6 @@
   /usr/lib/x86_64-linux-gnu/libGLX.so \
   /usr/lib/x86_64-linux-gnu/libOpenGL.so \
   /lib/x86_64-linux-gnu/libmd4c.so.0 \
-  /lib/x86_64-linux-gnu/libicudata.so.76 \
-  /lib/x86_64-linux-gnu/libatomic.so.1 \
-  /lib/x86_64-linux-gnu/libpcre2-8.so.0 \
-  /lib/x86_64-linux-gnu/libgomp.so.1 \
   /lib/x86_64-linux-gnu/libplc4.so \
   /lib/x86_64-linux-gnu/libplds4.so \
   /lib/x86_64-linux-gnu/libXrender.so.1 \
@@ -134,6 +130,10 @@
   /lib/x86_64-linux-gnu/libproxy.so.1 \
   /usr/lib/x86_64-linux-gnu/libproxy.so.1 \
   /lib/x86_64-linux-gnu/libproxy.so.1 \
+  /lib/x86_64-linux-gnu/libicudata.so.76 \
+  /lib/x86_64-linux-gnu/libatomic.so.1 \
+  /lib/x86_64-linux-gnu/libpcre2-8.so.0 \
+  /lib/x86_64-linux-gnu/libgomp.so.1 \
   /usr/lib/x86_64-linux-gnu/libQt6QmlWorkerScript.so.6.8.2 \
   /lib/x86_64-linux-gnu/libGLdispatch.so.0 \
   /lib/x86_64-linux-gnu/libcap.so.2 \
@@ -186,6 +186,8 @@ CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 CMakeFiles/Piper.dir/main.cpp.o:
 
 CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
+
+CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o:
 
 /usr/lib/x86_64-linux-gnu/libQt6WebEngineWidgets.so.6.8.2:
 
@@ -277,33 +279,9 @@ CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 
 /usr/lib/x86_64-linux-gnu/libQt6PrintSupport.so.6.8.2:
 
-/usr/lib/x86_64-linux-gnu/libQt6WebEngineCore.so.6.8.2:
-
 /usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.8.2:
 
 /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.8.2:
-
-/lib/x86_64-linux-gnu/libm.so.6:
-
-/lib/x86_64-linux-gnu/libicui18n.so.76:
-
-/lib/x86_64-linux-gnu/libicuuc.so.76:
-
-/lib/x86_64-linux-gnu/libglib-2.0.so.0:
-
-/lib/x86_64-linux-gnu/libz.so.1:
-
-/lib/x86_64-linux-gnu/libdouble-conversion.so.3:
-
-/lib/x86_64-linux-gnu/libb2.so.1:
-
-/lib/x86_64-linux-gnu/libpcre2-16.so.0:
-
-/lib/x86_64-linux-gnu/libzstd.so.1:
-
-/lib64/ld-linux-x86-64.so.2:
-
-/usr/lib/x86_64-linux-gnu/libQt6Qml.so.6.8.2:
 
 /usr/lib/x86_64-linux-gnu/libQt6WebChannel.so.6.8.2:
 
@@ -318,6 +296,8 @@ CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 /lib/x86_64-linux-gnu/libnspr4.so:
 
 /lib/x86_64-linux-gnu/libevent-2.1.so.7:
+
+/lib/x86_64-linux-gnu/libz.so.1:
 
 /lib/x86_64-linux-gnu/libjpeg.so.62:
 
@@ -379,7 +359,27 @@ CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 
 /lib/x86_64-linux-gnu/libxkbfile.so.1:
 
+/usr/lib/x86_64-linux-gnu/libQt6Qml.so.6.8.2:
+
 /usr/lib/x86_64-linux-gnu/libQt6Network.so.6.8.2:
+
+/lib/x86_64-linux-gnu/libm.so.6:
+
+/lib64/ld-linux-x86-64.so.2:
+
+/lib/x86_64-linux-gnu/libicui18n.so.76:
+
+/lib/x86_64-linux-gnu/libicuuc.so.76:
+
+/lib/x86_64-linux-gnu/libglib-2.0.so.0:
+
+/lib/x86_64-linux-gnu/libdouble-conversion.so.3:
+
+/lib/x86_64-linux-gnu/libb2.so.1:
+
+/lib/x86_64-linux-gnu/libpcre2-16.so.0:
+
+/lib/x86_64-linux-gnu/libzstd.so.1:
 
 /usr/lib/x86_64-linux-gnu/libQt6QmlMeta.so.6.8.2:
 
@@ -396,14 +396,6 @@ CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 /usr/lib/x86_64-linux-gnu/libOpenGL.so:
 
 /lib/x86_64-linux-gnu/libmd4c.so.0:
-
-/lib/x86_64-linux-gnu/libicudata.so.76:
-
-/lib/x86_64-linux-gnu/libatomic.so.1:
-
-/lib/x86_64-linux-gnu/libpcre2-8.so.0:
-
-/lib/x86_64-linux-gnu/libgomp.so.1:
 
 /lib/x86_64-linux-gnu/libplc4.so:
 
@@ -444,6 +436,14 @@ CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 /usr/lib/x86_64-linux-gnu/libproxy.so.1:
 
 /lib/x86_64-linux-gnu/libproxy.so.1:
+
+/lib/x86_64-linux-gnu/libicudata.so.76:
+
+/lib/x86_64-linux-gnu/libatomic.so.1:
+
+/lib/x86_64-linux-gnu/libpcre2-8.so.0:
+
+/lib/x86_64-linux-gnu/libgomp.so.1:
 
 /usr/lib/x86_64-linux-gnu/libQt6QmlWorkerScript.so.6.8.2:
 

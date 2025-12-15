@@ -158,6 +158,30 @@ Piper_autogen/fast:
 	cd /home/kayogs/Piper/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Piper_autogen.dir/build.make src/CMakeFiles/Piper_autogen.dir/build
 .PHONY : Piper_autogen/fast
 
+Piper_autogen/DQCCZ5YITF/qrc_resources.o: Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o
+.PHONY : Piper_autogen/DQCCZ5YITF/qrc_resources.o
+
+# target to build an object file
+Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o:
+	cd /home/kayogs/Piper/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Piper.dir/build.make src/CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o
+.PHONY : Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o
+
+Piper_autogen/DQCCZ5YITF/qrc_resources.i: Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.i
+.PHONY : Piper_autogen/DQCCZ5YITF/qrc_resources.i
+
+# target to preprocess a source file
+Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.i:
+	cd /home/kayogs/Piper/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Piper.dir/build.make src/CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.i
+.PHONY : Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.i
+
+Piper_autogen/DQCCZ5YITF/qrc_resources.s: Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.s
+.PHONY : Piper_autogen/DQCCZ5YITF/qrc_resources.s
+
+# target to generate assembly for a file
+Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.s:
+	cd /home/kayogs/Piper/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Piper.dir/build.make src/CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.s
+.PHONY : Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.s
+
 Piper_autogen/mocs_compilation.o: Piper_autogen/mocs_compilation.cpp.o
 .PHONY : Piper_autogen/mocs_compilation.o
 
@@ -241,6 +265,9 @@ help:
 	@echo "... Piper_autogen"
 	@echo "... Piper_autogen_timestamp_deps"
 	@echo "... Piper"
+	@echo "... Piper_autogen/DQCCZ5YITF/qrc_resources.o"
+	@echo "... Piper_autogen/DQCCZ5YITF/qrc_resources.i"
+	@echo "... Piper_autogen/DQCCZ5YITF/qrc_resources.s"
 	@echo "... Piper_autogen/mocs_compilation.o"
 	@echo "... Piper_autogen/mocs_compilation.i"
 	@echo "... Piper_autogen/mocs_compilation.s"

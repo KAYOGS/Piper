@@ -1,0 +1,9 @@
+<RCC>
+    <qresource prefix="/icons">
+        <file>icons/piperos.png</file>
+        <file>icons/home.png</file>
+        <file>icons/incognito.png</file>
+        <file>icons/history.png</file>
+        <file>icons/lock.png</file>
+    </qresource>
+</RCC>

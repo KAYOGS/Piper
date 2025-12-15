@@ -1,7 +1,12 @@
+# Define a versão mínima do CMake
+cmake_minimum_required(VERSION 3.16)
+
 # --- Configuração MOC Explícita ---
-# Usamos a abordagem mais robusta para forçar o MOC.
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
+# Garante que os headers com Q_OBJECT sejam processados (MOC).
+set(CMAKE_AUTOMOC ON) 
+
+# Garante que os arquivos .qrc sejam processados (RCC - Resource Compiler).
+set(CMAKE_AUTORCC ON) 
 
 # --- Definição dos Arquivos ---
 
@@ -14,9 +19,24 @@ set(PIPER_HEADERS
     ui/browserwindow.h
 )
 
+# --- Definição dos Arquivos de Recursos ---
+# Declaração do nosso arquivo QRC que lista os ícones.
+set(PIPER_RESOURCES
+    ../res/resources.qrc
+)
+
 # --- Criação do Executável ---
-# Voltamos para add_executable normal, mas com CMAKE_AUTOMOC ON
-add_executable(Piper ${PIPER_SOURCES} ${PIPER_HEADERS})
+# ESTA DEVE SER A PRIMEIRA REFERÊNCIA AO ALVO 'Piper' no arquivo.
+add_executable(Piper 
+    ${PIPER_SOURCES} 
+    ${PIPER_HEADERS}
+)
+
+# CORREÇÃO: target_sources AGORA está depois de add_executable.
+# Isso resolve o erro: "Cannot specify sources for target 'Piper' which is not built by this project."
+target_sources(Piper PRIVATE
+    ${PIPER_RESOURCES}
+)
 
 # --- Configuração de Inclusão ---
 target_include_directories(Piper PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
