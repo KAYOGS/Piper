@@ -52,7 +52,6 @@
   /lib/x86_64-linux-gnu/libQt6QuickWidgets.so.6 \
   /usr/lib/x86_64-linux-gnu/libQt6PrintSupport.so.6.8.2 \
   /usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.8.2 \
-  /usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.8.2 \
   /usr/lib/x86_64-linux-gnu/libQt6WebChannel.so.6.8.2 \
   /usr/lib/x86_64-linux-gnu/libQt6Positioning.so.6.8.2 \
   /lib/x86_64-linux-gnu/libnss3.so \
@@ -95,9 +94,14 @@
   /usr/lib/x86_64-linux-gnu/libQt6Network.so.6.8.2 \
   /lib/x86_64-linux-gnu/libm.so.6 \
   /lib64/ld-linux-x86-64.so.2 \
+  /lib/x86_64-linux-gnu/libEGL.so.1 \
+  /lib/x86_64-linux-gnu/libglib-2.0.so.0 \
+  /lib/x86_64-linux-gnu/libQt6DBus.so.6 \
+  /usr/lib/x86_64-linux-gnu/libGLX.so \
+  /usr/lib/x86_64-linux-gnu/libOpenGL.so \
+  /lib/x86_64-linux-gnu/libmd4c.so.0 \
   /lib/x86_64-linux-gnu/libicui18n.so.76 \
   /lib/x86_64-linux-gnu/libicuuc.so.76 \
-  /lib/x86_64-linux-gnu/libglib-2.0.so.0 \
   /lib/x86_64-linux-gnu/libdouble-conversion.so.3 \
   /lib/x86_64-linux-gnu/libb2.so.1 \
   /lib/x86_64-linux-gnu/libpcre2-16.so.0 \
@@ -105,11 +109,6 @@
   /usr/lib/x86_64-linux-gnu/libQt6QmlMeta.so.6.8.2 \
   /usr/lib/x86_64-linux-gnu/libQt6QmlModels.so.6.8.2 \
   /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.8.2 \
-  /lib/x86_64-linux-gnu/libEGL.so.1 \
-  /lib/x86_64-linux-gnu/libQt6DBus.so.6 \
-  /usr/lib/x86_64-linux-gnu/libGLX.so \
-  /usr/lib/x86_64-linux-gnu/libOpenGL.so \
-  /lib/x86_64-linux-gnu/libmd4c.so.0 \
   /lib/x86_64-linux-gnu/libplc4.so \
   /lib/x86_64-linux-gnu/libplds4.so \
   /lib/x86_64-linux-gnu/libXrender.so.1 \
@@ -130,12 +129,12 @@
   /lib/x86_64-linux-gnu/libproxy.so.1 \
   /usr/lib/x86_64-linux-gnu/libproxy.so.1 \
   /lib/x86_64-linux-gnu/libproxy.so.1 \
-  /lib/x86_64-linux-gnu/libicudata.so.76 \
+  /lib/x86_64-linux-gnu/libGLdispatch.so.0 \
   /lib/x86_64-linux-gnu/libatomic.so.1 \
   /lib/x86_64-linux-gnu/libpcre2-8.so.0 \
+  /lib/x86_64-linux-gnu/libicudata.so.76 \
   /lib/x86_64-linux-gnu/libgomp.so.1 \
   /usr/lib/x86_64-linux-gnu/libQt6QmlWorkerScript.so.6.8.2 \
-  /lib/x86_64-linux-gnu/libGLdispatch.so.0 \
   /lib/x86_64-linux-gnu/libcap.so.2 \
   /lib/x86_64-linux-gnu/libbrotlicommon.so.1 \
   /lib/x86_64-linux-gnu/libkrb5.so.3 \
@@ -281,8 +280,6 @@ CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o:
 
 /usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.8.2:
 
-/usr/lib/x86_64-linux-gnu/libQt6Gui.so.6.8.2:
-
 /usr/lib/x86_64-linux-gnu/libQt6WebChannel.so.6.8.2:
 
 /usr/lib/x86_64-linux-gnu/libQt6Positioning.so.6.8.2:
@@ -367,11 +364,21 @@ CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o:
 
 /lib64/ld-linux-x86-64.so.2:
 
+/lib/x86_64-linux-gnu/libEGL.so.1:
+
+/lib/x86_64-linux-gnu/libglib-2.0.so.0:
+
+/lib/x86_64-linux-gnu/libQt6DBus.so.6:
+
+/usr/lib/x86_64-linux-gnu/libGLX.so:
+
+/usr/lib/x86_64-linux-gnu/libOpenGL.so:
+
+/lib/x86_64-linux-gnu/libmd4c.so.0:
+
 /lib/x86_64-linux-gnu/libicui18n.so.76:
 
 /lib/x86_64-linux-gnu/libicuuc.so.76:
-
-/lib/x86_64-linux-gnu/libglib-2.0.so.0:
 
 /lib/x86_64-linux-gnu/libdouble-conversion.so.3:
 
@@ -386,16 +393,6 @@ CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o:
 /usr/lib/x86_64-linux-gnu/libQt6QmlModels.so.6.8.2:
 
 /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.8.2:
-
-/lib/x86_64-linux-gnu/libEGL.so.1:
-
-/lib/x86_64-linux-gnu/libQt6DBus.so.6:
-
-/usr/lib/x86_64-linux-gnu/libGLX.so:
-
-/usr/lib/x86_64-linux-gnu/libOpenGL.so:
-
-/lib/x86_64-linux-gnu/libmd4c.so.0:
 
 /lib/x86_64-linux-gnu/libplc4.so:
 
@@ -437,17 +434,17 @@ CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o:
 
 /lib/x86_64-linux-gnu/libproxy.so.1:
 
-/lib/x86_64-linux-gnu/libicudata.so.76:
+/lib/x86_64-linux-gnu/libGLdispatch.so.0:
 
 /lib/x86_64-linux-gnu/libatomic.so.1:
 
 /lib/x86_64-linux-gnu/libpcre2-8.so.0:
 
+/lib/x86_64-linux-gnu/libicudata.so.76:
+
 /lib/x86_64-linux-gnu/libgomp.so.1:
 
 /usr/lib/x86_64-linux-gnu/libQt6QmlWorkerScript.so.6.8.2:
-
-/lib/x86_64-linux-gnu/libGLdispatch.so.0:
 
 /lib/x86_64-linux-gnu/libcap.so.2:
 

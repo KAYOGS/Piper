@@ -3,7 +3,7 @@
 
 #include <QMainWindow>
 #include <QWebEngineView>
-#include <QWebEngineProfile>
+#include <QWebEngineProfile> // Manter para usar o perfil padrão
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QListWidget>
@@ -15,7 +15,8 @@ class BrowserWindow : public QMainWindow
     Q_OBJECT
 
 public:
-    explicit BrowserWindow(QWebEngineProfile *profile = nullptr, QWidget *parent = nullptr);
+    // Construtor sem o argumento opcional QWebEngineProfile
+    explicit BrowserWindow(QWidget *parent = nullptr); 
     ~BrowserWindow();
 
 private:
@@ -24,22 +25,16 @@ private:
     QHBoxLayout *mainLayout;
     QVBoxLayout *sidebarLayout;
     QListWidget *sidebarTabs;
-    QWidget *fixedButtonsContainer;
-    QVBoxLayout *fixedButtonsLayout;
 
     // Componentes de Navegação
     QWebEngineView *webView;
-    QWebEngineProfile *privateProfile; // Perfil usado para janelas privadas
+    // REMOVIDO: QWebEngineProfile *privateProfile; 
 
-    // Botões da Barra Lateral
-    QPushButton *privateModeButton;
+    // Botões da Barra Lateral (SOMENTE Home)
     QPushButton *homeButton;
-    QPushButton *historyButton;
-    QPushButton *passwordsButton;
 
-private slots: // SEÇÃO NOVO/CORRIGIDA
-    void openPrivateWindow();
-    void goHome(); // NOVO SLOT: Para o botão Home
+private slots: 
+    void goHome(); 
 
 };
 
