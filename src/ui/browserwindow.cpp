@@ -14,6 +14,7 @@
 #include <QListWidget>
 #include <QPushButton>
 #include <QStringLiteral>
+#include <QDebug> 
 
 // ----------------------------------------------------------------------------------
 // Definição do Construtor
@@ -55,18 +56,55 @@ BrowserWindow::BrowserWindow(QWidget *parent)
     sidebarTabs->setStyleSheet("QListWidget { border: none; background-color: #252526; }");
     sidebarLayout->addWidget(sidebarTabs);
 
+    // Empurra os botões para a parte inferior da barra lateral
     sidebarLayout->addStretch(1);
 
-    // --- Botão Home (Substituído Texto por Ícone) ---
-    homeButton = new QPushButton(); 
+    // --- NOVO: Botão Voltar ---
+    backButton = new QPushButton();
+    backButton->setFixedSize(40, 40);
+    QIcon backIcon(QDir::current().absoluteFilePath("res/icons/voltar.png"));
+    backButton->setIcon(backIcon);
+    backButton->setIconSize(QSize(32, 32));
+    backButton->setStyleSheet(
+        "QPushButton {"
+        "   background-color: transparent;"
+        "   border: none;"
+        "   border-radius: 5px;"
+        "}"
+        "QPushButton:hover {"
+        "   background-color: #3c3c3c;"
+        "}"
+        "QPushButton:pressed {"
+        "   background-color: #007acc;"
+        "}"
+    );
+
+    // --- Botão de Refresh com Ícone ---
+    refreshButton = new QPushButton();
+    refreshButton->setFixedSize(40, 40);
+    QIcon refreshIcon(QDir::current().absoluteFilePath("res/icons/recarregar.png"));
+    refreshButton->setIcon(refreshIcon);
+    refreshButton->setIconSize(QSize(32, 32));
+    refreshButton->setStyleSheet(
+        "QPushButton {"
+        "   background-color: transparent;"
+        "   border: none;"
+        "   border-radius: 5px;"
+        "}"
+        "QPushButton:hover {"
+        "   background-color: #3c3c3c;"
+        "}"
+        "QPushButton:pressed {"
+        "   background-color: #007acc;"
+        "}"
+    );
+
+    // --- Botão Home ---
+    homeButton = new QPushButton();
     homeButton->setFixedSize(40, 40);
-    
-    // Carrega o ícone da Piper
     QIcon homeIcon(QDir::current().absoluteFilePath("res/icons/home.png"));
     homeButton->setIcon(homeIcon);
-    homeButton->setIconSize(QSize(32, 32)); // Tamanho do ícone dentro do botão
-
-    // Estilo VS Code: Fundo transparente que aparece apenas no hover
+    homeButton->setIconSize(QSize(32, 32));
     homeButton->setStyleSheet(
         "QPushButton {"
         "   background-color: transparent;"
@@ -81,30 +119,55 @@ BrowserWindow::BrowserWindow(QWidget *parent)
         "}"
     );
 
-    connect(homeButton, &QPushButton::clicked, this, &BrowserWindow::goHome);
+    // Adiciona os botões à barra lateral na ordem sugerida
+    sidebarLayout->addWidget(backButton, 0, Qt::AlignCenter);
+    sidebarLayout->addWidget(refreshButton, 0, Qt::AlignCenter);
     sidebarLayout->addWidget(homeButton, 0, Qt::AlignCenter);
 
-    // --- 3. Web View (Área de Conteúdo) ---
+    // --- 3. Configuração do Perfil e Web View ---
 
-    QString firefoxUserAgent = QStringLiteral("Mozilla/5.0 (X11; Linux x86_64; rv:128.0) Gecko/20100101 Firefox/128.0");
-    QWebEngineProfile::defaultProfile()->setHttpUserAgent(firefoxUserAgent);
+    QString chromeUserAgent = QStringLiteral("Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36");
+    QWebEngineProfile::defaultProfile()->setHttpUserAgent(chromeUserAgent);
+
+    QWebEngineProfile::defaultProfile()->setPersistentStoragePath(QDir::currentPath() + "/storage");
+    QWebEngineProfile::defaultProfile()->setPersistentCookiesPolicy(QWebEngineProfile::AllowPersistentCookies);
 
     webView = new QWebEngineView();
     
-    // Permissões de navegação para evitar erros de rede
     webView->page()->settings()->setAttribute(QWebEngineSettings::LocalContentCanAccessRemoteUrls, true);
     webView->page()->settings()->setAttribute(QWebEngineSettings::AllowRunningInsecureContent, true);
     webView->page()->settings()->setAttribute(QWebEngineSettings::AutoLoadImages, true);
     webView->page()->settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, true);
 
-    // Título dinâmico da janela
+    // --- Conexões de Sinais e Slots ---
+
+    // Ações de Navegação
+    connect(backButton, &QPushButton::clicked, webView, &QWebEngineView::back);
+    connect(refreshButton, &QPushButton::clicked, webView, &QWebEngineView::reload);
+    connect(homeButton, &QPushButton::clicked, this, &BrowserWindow::goHome);
+
+    // Lógica de Histórico Filtrado (Ignora a Homepage)
+    connect(webView, &QWebEngineView::urlChanged, this, [this](const QUrl &url) {
+        QString urlStr = url.toString();
+        QString homePath = QUrl::fromLocalFile(QDir::current().absoluteFilePath("homepage.html")).toString();
+
+        // Só salva no histórico se não for a home e não for repetido
+        if (urlStr != homePath && !urlStr.isEmpty() && (historyList.isEmpty() || historyList.last() != urlStr)) {
+            historyList.append(urlStr);
+            if (historyList.size() > 100) historyList.removeFirst();
+            qDebug() << "Histórico Piper:" << urlStr;
+        }
+    });
+
+    // Atualiza o título da janela conforme a navegação
     connect(webView, &QWebEngineView::titleChanged, this, [this](const QString &title)
-            {
+    {
         if(title.isEmpty() || title == "PiperHub") {
             setWindowTitle("Piper - browser");
         } else {
             setWindowTitle(title + " - Piper");
-        } });
+        } 
+    });
 
     // --- 4. Montar o Layout Horizontal ---
     mainLayout->addWidget(sidebarContainer);
@@ -115,17 +178,7 @@ BrowserWindow::BrowserWindow(QWidget *parent)
     showMaximized();
 }
 
-// ----------------------------------------------------------------------------------
-// Definição do Destrutor
-// ----------------------------------------------------------------------------------
-
-BrowserWindow::~BrowserWindow()
-{
-}
-
-// ----------------------------------------------------------------------------------
-// Slot: goHome
-// ----------------------------------------------------------------------------------
+BrowserWindow::~BrowserWindow() {}
 
 void BrowserWindow::goHome()
 {

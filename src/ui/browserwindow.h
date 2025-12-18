@@ -25,6 +25,9 @@ private:
     QHBoxLayout *mainLayout;
     QVBoxLayout *sidebarLayout;
     QListWidget *sidebarTabs;
+    QPushButton *refreshButton;
+    QStringList historyList;
+    QPushButton *backButton;
 
     // Componentes de Navegação
     QWebEngineView *webView;
