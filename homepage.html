@@ -2,282 +2,96 @@
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PiperHub</title>
     <style>
         :root {
-            --bg-color: #1e1e1e;
-            --card-bg: #252526;
-            --input-bg: #3c3c3c;
-            --text-color: #cccccc;
-            --accent-color: #007acc;
-            --hover-bg: #2a2d2e;
-            --border-color: #3e3e42;
+            --bg: #121212; 
+            --card: #1e1e1e;
+            --accent: #007acc;
+            --txt: #d4d4d4;
         }
-
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; outline: none; }
         body {
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            font-family: 'Segoe UI', system-ui, sans-serif;
-            padding: 40px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center; /* Centralização vertical */
-            min-height: 100vh;
-        }
-
-        /* --- HEADER & PESQUISA --- */
-        header {
-            width: 100%;
-            max-width: 650px;
-            text-align: center;
-            margin-bottom: 50px;
-            margin-top: 20px;
-        }
-
-        h1 {
-            font-weight: 200;
-            letter-spacing: 8px;
-            font-size: 32px;
-            color: #fff;
-            margin-bottom: 30px;
-            text-transform: uppercase;
-        }
-
-        .search-box {
-            position: relative;
-            width: 100%;
-            display: flex;
-            gap: 12px;
-        }
-
-        .input-container {
-            position: relative;
-            flex-grow: 1;
-        }
-
-        .search-input {
-            width: 100%;
-            padding: 16px 20px 16px 55px;
-            font-size: 16px;
-            background-color: var(--input-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            color: white;
-            outline: none;
-            transition: all 0.2s ease;
-        }
-
-        .search-input:focus {
-            border-color: var(--accent-color);
-            box-shadow: 0 0 0 3px rgba(0, 122, 204, 0.1);
-        }
-
-        .search-icon {
-            position: absolute;
-            left: 20px;
-            top: 50%;
-            transform: translateY(-50%);
-            fill: #888;
-            width: 22px;
-            height: 22px;
-            z-index: 1;
-        }
-
-        .search-btn {
-            background-color: var(--accent-color);
-            color: white;
-            border: none;
-            padding: 0 30px;
-            border-radius: 12px;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.2s ease;
-        }
-
-        .search-btn:hover {
-            background-color: #1a8ad4;
-            transform: translateY(-2px);
-        }
-
-        /* --- UNIFIED GRID (APP WALL) --- */
-        .app-wall {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-            gap: 15px;
-            width: 100%;
-            max-width: 1200px;
-            margin-bottom: 40px;
-        }
-
-        .app-card {
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
+            background: var(--bg);
+            color: var(--txt);
+            font-family: system-ui, -apple-system, sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
-            text-decoration: none;
-            padding: 20px 10px;
-            border-radius: 12px;
-            transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+            min-height: 100vh;
+            padding: 20px;
         }
-
-        .app-card:hover {
-            background-color: var(--hover-bg);
-            border-color: var(--accent-color);
-            transform: translateY(-4px);
+        header { width: 100%; max-width: 600px; text-align: center; margin-bottom: 40px; }
+        h1 { font-weight: 100; letter-spacing: 10px; margin-bottom: 25px; color: #fff; text-transform: uppercase; }
+        
+        .search-box { display: flex; background: var(--card); border-radius: 12px; padding: 5px; border: 1px solid #333; transition: 0.2s; }
+        .search-box:focus-within { border-color: var(--accent); }
+        .search-input {
+            flex: 1; background: transparent; border: none; color: #fff;
+            padding: 12px 20px; font-size: 16px; width: 100%;
         }
+        .search-btn { background: var(--accent); color: #fff; border: none; padding: 0 25px; border-radius: 8px; cursor: pointer; font-weight: bold; }
 
-        .icon {
-            width: 36px;
-            height: 36px;
-            margin-bottom: 12px;
-            object-fit: contain;
+        .app-wall {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+            gap: 15px; width: 100%; max-width: 900px;
         }
-
-        .app-card span {
-            font-size: 11px;
-            font-weight: 500;
-            color: var(--text-color);
-            text-align: center;
-            width: 100%;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+        .app-card {
+            background: var(--card);
+            text-decoration: none; display: flex; flex-direction: column;
+            align-items: center; padding: 18px 10px; border-radius: 12px;
+            transition: 0.2s; border: 1px solid #2a2a2a;
         }
-
-        .invert { filter: invert(1) brightness(1.5); }
-
-        /* CUSTOM SCROLLBAR */
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: var(--bg-color); }
-        ::-webkit-scrollbar-thumb { background: #333; border-radius: 4px; }
+        .app-card:hover { border-color: var(--accent); transform: translateY(-3px); background: #252526; }
+        .icon { width: 32px; height: 32px; margin-bottom: 10px; object-fit: contain; }
+        .app-card span { font-size: 11px; font-weight: 500; color: var(--txt); text-align: center; }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>Piper Hub</h1>
-        <form action="https://duckduckgo.com/" method="get" class="search-box" id="searchForm">
-            <div class="input-container">
-                <svg class="search-icon" viewBox="0 0 24 24"><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>
-                <input type="text" name="q" id="searchInput" class="search-input" placeholder="Pesquisar ou digitar URL..." autocomplete="off" autofocus>
-            </div>
-            <button type="submit" class="search-btn">Ir</button>
+        <h1>PIPER</h1>
+        <form class="search-box" id="f">
+            <input type="text" id="i" class="search-input" placeholder="URL ou Pesquisa..." autofocus autocomplete="off">
+            <button type="submit" class="search-btn">IR</button>
         </form>
     </header>
 
     <main class="app-wall">
-        <a href="https://youtube.com" class="app-card">
-            <img src="res/images/youtube.jpg" class="icon" loading="lazy">
-            <span>YouTube</span>
-        </a>
-        <a href="https://gemini.google.com" class="app-card">
-            <img src="res/images/gemini.png" class="icon" loading="lazy">
-            <span>Gemini</span>
-        </a>
-        <a href="https://github.com/dashboard" class="app-card">
-            <img src="res/images/github.png" class="icon invert" loading="lazy">
-            <span>GitHub</span>
-        </a>
-        <a href="https://web.whatsapp.com" class="app-card">
-            <img src="res/images/whatsapp.png" class="icon" loading="lazy">
-            <span>WhatsApp</span>
-        </a>
-        <a href="https://mail.google.com" class="app-card">
-            <img src="res/images/gmail.png" class="icon" loading="lazy">
-            <span>Gmail</span>
-        </a>
-        <a href="https://www.canva.com/projects" class="app-card">
-            <img src="res/images/canva.png" class="icon" loading="lazy">
-            <span>Canva</span>
-        </a>
-        <a href="https://www.figma.com/files/recents" class="app-card">
-            <img src="res/images/figma.png" class="icon" loading="lazy">
-            <span>Figma</span>
-        </a>
-        <a href="https://powerpoint.office.com" class="app-card">
-            <img src="res/images/power-point.png" class="icon" loading="lazy">
-            <span>PowerPoint</span>
-        </a>
-        <a href="https://docs.google.com/document" class="app-card">
-            <img src="res/images/docs.png" class="icon" loading="lazy">
-            <span>Docs</span>
-        </a>
-        <a href="https://docs.google.com/spreadsheets" class="app-card">
-            <img src="res/images/sheets.png" class="icon" loading="lazy">
-            <span>Sheets</span>
-        </a>
-        <a href="https://drive.google.com/drive/my-drive" class="app-card">
-            <img src="res/images/drive.png" class="icon" loading="lazy">
-            <span>Drive</span>
-        </a>
-        <a href="https://trello.com/boards" class="app-card">
-            <img src="res/images/trello.png" class="icon" loading="lazy">
-            <span>Trello</span>
-        </a>
-        <a href="https://instagram.com" class="app-card">
-            <img src="res/images/instagram.png" class="icon" loading="lazy">
-            <span>Instagram</span>
-        </a>
-        <a href="https://discord.com/app" class="app-card">
-            <img src="res/images/discord.png" class="icon" loading="lazy">
-            <span>Discord</span>
-        </a>
-        <a href="https://mercadolivre.com.br" class="app-card">
-            <img src="res/images/mercadolivre.png" class="icon" loading="lazy">
-            <span>M.Livre</span>
-        </a>
-        <a href="https://shopee.com.br" class="app-card">
-            <img src="res/images/shopee.png" class="icon" loading="lazy">
-            <span>Shopee</span>
-        </a>
-        <a href="https://animesonlinecc.to/" class="app-card">
-            <img src="res/images/animes.jpg" class="icon" loading="lazy">
-            <span>Animes</span>
-        </a>
-        <a href="https://play-cs.com/en/servers" class="app-card">
-            <img src="res/images/cs.jpg" class="icon" loading="lazy">
-            <span>CS 1.6</span>
-        </a>
-        <a href="https://krunker.io" class="app-card">
-            <img src="res/images/krunker.jpg" class="icon" loading="lazy">
-            <span>Krunker</span>
-        </a>
-        <a href="https://kirka.io" class="app-card">
-            <img src="res/images/kirka.png" class="icon" loading="lazy">
-            <span>Kirka</span>
-        </a>
+        <a href="https://mail.google.com" class="app-card"><img src="res/images/gmail.png" class="icon" loading="lazy"><span>Email</span></a>
+        <a href="https://web.whatsapp.com" class="app-card"><img src="res/images/whatsapp.png" class="icon" loading="lazy"><span>WhatsApp</span></a>
+        <a href="https://gemini.google.com" class="app-card"><img src="res/images/gemini.png" class="icon" loading="lazy"><span>Gemini</span></a>
+        <a href="https://docs.google.com/document" class="app-card"><img src="res/images/docs.png" class="icon" loading="lazy"><span>Docs</span></a>
+        <a href="https://docs.google.com/spreadsheets" class="app-card"><img src="res/images/sheets.png" class="icon" loading="lazy"><span>Sheets</span></a>
+        <a href="https://powerpoint.office.com" class="app-card"><img src="res/images/power-point.png" class="icon" loading="lazy"><span>PowerPoint</span></a>
+        <a href="https://drive.google.com/drive/my-drive" class="app-card"><img src="res/images/drive.png" class="icon" loading="lazy"><span>Drive</span></a>
+        <a href="https://discord.com/app" class="app-card"><img src="res/images/discord.png" class="icon" loading="lazy"><span>Discord</span></a>
+        
+        <a href="https://youtube.com" class="app-card"><img src="res/images/youtube.jpg" class="icon" loading="lazy"><span>YouTube</span></a>
+        <a href="https://animesonlinecc.to/" class="app-card"><img src="res/images/animes.jpg" class="icon" loading="lazy"><span>Animes</span></a>
+        <a href="https://play-cs.com/en/servers" class="app-card"><img src="res/images/cs.jpg" class="icon" loading="lazy"><span>CS 1.6</span></a>
     </main>
 
     <script>
-        // Lógica Híbrida Inteligente
-        document.getElementById('searchForm').addEventListener('submit', function(e) {
-            const input = document.getElementById('searchInput').value.trim();
-            if (!input) {
-                e.preventDefault();
-                return;
-            }
+        const f = document.getElementById('f');
+        const i = document.getElementById('i');
 
-            // Regra: Se contém um ponto (.) e não tem espaços, é provavelmente um URL
-            const isUrl = input.includes('.') && !input.includes(' ');
+        f.onsubmit = (e) => {
+            e.preventDefault();
+            const v = i.value.trim();
+            if (!v) return;
 
+            // Lógica de Salto Direto (Se tiver ponto e não tiver espaço, pula o buscador)
+            const isUrl = v.includes('.') && !v.includes(' ');
             if (isUrl) {
-                e.preventDefault(); // Cancela a busca no Google
-                let destination = input;
-                // Adiciona o protocolo se o usuário não digitou
-                if (!destination.startsWith('http://') && !destination.startsWith('https://')) {
-                    destination = 'https://' + destination;
-                }
-                window.location.href = destination; // Navega direto para o site
+                location.href = v.startsWith('http') ? v : 'https://' + v;
+            } else {
+                // Motor de busca DuckDuckGo (Mais leve que Google para hardware antigo)
+                location.href = 'https://duckduckgo.com/?q=' + encodeURIComponent(v);
             }
-            // Caso contrário, o formulário segue para o action="https://www.google.com/search"
-        });
+        };
     </script>
-
 </body>
 </html>

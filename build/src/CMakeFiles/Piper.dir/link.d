@@ -5,6 +5,7 @@
   CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o \
   CMakeFiles/Piper.dir/main.cpp.o \
   CMakeFiles/Piper.dir/ui/browserwindow.cpp.o \
+  CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.o \
   CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o \
   /usr/lib/x86_64-linux-gnu/libQt6WebEngineWidgets.so.6.8.2 \
   /usr/lib/x86_64-linux-gnu/libQt6WebEngineCore.so.6.8.2 \
@@ -185,6 +186,8 @@ CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 CMakeFiles/Piper.dir/main.cpp.o:
 
 CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
+
+CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.o:
 
 CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o:
 

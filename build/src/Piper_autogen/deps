@@ -5,6 +5,8 @@ Piper_autogen/timestamp: \
 	/home/kayogs/Piper/src/main.cpp \
 	/home/kayogs/Piper/src/ui/browserwindow.cpp \
 	/home/kayogs/Piper/src/ui/browserwindow.h \
+	/home/kayogs/Piper/src/ui/urlinterceptor.cpp \
+	/home/kayogs/Piper/src/ui/urlinterceptor.h \
 	/usr/include/alloca.h \
 	/usr/include/asm-generic/bitsperlong.h \
 	/usr/include/asm-generic/errno-base.h \
@@ -270,6 +272,7 @@ Piper_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QWeakPointer \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h \
@@ -321,6 +324,7 @@ Piper_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qglobalstatic.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qhash.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qhashfunctions.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevicebase.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qitemselectionmodel.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/qiterable.h \
@@ -441,6 +445,8 @@ Piper_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlglobal.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtQmlIntegration/qqmlintegration.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineProfile \
+	/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInfo \
+	/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInterceptor \
 	/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qtwebenginecore-config.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qtwebenginecoreglobal.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineclientcertificateselection.h \
@@ -450,6 +456,8 @@ Piper_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginepermission.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineprofile.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginequotarequest.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineurlrequestinfo.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineurlrequestinterceptor.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/QWebEngineView \
 	/usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qtwebenginewidgetsglobal.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qwebengineview.h \

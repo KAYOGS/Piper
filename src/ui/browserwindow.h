@@ -28,6 +28,8 @@ private:
     QPushButton *refreshButton;
     QStringList historyList;
     QPushButton *backButton;
+    QPushButton *historyButton; // Novo botão
+    void showHistory();
 
     // Componentes de Navegação
     QWebEngineView *webView;

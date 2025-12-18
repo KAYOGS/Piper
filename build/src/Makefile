@@ -254,6 +254,30 @@ ui/browserwindow.cpp.s:
 	cd /home/kayogs/Piper/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Piper.dir/build.make src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.s
 .PHONY : ui/browserwindow.cpp.s
 
+ui/urlinterceptor.o: ui/urlinterceptor.cpp.o
+.PHONY : ui/urlinterceptor.o
+
+# target to build an object file
+ui/urlinterceptor.cpp.o:
+	cd /home/kayogs/Piper/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Piper.dir/build.make src/CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.o
+.PHONY : ui/urlinterceptor.cpp.o
+
+ui/urlinterceptor.i: ui/urlinterceptor.cpp.i
+.PHONY : ui/urlinterceptor.i
+
+# target to preprocess a source file
+ui/urlinterceptor.cpp.i:
+	cd /home/kayogs/Piper/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Piper.dir/build.make src/CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.i
+.PHONY : ui/urlinterceptor.cpp.i
+
+ui/urlinterceptor.s: ui/urlinterceptor.cpp.s
+.PHONY : ui/urlinterceptor.s
+
+# target to generate assembly for a file
+ui/urlinterceptor.cpp.s:
+	cd /home/kayogs/Piper/build && $(MAKE) $(MAKESILENT) -f src/CMakeFiles/Piper.dir/build.make src/CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.s
+.PHONY : ui/urlinterceptor.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -277,6 +301,9 @@ help:
 	@echo "... ui/browserwindow.o"
 	@echo "... ui/browserwindow.i"
 	@echo "... ui/browserwindow.s"
+	@echo "... ui/urlinterceptor.o"
+	@echo "... ui/urlinterceptor.i"
+	@echo "... ui/urlinterceptor.s"
 .PHONY : help
 
 

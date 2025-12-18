@@ -9,14 +9,17 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON) 
 
 # --- Definição dos Arquivos ---
-
+# Adicionamos o urlinterceptor.cpp aqui
 set(PIPER_SOURCES
     main.cpp
     ui/browserwindow.cpp
+    ui/urlinterceptor.cpp
 )
 
+# Adicionamos o urlinterceptor.h aqui
 set(PIPER_HEADERS
     ui/browserwindow.h
+    ui/urlinterceptor.h
 )
 
 # --- Definição dos Arquivos de Recursos ---
@@ -26,14 +29,12 @@ set(PIPER_RESOURCES
 )
 
 # --- Criação do Executável ---
-# ESTA DEVE SER A PRIMEIRA REFERÊNCIA AO ALVO 'Piper' no arquivo.
 add_executable(Piper 
     ${PIPER_SOURCES} 
     ${PIPER_HEADERS}
 )
 
-# CORREÇÃO: target_sources AGORA está depois de add_executable.
-# Isso resolve o erro: "Cannot specify sources for target 'Piper' which is not built by this project."
+# Adiciona os recursos ao executável
 target_sources(Piper PRIVATE
     ${PIPER_RESOURCES}
 )
@@ -42,7 +43,6 @@ target_sources(Piper PRIVATE
 target_include_directories(Piper PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 # --- Linkagem das Bibliotecas ---
-
 target_link_libraries(Piper PRIVATE
     Qt6::Widgets
     Qt6::WebEngineWidgets

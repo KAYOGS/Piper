@@ -13,6 +13,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Piper.dir/main.cpp.o.d"
   "CMakeFiles/Piper.dir/ui/browserwindow.cpp.o"
   "CMakeFiles/Piper.dir/ui/browserwindow.cpp.o.d"
+  "CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.o"
+  "CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.o.d"
   "Piper_autogen/DQCCZ5YITF/qrc_resources.cpp"
   "Piper_autogen/mocs_compilation.cpp"
   "Piper_autogen/timestamp"

@@ -7,6 +7,8 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /home/kayogs/Piper/src/main.cpp \
   /home/kayogs/Piper/src/ui/browserwindow.cpp \
   /home/kayogs/Piper/src/ui/browserwindow.h \
+  /home/kayogs/Piper/src/ui/urlinterceptor.cpp \
+  /home/kayogs/Piper/src/ui/urlinterceptor.h \
   /usr/bin/cmake \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
@@ -273,6 +275,7 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QWeakPointer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h \
@@ -324,6 +327,7 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobalstatic.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qhash.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qhashfunctions.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevicebase.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qitemselectionmodel.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterable.h \
@@ -444,6 +448,8 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtQmlIntegration/qqmlintegration.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineProfile \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInfo \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInterceptor \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qtwebenginecore-config.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qtwebenginecoreglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineclientcertificateselection.h \
@@ -453,6 +459,8 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginepermission.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineprofile.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginequotarequest.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineurlrequestinfo.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineurlrequestinterceptor.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/QWebEngineView \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qtwebenginewidgetsglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qwebengineview.h \
@@ -539,6 +547,10 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
 
 /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qtwebenginewidgetsglobal.h:
 
+/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineurlrequestinterceptor.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineurlrequestinfo.h:
+
 /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginequotarequest.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineprofile.h:
@@ -546,6 +558,8 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
 /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginepermission.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineclientcertificateselection.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInterceptor:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineProfile:
 
@@ -621,8 +635,6 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qsystemdetection.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qsysinfo.h:
-
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringtokenizer.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringliteral.h:
@@ -642,6 +654,8 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopeguard.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInfo:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopedpointer.h:
 
@@ -686,6 +700,8 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtypes.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qline.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginedownloadrequest.h:
 
@@ -753,6 +769,8 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h:
 
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/q20type_traits.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF:
@@ -787,7 +805,7 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/atomic_word.h:
 
-/usr/include/c++/14/ext/alloc_traits.h:
+/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:
 
 /usr/include/c++/14/cstring:
 
@@ -810,6 +828,10 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
 /usr/include/c++/14/cerrno:
 
 /usr/include/c++/14/debug/assertions.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qsysinfo.h:
+
+/home/kayogs/Piper/src/ui/urlinterceptor.h:
 
 /usr/include/c++/14/cassert:
 
@@ -879,12 +901,6 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
 
 /usr/include/c++/14/ext/numeric_traits.h:
 
-/usr/include/c++/14/bits/stl_iterator.h:
-
-/usr/include/c++/14/bits/stl_algobase.h:
-
-/usr/include/asm-generic/errno-base.h:
-
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistwidget.h:
 
 /usr/include/c++/14/bits/stl_heap.h:
@@ -951,41 +967,15 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
+/usr/include/c++/14/bits/stl_algobase.h:
+
+/usr/include/c++/14/bits/stl_iterator.h:
+
+/usr/include/asm-generic/errno-base.h:
+
 /usr/include/c++/14/bits/allocated_ptr.h:
 
 /usr/include/c++/14/bits/cxxabi_forced.h:
-
-/usr/include/c++/14/new:
-
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qdatastream.h:
-
-/usr/include/c++/14/bits/stl_tempbuf.h:
-
-/usr/include/linux/stddef.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qitemselectionmodel.h:
-
-/usr/include/c++/14/bits/stl_tree.h:
-
-/usr/include/c++/14/cstdint:
-
-/usr/include/c++/14/bits/string_view.tcc:
-
-/usr/include/x86_64-linux-gnu/qt6/QtNetwork/qssl.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qlocale.h:
-
-/usr/include/c++/14/streambuf:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qconstructormacros.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdint-least.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
-
-/usr/include/c++/14/numeric:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtenvironmentvariables.h:
 
@@ -1011,15 +1001,31 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
 
 /usr/include/c++/14/cctype:
 
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearraylist.h:
+/usr/include/c++/14/cstdlib:
 
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qanystringview.h:
+/usr/include/c++/14/system_error:
 
-/usr/include/x86_64-linux-gnu/qt6/QtCore/QString:
+/usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetworkexports.h:
 
-/home/kayogs/Piper/src/ui/browserwindow.cpp:
+/usr/include/asm-generic/posix_types.h:
 
-/usr/include/c++/14/cstddef:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qprocessordetection.h:
+
+/usr/include/c++/14/tr1/bessel_function.tcc:
+
+/usr/include/stdc-predef.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QWeakPointer:
+
+/usr/include/c++/14/bits/memory_resource.h:
+
+/home/kayogs/Piper/src/ui/urlinterceptor.cpp:
+
+/usr/include/locale.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qobjectdefs_impl.h:
 
@@ -1028,6 +1034,8 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/alloca.h:
+
+/usr/include/asm-generic/int-ll64.h:
 
 /usr/include/c++/14/bits/streambuf.tcc:
 
@@ -1091,10 +1099,6 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
 
 /usr/include/linux/posix_types.h:
 
-/usr/include/linux/limits.h:
-
-/usr/include/c++/14/bits/atomic_lockfree_defines.h:
-
 /usr/include/c++/14/bits/alloc_traits.h:
 
 /usr/include/c++/14/bits/stringfwd.h:
@@ -1105,6 +1109,12 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
 
 /usr/include/c++/14/bits/exception_ptr.h:
 
+/usr/include/c++/14/bits/allocator.h:
+
+/usr/include/string.h:
+
+/home/kayogs/Piper/src/ui/browserwindow.h:
+
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QListWidget:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
@@ -1113,45 +1123,43 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
 
 /usr/include/c++/14/bits/algorithmfwd.h:
 
-/usr/include/c++/14/bit:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qitemselectionmodel.h:
+
+/usr/include/c++/14/bits/stl_tree.h:
 
 /usr/include/c++/14/bits/chrono.h:
 
+/usr/include/c++/14/bit:
+
+/usr/include/c++/14/cstdint:
+
+/usr/include/c++/14/bits/string_view.tcc:
+
+/usr/include/x86_64-linux-gnu/qt6/QtNetwork/qssl.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qlocale.h:
+
+/usr/include/c++/14/streambuf:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qconstructormacros.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-least.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
+
+/usr/include/c++/14/numeric:
+
 /usr/include/x86_64-linux-gnu/bits/posix1_lim.h:
-
-/usr/include/stdlib.h:
-
-/usr/include/c++/14/algorithm:
 
 /home/kayogs/Piper/res/resources.qrc:
 
-/usr/include/c++/14/bits/allocator.h:
+/usr/include/c++/14/algorithm:
 
-/home/kayogs/Piper/src/ui/browserwindow.h:
+/usr/include/stdlib.h:
 
-/usr/include/string.h:
+/usr/include/linux/limits.h:
 
-/usr/include/asm-generic/int-ll64.h:
-
-/usr/include/c++/14/cstdlib:
-
-/usr/include/c++/14/system_error:
-
-/usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetworkexports.h:
-
-/usr/include/asm-generic/posix_types.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qprocessordetection.h:
-
-/usr/include/c++/14/tr1/bessel_function.tcc:
-
-/usr/include/stdc-predef.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/QWeakPointer:
-
-/usr/include/c++/14/bits/memory_resource.h:
+/usr/include/c++/14/bits/atomic_lockfree_defines.h:
 
 /usr/include/c++/14/bits/stl_vector.h:
 
@@ -1165,14 +1173,6 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
 
 /usr/include/c++/14/bits/cpp_type_traits.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/QWebEngineView:
-
-/usr/include/c++/14/bits/align.h:
-
-/usr/include/c++/14/ext/aligned_buffer.h:
-
-/usr/include/c++/14/bits/concept_check.h:
-
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
 /usr/include/c++/14/bits/cxxabi_init_exception.h:
@@ -1182,6 +1182,14 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
 /usr/include/c++/14/string_view:
 
 /usr/include/c++/14/tr1/poly_laguerre.tcc:
+
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+
+/usr/include/c++/14/exception:
+
+/usr/include/c++/14/chrono:
+
+/usr/include/c++/14/atomic:
 
 /usr/include/c++/14/bits/std_function.h:
 
@@ -1227,21 +1235,51 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
 
 /usr/include/endian.h:
 
-/usr/include/c++/14/bits/nested_exception.h:
-
 /usr/include/c++/14/compare:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
 /usr/include/c++/14/bits/parse_numbers.h:
 
-/usr/include/c++/14/bits/memoryfwd.h:
-
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemview.h:
 
 /usr/include/features.h:
 
 /usr/include/c++/14/bits/node_handle.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearraylist.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qanystringview.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QString:
+
+/usr/include/c++/14/cstddef:
+
+/home/kayogs/Piper/src/ui/browserwindow.cpp:
+
+/usr/include/c++/14/ext/alloc_traits.h:
+
+/usr/include/c++/14/bits/memoryfwd.h:
+
+/usr/include/c++/14/bits/nested_exception.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/QWebEngineView:
+
+/usr/include/c++/14/bits/align.h:
+
+/usr/include/c++/14/bits/concept_check.h:
+
+/usr/include/c++/14/ext/aligned_buffer.h:
+
+/usr/include/c++/14/new:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qdatastream.h:
+
+/usr/include/c++/14/bits/stl_tempbuf.h:
+
+/usr/include/linux/stddef.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtconfiginclude.h:
 
@@ -1365,10 +1403,6 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
 
 /usr/include/linux/types.h:
 
-/usr/include/locale.h:
-
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h:
-
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtypeinfo.h:
 
 /usr/include/sched.h:
@@ -1486,13 +1520,3 @@ src/Piper_autogen/moc_predefs.h:
 /usr/include/c++/14/bits/hash_bytes.h:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
-
-/usr/include/c++/14/exception:
-
-/usr/include/c++/14/chrono:
-
-/usr/include/c++/14/atomic:
-
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
-
-/usr/include/x86_64-linux-gnu/bits/xopen_lim.h:

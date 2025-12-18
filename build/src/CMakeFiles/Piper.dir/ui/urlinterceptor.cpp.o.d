@@ -1,12 +1,9 @@
-src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: \
- /home/kayogs/Piper/build/src/Piper_autogen/mocs_compilation.cpp \
- /usr/include/stdc-predef.h \
- /home/kayogs/Piper/build/src/Piper_autogen/UYX5XTB5RZ/moc_browserwindow.cpp \
- /home/kayogs/Piper/build/src/Piper_autogen/UYX5XTB5RZ/../../../../src/ui/browserwindow.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsglobal.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiglobal.h \
+src/CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.o: \
+ /home/kayogs/Piper/src/ui/urlinterceptor.cpp /usr/include/stdc-predef.h \
+ /home/kayogs/Piper/src/ui/urlinterceptor.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInterceptor \
+ /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineurlrequestinterceptor.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qtwebenginecoreglobal.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h \
  /usr/include/c++/14/type_traits \
  /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
@@ -163,13 +160,11 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtresource.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qttranslation.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qtgui-config.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiexports.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgets-config.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsexports.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qobjectdefs.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qtwebenginecore-config.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineurlrequestinfo.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearray.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qnamespace.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcompare.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcomparehelpers.h \
@@ -199,12 +194,15 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/14/bits/vector.tcc /usr/include/c++/14/array \
  /usr/include/c++/14/compare \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtmetamacros.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qobjectdefs_impl.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qfunctionaltools_impl.h \
- /usr/include/c++/14/memory /usr/include/c++/14/bits/stl_tempbuf.h \
- /usr/include/c++/14/bits/stl_raw_storage_iter.h \
- /usr/include/c++/14/bits/align.h /usr/include/c++/14/bits/unique_ptr.h \
- /usr/include/c++/14/bits/shared_ptr.h /usr/include/c++/14/iosfwd \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydata.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h /usr/include/string.h \
+ /usr/include/strings.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydatapointer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydataops.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainertools_impl.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qxptype_traits.h \
+ /usr/include/c++/14/cstring /usr/include/c++/14/iterator \
+ /usr/include/c++/14/bits/stream_iterator.h /usr/include/c++/14/iosfwd \
  /usr/include/c++/14/bits/stringfwd.h /usr/include/c++/14/bits/postypes.h \
  /usr/include/c++/14/cwchar /usr/include/wchar.h \
  /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h \
@@ -213,8 +211,12 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
- /usr/include/c++/14/bits/shared_ptr_base.h \
- /usr/include/c++/14/bits/allocated_ptr.h \
+ /usr/include/c++/14/bits/streambuf_iterator.h \
+ /usr/include/c++/14/streambuf /usr/include/c++/14/bits/localefwd.h \
+ /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h \
+ /usr/include/c++/14/clocale /usr/include/locale.h \
+ /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/14/cctype \
+ /usr/include/ctype.h /usr/include/c++/14/bits/ios_base.h \
  /usr/include/c++/14/ext/atomicity.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/gthr.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/gthr-default.h \
@@ -239,32 +241,6 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
  /usr/include/x86_64-linux-gnu/c++/14/bits/atomic_word.h \
  /usr/include/x86_64-linux-gnu/sys/single_threaded.h \
- /usr/include/c++/14/ext/concurrence.h \
- /usr/include/c++/14/bits/shared_ptr_atomic.h \
- /usr/include/c++/14/backward/auto_ptr.h \
- /usr/include/c++/14/pstl/glue_memory_defs.h \
- /usr/include/c++/14/pstl/execution_defs.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringview.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearray.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydata.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h /usr/include/string.h \
- /usr/include/strings.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydatapointer.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydataops.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainertools_impl.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qxptype_traits.h \
- /usr/include/c++/14/cstring /usr/include/c++/14/iterator \
- /usr/include/c++/14/bits/stream_iterator.h \
- /usr/include/c++/14/bits/streambuf_iterator.h \
- /usr/include/c++/14/streambuf /usr/include/c++/14/bits/localefwd.h \
- /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h \
- /usr/include/c++/14/clocale /usr/include/locale.h \
- /usr/include/x86_64-linux-gnu/bits/locale.h /usr/include/c++/14/cctype \
- /usr/include/ctype.h /usr/include/c++/14/bits/ios_base.h \
  /usr/include/c++/14/bits/locale_classes.h /usr/include/c++/14/string \
  /usr/include/c++/14/bits/char_traits.h \
  /usr/include/c++/14/bits/ostream_insert.h \
@@ -289,7 +265,18 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: \
  /usr/include/c++/14/system_error \
  /usr/include/x86_64-linux-gnu/c++/14/bits/error_constants.h \
  /usr/include/c++/14/stdexcept /usr/include/c++/14/bits/streambuf.tcc \
- /usr/include/c++/14/algorithm /usr/include/c++/14/bits/stl_algo.h \
+ /usr/include/c++/14/memory /usr/include/c++/14/bits/stl_tempbuf.h \
+ /usr/include/c++/14/bits/stl_raw_storage_iter.h \
+ /usr/include/c++/14/bits/align.h /usr/include/c++/14/bits/unique_ptr.h \
+ /usr/include/c++/14/bits/shared_ptr.h \
+ /usr/include/c++/14/bits/shared_ptr_base.h \
+ /usr/include/c++/14/bits/allocated_ptr.h \
+ /usr/include/c++/14/ext/concurrence.h \
+ /usr/include/c++/14/bits/shared_ptr_atomic.h \
+ /usr/include/c++/14/backward/auto_ptr.h \
+ /usr/include/c++/14/pstl/glue_memory_defs.h \
+ /usr/include/c++/14/pstl/execution_defs.h /usr/include/c++/14/algorithm \
+ /usr/include/c++/14/bits/stl_algo.h \
  /usr/include/c++/14/bits/algorithmfwd.h \
  /usr/include/c++/14/bits/stl_heap.h \
  /usr/include/c++/14/bits/uniform_int_dist.h \
@@ -300,6 +287,12 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayview.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringfwd.h \
  /usr/include/c++/14/stdlib.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qobjectdefs.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qobjectdefs_impl.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qfunctionaltools_impl.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringview.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringliteral.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringalgorithms.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qlatin1stringview.h \
@@ -318,10 +311,12 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringlist.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qalgorithms.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringmatcher.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevicebase.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopedpointer.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatastream.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevicebase.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qfloat16.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmath.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterable.h \
@@ -337,19 +332,17 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbindingstorage.h \
  /usr/include/c++/14/chrono /usr/include/c++/14/bits/chrono.h \
  /usr/include/c++/14/ratio /usr/include/c++/14/ctime \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qmargins.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/q23utility.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qaction.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qkeysequence.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qicon.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qsize.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixmap.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpaintdevice.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qpoint.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qrgb.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qrgba64.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInfo \
+ /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineurlrequestinfo.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringlist.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qdebug.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qtextstream.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontiguouscache.h \
+ /usr/include/c++/14/climits \
  /usr/lib/gcc/x86_64-linux-gnu/14/include/limits.h \
  /usr/lib/gcc/x86_64-linux-gnu/14/include/syslimits.h \
  /usr/include/limits.h /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
@@ -358,123 +351,11 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixelformat.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qtransform.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpolygon.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qregion.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qspan.h \
- /usr/include/c++/14/cassert \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/q20iterator.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qline.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qdebug.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qtextstream.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontiguouscache.h \
- /usr/include/c++/14/climits \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qsharedpointer.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qsharedpointer_impl.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmap.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata_impl.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qhash.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpalette.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qbrush.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qfont.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qendian.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qfontmetrics.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qfontinfo.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qcursor.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qbitmap.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/QWebEngineView \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qwebengineview.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/QPageLayout \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpagelayout.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpagesize.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpageranges.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qtwebenginewidgetsglobal.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginepage.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qtwebenginecoreglobal.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qtwebenginecore-config.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineclientcertificateselection.h \
- /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetwork-config.h \
- /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslcertificate.h \
- /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetworkglobal.h \
- /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetworkexports.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qcryptographichash.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qlocale.h \
- /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qssl.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qflags.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginedownloadrequest.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginequotarequest.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineframe.h \
- /usr/include/x86_64-linux-gnu/qt6/QtQml/qqmlregistration.h \
- /usr/include/x86_64-linux-gnu/qt6/QtQmlIntegration/qqmlintegration.h \
- /usr/include/x86_64-linux-gnu/qt6/QtQml/qjsvalue.h \
- /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlglobal.h \
- /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqml-config.h \
- /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlexports.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qsize.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qstring.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QWeakPointer \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qsharedpointer.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginepermission.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpagelayout.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineProfile \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineprofile.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QListWidget \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistwidget.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistview.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemview.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractscrollarea.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qabstractitemmodel.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qitemselectionmodel.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemdelegate.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyleoption.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractspinbox.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qvalidator.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qregularexpression.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractslider.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyle.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QWidget \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qtmochelpers.h \
- /home/kayogs/Piper/build/src/Piper_autogen/UYX5XTB5RZ/moc_urlinterceptor.cpp \
- /home/kayogs/Piper/build/src/Piper_autogen/UYX5XTB5RZ/../../../../src/ui/urlinterceptor.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInterceptor \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineurlrequestinterceptor.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineurlrequestinfo.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevice.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInfo \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineurlrequestinfo.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringlist.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h

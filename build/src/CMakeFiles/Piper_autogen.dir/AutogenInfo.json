@@ -20,6 +20,12 @@
 			"Mu",
 			"UYX5XTB5RZ/moc_browserwindow.cpp",
 			null
+		],
+		[
+			"/home/kayogs/Piper/src/ui/urlinterceptor.h",
+			"Mu",
+			"UYX5XTB5RZ/moc_urlinterceptor.cpp",
+			null
 		]
 	],
 	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
@@ -114,7 +120,8 @@
 	"SOURCES" : 
 	[
 		[ "/home/kayogs/Piper/src/main.cpp", "Mu", null ],
-		[ "/home/kayogs/Piper/src/ui/browserwindow.cpp", "Mu", null ]
+		[ "/home/kayogs/Piper/src/ui/browserwindow.cpp", "Mu", null ],
+		[ "/home/kayogs/Piper/src/ui/urlinterceptor.cpp", "Mu", null ]
 	],
 	"USE_BETTER_GRAPH" : true,
 	"VERBOSITY" : 0
