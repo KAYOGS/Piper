@@ -3,44 +3,55 @@
 
 #include <QMainWindow>
 #include <QWebEngineView>
-#include <QWebEngineProfile> // Manter para usar o perfil padrão
+#include <QWebEngineProfile>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
-#include <QListWidget>
 #include <QPushButton>
-#include <QWidget>
+#include <QLineEdit>
+#include <QTabWidget>
+#include <QProgressBar>
+#include <QLabel>
+#include <QStringList>
 
 class BrowserWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    // Construtor sem o argumento opcional QWebEngineProfile
-    explicit BrowserWindow(QWidget *parent = nullptr); 
+    // Aceita um perfil (para modo privado) ou inicia com o padrão
+    explicit BrowserWindow(QWebEngineProfile *profile = nullptr, QWidget *parent = nullptr);
     ~BrowserWindow();
 
-private:
-    // Componentes de Layout
-    QWidget *centralWidget;
-    QHBoxLayout *mainLayout;
-    QVBoxLayout *sidebarLayout;
-    QListWidget *sidebarTabs;
-    QPushButton *refreshButton;
-    QStringList historyList;
-    QPushButton *backButton;
-    QPushButton *historyButton; // Novo botão
+private slots:
+    void goHome();
+    void openPrivateWindow();
     void showHistory();
+    void handleDownload(class QWebEngineDownloadRequest *download);
+    void createNewTab(const QUrl &url); // Função para gerenciar múltiplas abas
 
-    // Componentes de Navegação
-    QWebEngineView *webView;
-    // REMOVIDO: QWebEngineProfile *privateProfile; 
+private:
+    // Layout e Containers
+    QWidget *centralWidget;
+    QVBoxLayout *rootLayout;
+    QWidget *topBar;
+    QTabWidget *tabWidget;
+    QLineEdit *urlEdit;
 
-    // Botões da Barra Lateral (SOMENTE Home)
+    // Botões
+    QPushButton *backButton;
+    QPushButton *refreshButton;
+    QPushButton *addTabButton;
     QPushButton *homeButton;
+    QPushButton *historyButton;
+    QPushButton *privateModeButton;
 
-private slots: 
-    void goHome(); 
+    // Download UI
+    QWidget *downloadWidget;
+    QProgressBar *downloadBar;
 
+    // Dados
+    QStringList historyList;
+    bool m_isPrivate;
 };
 
 #endif // BROWSERWINDOW_H

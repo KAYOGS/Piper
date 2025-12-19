@@ -7,6 +7,7 @@
 *****************************************************************************/
 
 #include "../../../../src/ui/browserwindow.h"
+#include <QtGui/qtextcursor.h>
 #include <QtCore/qmetatype.h>
 
 #include <QtCore/qtmochelpers.h>
@@ -39,7 +40,14 @@ struct qt_meta_tag_ZN13BrowserWindowE_t {};
 static constexpr auto qt_meta_stringdata_ZN13BrowserWindowE = QtMocHelpers::stringData(
     "BrowserWindow",
     "goHome",
-    ""
+    "",
+    "openPrivateWindow",
+    "showHistory",
+    "handleDownload",
+    "QWebEngineDownloadRequest*",
+    "download",
+    "createNewTab",
+    "url"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -51,7 +59,7 @@ Q_CONSTINIT static const uint qt_meta_data_ZN13BrowserWindowE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       5,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -59,10 +67,18 @@ Q_CONSTINIT static const uint qt_meta_data_ZN13BrowserWindowE[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   20,    2, 0x08,    1 /* Private */,
+       1,    0,   44,    2, 0x08,    1 /* Private */,
+       3,    0,   45,    2, 0x08,    2 /* Private */,
+       4,    0,   46,    2, 0x08,    3 /* Private */,
+       5,    1,   47,    2, 0x08,    4 /* Private */,
+       8,    1,   50,    2, 0x08,    6 /* Private */,
 
  // slots: parameters
     QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 6,    7,
+    QMetaType::Void, QMetaType::QUrl,    9,
 
        0        // eod
 };
@@ -77,7 +93,17 @@ Q_CONSTINIT const QMetaObject BrowserWindow::staticMetaObject = { {
         // Q_OBJECT / Q_GADGET
         QtPrivate::TypeAndForceComplete<BrowserWindow, std::true_type>,
         // method 'goHome'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'openPrivateWindow'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'showHistory'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'handleDownload'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QWebEngineDownloadRequest *, std::false_type>,
+        // method 'createNewTab'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<const QUrl &, std::false_type>
     >,
     nullptr
 } };
@@ -88,10 +114,25 @@ void BrowserWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
     if (_c == QMetaObject::InvokeMetaMethod) {
         switch (_id) {
         case 0: _t->goHome(); break;
+        case 1: _t->openPrivateWindow(); break;
+        case 2: _t->showHistory(); break;
+        case 3: _t->handleDownload((*reinterpret_cast< std::add_pointer_t<QWebEngineDownloadRequest*>>(_a[1]))); break;
+        case 4: _t->createNewTab((*reinterpret_cast< std::add_pointer_t<QUrl>>(_a[1]))); break;
         default: ;
         }
     }
-    (void)_a;
+    if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
+        switch (_id) {
+        default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+        case 3:
+            switch (*reinterpret_cast<int*>(_a[1])) {
+            default: *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType(); break;
+            case 0:
+                *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType::fromType< QWebEngineDownloadRequest* >(); break;
+            }
+            break;
+        }
+    }
 }
 
 const QMetaObject *BrowserWindow::metaObject() const
@@ -113,14 +154,14 @@ int BrowserWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 5)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 5;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
-            *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 1;
+        if (_id < 5)
+            qt_static_metacall(this, _c, _id, _a);
+        _id -= 5;
     }
     return _id;
 }

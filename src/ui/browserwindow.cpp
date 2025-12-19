@@ -1,42 +1,26 @@
 #include "browserwindow.h"
 #include "urlinterceptor.h"
-#include <QWidget>
-#include <QUrl>
 #include <QDir>
 #include <QIcon>
-#include <QListWidgetItem>
-#include <QDesktopServices>
-#include <QWebEngineView>
-#include <QWebEngineProfile>
-#include <QWebEnginePage>
-#include <QWebEngineSettings>
-#include <QHBoxLayout>
-#include <QVBoxLayout>
-#include <QListWidget>
-#include <QPushButton>
-#include <QStringLiteral>
-#include <QDebug> 
 #include <QTimer>
+#include <QFileDialog>
+#include <QStandardPaths>
+#include <QWebEngineDownloadRequest>
+#include <QFileInfo>
 #include <fstream>
 #include <string>
 #include <unistd.h>
 
-// --- Funções de Hardware Exclusivas do Processo Piper ---
-
+// --- Funções de Hardware ---
 double getRealRamUsage() {
     std::string line;
     std::ifstream statusFile("/proc/self/status");
     if (!statusFile.is_open()) return 0.0;
-
     while (std::getline(statusFile, line)) {
         if (line.substr(0, 6) == "VmRSS:") {
             std::string valueStr = "";
-            for (char c : line) {
-                if (std::isdigit(c)) valueStr += c;
-            }
-            if (!valueStr.empty()) {
-                return std::stol(valueStr) / 1024.0; // kB para MB
-            }
+            for (char c : line) if (std::isdigit(c)) valueStr += c;
+            if (!valueStr.empty()) return std::stol(valueStr) / 1024.0;
         }
     }
     return 0.0;
@@ -46,162 +30,198 @@ int getRealCpuUsage() {
     double load[1];
     if (getloadavg(load, 1) != -1) {
         int cpu = static_cast<int>(load[0] * 10);
-        if (cpu < 1) cpu = 1; 
-        return (cpu > 100) ? 99 : cpu;
+        return (cpu > 100) ? 99 : (cpu < 1 ? 1 : cpu);
     }
     return 1;
 }
 
-BrowserWindow::BrowserWindow(QWidget *parent)
+BrowserWindow::BrowserWindow(QWebEngineProfile *profile, QWidget *parent)
     : QMainWindow(parent)
 {
-    // --- Configurações de Identidade ---
-    setWindowTitle("Piper - browser");
+    m_isPrivate = (profile && profile->isOffTheRecord());
+    
+    setWindowTitle(m_isPrivate ? "Piper - Sessão Privada" : "Piper Professional");
     setWindowIcon(QIcon(QDir::current().absoluteFilePath("res/icons/piperos.png")));
 
-    // --- 1. Layout Principal ---
     centralWidget = new QWidget(this);
     setCentralWidget(centralWidget);
-    mainLayout = new QHBoxLayout(centralWidget);
-    mainLayout->setContentsMargins(0, 0, 0, 0);
-    mainLayout->setSpacing(0);
 
-    // --- 2. Barra Lateral de Controle ---
-    QWidget *sidebarContainer = new QWidget();
-    sidebarContainer->setFixedWidth(50);
-    sidebarLayout = new QVBoxLayout(sidebarContainer);
-    sidebarLayout->setContentsMargins(0, 5, 0, 5);
-    sidebarLayout->setSpacing(5);
+    rootLayout = new QVBoxLayout(centralWidget);
+    rootLayout->setContentsMargins(0, 0, 0, 0);
+    rootLayout->setSpacing(0);
 
-    sidebarTabs = new QListWidget();
-    sidebarTabs->setStyleSheet("QListWidget { border: none; background-color: #252526; }");
-    sidebarLayout->addWidget(sidebarTabs);
-    sidebarLayout->addStretch(1);
+    // --- BARRA SUPERIOR (PRETO RÚSTICO - 30px) ---
+    topBar = new QWidget();
+    topBar->setFixedHeight(30);
+    topBar->setStyleSheet(m_isPrivate ? "background-color: #0d0d0d;" : "background-color: #121212;");
+    
+    QHBoxLayout *topLayout = new QHBoxLayout(topBar);
+    topLayout->setContentsMargins(5, 0, 5, 0);
+    topLayout->setSpacing(6);
 
-    // --- 3. Botões da Interface (BARRA LATERAL COMPLETA) ---
-    backButton = new QPushButton();
-    backButton->setFixedSize(40, 40);
-    backButton->setIcon(QIcon(QDir::current().absoluteFilePath("res/icons/voltar.png")));
-    backButton->setIconSize(QSize(32, 32));
-    backButton->setStyleSheet("QPushButton { background: transparent; border: none; border-radius: 5px; } QPushButton:hover { background: #3c3c3c; }");
+    // Estilo para botões com ícones brancos
+    QString btnStyle = "QPushButton { background: transparent; border: none; border-radius: 4px; } "
+                       "QPushButton:hover { background: #2a2a2a; }";
 
-    refreshButton = new QPushButton();
-    refreshButton->setFixedSize(40, 40);
-    refreshButton->setIcon(QIcon(QDir::current().absoluteFilePath("res/icons/recarregar.png")));
-    refreshButton->setIconSize(QSize(32, 32));
-    refreshButton->setStyleSheet("QPushButton { background: transparent; border: none; border-radius: 5px; } QPushButton:hover { background: #3c3c3c; }");
+    auto setupBtn = [&](QPushButton* &btn, QString iconPath, QString tip) {
+        btn = new QPushButton();
+        btn->setFixedSize(25, 25);
+        btn->setIcon(QIcon(QDir::current().absoluteFilePath(iconPath)));
+        btn->setIconSize(QSize(16, 16));
+        btn->setToolTip(tip);
+        btn->setStyleSheet(btnStyle);
+    };
 
-    historyButton = new QPushButton();
-    historyButton->setFixedSize(40, 40);
-    historyButton->setIcon(QIcon(QDir::current().absoluteFilePath("res/icons/history.png")));
-    historyButton->setIconSize(QSize(32, 32));
-    historyButton->setStyleSheet("QPushButton { background: transparent; border: none; border-radius: 5px; } QPushButton:hover { background: #3c3c3c; }");
+    // 1. Esquerda: Voltar e Recarregar
+    setupBtn(backButton, "res/icons/voltar.png", "Voltar");
+    setupBtn(refreshButton, "res/icons/recarregar.png", "Recarregar");
 
-    homeButton = new QPushButton();
-    homeButton->setFixedSize(40, 40);
-    homeButton->setIcon(QIcon(QDir::current().absoluteFilePath("res/icons/home.png")));
-    homeButton->setIconSize(QSize(32, 32));
-    homeButton->setStyleSheet("QPushButton { background: transparent; border: none; border-radius: 5px; } QPushButton:hover { background: #3c3c3c; }");
+    // 2. Centro: Barra de Endereço (Tamanho Fixo: 280px para equilíbrio)
+    urlEdit = new QLineEdit();
+    urlEdit->setFixedWidth(280);
+    urlEdit->setFixedHeight(22);
+    urlEdit->setPlaceholderText("Pesquisar ou URL...");
+    urlEdit->setStyleSheet("QLineEdit { background: #1e1e1e; color: white; border: 1px solid #333; border-radius: 4px; padding-left: 8px; font-size: 11px; }");
 
-    sidebarLayout->addWidget(backButton, 0, Qt::AlignCenter);
-    sidebarLayout->addWidget(refreshButton, 0, Qt::AlignCenter);
-    sidebarLayout->addWidget(historyButton, 0, Qt::AlignCenter); // Histórico Restaurado
-    sidebarLayout->addWidget(homeButton, 0, Qt::AlignCenter);
+    // 3. Botão Nova Aba (+)
+    setupBtn(addTabButton, "res/icons/novaaba.png", "Nova Aba");
 
-    // --- 4. Motor do Escudo e Perfil ---
-    QWebEngineProfile *profile = QWebEngineProfile::defaultProfile();
-    QString ua = QStringLiteral("Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36");
-    profile->setHttpUserAgent(ua);
-    profile->setPersistentStoragePath(QDir::currentPath() + "/storage");
+    // 4. Container de Abas (Ocupa o centro)
+    tabWidget = new QTabWidget();
+    tabWidget->setTabsClosable(true);
+    tabWidget->setMovable(true);
+    tabWidget->setStyleSheet(
+        "QTabWidget::pane { border: none; } "
+        "QTabBar::tab { background: #121212; color: #8b949e; padding: 4px 10px; min-width: 80px; max-width: 150px; font-size: 10px; border: none; } "
+        "QTabBar::tab:selected { background: #1e1e1e; color: white; border-bottom: 2px solid #58a6ff; } "
+        "QTabBar::close-button { image: url(res/icons/fecharaba.png); } "
+    );
 
-    UrlInterceptor *interceptor = new UrlInterceptor(this);
-    profile->setUrlRequestInterceptor(interceptor);
+    // 5. Direita: Funções Adicionais
+    setupBtn(homeButton, "res/icons/home.png", "Início");
+    setupBtn(historyButton, "res/icons/history.png", "Histórico");
+    setupBtn(privateModeButton, "res/icons/incognito.png", "Privado");
 
-    // --- 5. WebView e Configurações ---
-    webView = new QWebEngineView(this);
-    webView->page()->settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, true);
-    webView->page()->settings()->setAttribute(QWebEngineSettings::LocalStorageEnabled, true);
+    // Montagem do Layout na Ordem Solicitada
+    topLayout->addWidget(backButton);
+    topLayout->addWidget(refreshButton);
+    topLayout->addWidget(urlEdit);
+    topLayout->addWidget(addTabButton);
+    topLayout->addWidget(tabWidget, 1); // Estica para ocupar o resto
+    topLayout->addWidget(homeButton);
+    topLayout->addWidget(historyButton);
+    topLayout->addWidget(privateModeButton);
 
-    // --- 6. Conexões e Sinais ---
-    connect(backButton, &QPushButton::clicked, webView, &QWebEngineView::back);
-    connect(refreshButton, &QPushButton::clicked, webView, &QWebEngineView::reload);
-    connect(historyButton, &QPushButton::clicked, this, &BrowserWindow::showHistory);
+    // --- LÓGICA DE ABAS E EVENTOS ---
+
+    connect(addTabButton, &QPushButton::clicked, this, [this]() { createNewTab(QUrl()); });
+
+    connect(tabWidget, &QTabWidget::tabCloseRequested, this, [this](int index) {
+        QWidget *w = tabWidget->widget(index);
+        tabWidget->removeTab(index);
+        w->deleteLater(); // Encerra o processo da aba
+        if (tabWidget->count() == 0) createNewTab(QUrl());
+    });
+
+    connect(urlEdit, &QLineEdit::returnPressed, this, [this]() {
+        QString url = urlEdit->text().trimmed();
+        if (url.isEmpty()) return;
+        if (!url.contains(".")) url = "https://www.google.com/search?q=" + url;
+        else if (!url.startsWith("http")) url = "https://" + url;
+        
+        if (auto *view = qobject_cast<QWebEngineView*>(tabWidget->currentWidget())) {
+            view->load(QUrl(url));
+        }
+    });
+
+    connect(backButton, &QPushButton::clicked, this, [this]() {
+        if (auto *v = qobject_cast<QWebEngineView*>(tabWidget->currentWidget())) v->back();
+    });
+    connect(refreshButton, &QPushButton::clicked, this, [this]() {
+        if (auto *v = qobject_cast<QWebEngineView*>(tabWidget->currentWidget())) v->reload();
+    });
+
     connect(homeButton, &QPushButton::clicked, this, &BrowserWindow::goHome);
+    connect(historyButton, &QPushButton::clicked, this, &BrowserWindow::showHistory);
+    connect(privateModeButton, &QPushButton::clicked, this, &BrowserWindow::openPrivateWindow);
 
-    connect(webView, &QWebEngineView::urlChanged, this, [this](const QUrl &url) {
-        QString urlStr = url.toString();
-        QString homePath = QUrl::fromLocalFile(QDir::current().absoluteFilePath("homepage.html")).toString();
-        if (urlStr != homePath && !urlStr.isEmpty() && !urlStr.startsWith("data:text/html")) {
-            if (historyList.isEmpty() || historyList.last() != urlStr) {
-                historyList.append(urlStr);
-                if (historyList.size() > 100) historyList.removeFirst();
+    rootLayout->addWidget(topBar);
+    rootLayout->addWidget(tabWidget);
+
+    // Inicia com a homepage
+    createNewTab(QUrl());
+    showMaximized();
+
+    // Timer de Stats para a Homepage
+    QTimer *statsTimer = new QTimer(this);
+    connect(statsTimer, &QTimer::timeout, this, [this]() {
+        if (auto *v = qobject_cast<QWebEngineView*>(tabWidget->currentWidget())) {
+            if (v->url().toString().contains("homepage.html")) {
+                QString js = QString("if(typeof updatePiperStats === 'function') { updatePiperStats(%1, %2, %3, %4); }")
+                    .arg(UrlInterceptor::globalAdsBlocked)
+                    .arg(UrlInterceptor::globalAdsBlocked * 0.15, 0, 'f', 1)
+                    .arg(getRealCpuUsage()).arg(getRealRamUsage(), 0, 'f', 1);
+                v->page()->runJavaScript(js);
             }
         }
     });
-
-    // Limpeza Cosmética (Remove anúncios visuais)
-    connect(webView, &QWebEngineView::loadFinished, this, [this](bool ok) {
-        if (ok) {
-            QString clean = "['.ad-slot', '.adsbygoogle', '#ad-container', '.ad-unit'].forEach(s => "
-                            "document.querySelectorAll(s).forEach(el => el.remove()));";
-            webView->page()->runJavaScript(clean);
-        }
-    });
-
-    // --- 7. Lógica do Dashboard (Telemetria Real) ---
-    QTimer *statsTimer = new QTimer(this);
-    connect(statsTimer, &QTimer::timeout, this, [this]() {
-        QString url = webView->url().toString();
-        if (url.contains("homepage.html") || url.isEmpty() || url.startsWith("file://")) {
-            int ads = UrlInterceptor::globalAdsBlocked;
-            double data = ads * 0.15; 
-            int cpu = getRealCpuUsage();
-            double ram = getRealRamUsage(); 
-
-            QString js = QString("if(typeof updatePiperStats === 'function') { "
-                                 "updatePiperStats(%1, %2, %3, %4); }")
-                                 .arg(ads).arg(data, 0, 'f', 1).arg(cpu).arg(ram, 0, 'f', 1);
-            
-            webView->page()->runJavaScript(js);
-        }
-    });
-    statsTimer->start(1500); 
-
-    mainLayout->addWidget(sidebarContainer);
-    mainLayout->addWidget(webView);
-
-    goHome();
-    showMaximized();
+    statsTimer->start(1500);
 }
 
-void BrowserWindow::showHistory() {
-    QString html = "<html><head><style>"
-                   "body { background-color: #1e1e1e; color: white; font-family: sans-serif; padding: 30px; }"
-                   "h1 { color: #58a6ff; border-bottom: 1px solid #30363d; padding-bottom: 10px; }"
-                   ".item { background: #21262d; padding: 10px; border-radius: 6px; margin-bottom: 8px; border: 1px solid #30363d; cursor: pointer; }"
-                   ".item:hover { background: #30363d; }"
-                   ".url { color: #8b949e; font-size: 12px; word-break: break-all; }"
-                   "</style></head><body>"
-                   "<h1>Histórico de Navegação</h1>";
+void BrowserWindow::createNewTab(const QUrl &url) {
+    QWebEngineView *view = new QWebEngineView();
+    QWebEngineProfile *profile = m_isPrivate ? new QWebEngineProfile(view) : QWebEngineProfile::defaultProfile();
+    
+    QWebEnginePage *page = new QWebEnginePage(profile, view);
+    view->setPage(page);
 
-    if (historyList.isEmpty()) {
-        html += "<p>Nenhum site visitado ainda.</p>";
-    } else {
-        for (int i = historyList.size() - 1; i >= 0; --i) {
-            QString url = historyList.at(i);
-            html += QString("<div class='item' onclick='window.location=\"%1\"'>"
-                            "<div>Site Visitado</div>"
-                            "<div class='url'>%1</div>"
-                            "</div>").arg(url);
-        }
-    }
-    html += "</body></html>";
-    webView->setHtml(html);
+    int index = tabWidget->addTab(view, QIcon(QDir::current().absoluteFilePath("res/icons/piperos.png")), "Carregando...");
+    tabWidget->setCurrentIndex(index);
+
+    connect(view, &QWebEngineView::titleChanged, this, [this, view](const QString &title) {
+        int idx = tabWidget->indexOf(view);
+        tabWidget->setTabText(idx, title.isEmpty() ? "Nova Aba" : title.left(12) + "...");
+    });
+
+    connect(view, &QWebEngineView::iconChanged, this, [this, view](const QIcon &icon) {
+        tabWidget->setTabIcon(tabWidget->indexOf(view), icon);
+    });
+
+    connect(view, &QWebEngineView::urlChanged, this, [this, view](const QUrl &u) {
+        if (tabWidget->currentWidget() == view) urlEdit->setText(u.toString());
+        if (!m_isPrivate && !u.toString().contains("homepage.html")) historyList.append(u.toString());
+    });
+
+    if (url.isEmpty()) goHome();
+    else view->load(url);
 }
 
 void BrowserWindow::goHome() {
-    QString path = QDir::current().absoluteFilePath("homepage.html");
-    webView->load(QUrl::fromLocalFile(QDir::cleanPath(path)));
+    if (auto *v = qobject_cast<QWebEngineView*>(tabWidget->currentWidget())) {
+        v->load(QUrl::fromLocalFile(QDir::current().absoluteFilePath("homepage.html")));
+    }
+}
+
+void BrowserWindow::openPrivateWindow() {
+    QWebEngineProfile *priv = new QWebEngineProfile();
+    BrowserWindow *win = new BrowserWindow(priv);
+    win->setAttribute(Qt::WA_DeleteOnClose);
+    win->show();
+}
+
+void BrowserWindow::showHistory() {
+    QString html = "<html><head><style>body{background:#1a1b1e;color:#e0e0e0;font-family:sans-serif;padding:20px;} .item{background:#21262d;padding:10px;margin-bottom:5px;border-radius:4px;cursor:pointer;} .item:hover{background:#30363d;}</style></head><body><h1>Histórico</h1>";
+    for(int i=historyList.size()-1; i>=0; --i) html += QString("<div class='item' onclick='window.location=\"%1\"'>%1</div>").arg(historyList.at(i));
+    html += "</body></html>";
+    if (auto *v = qobject_cast<QWebEngineView*>(tabWidget->currentWidget())) v->setHtml(html);
+}
+
+void BrowserWindow::handleDownload(QWebEngineDownloadRequest *download) {
+    QString path = QFileDialog::getSaveFileName(this, "Salvar", QStandardPaths::writableLocation(QStandardPaths::DownloadLocation) + "/" + download->downloadFileName());
+    if (path.isEmpty()) { download->cancel(); return; }
+    download->setDownloadDirectory(QFileInfo(path).absolutePath());
+    download->setDownloadFileName(QFileInfo(path).fileName());
+    download->accept();
 }
 
 BrowserWindow::~BrowserWindow() {}

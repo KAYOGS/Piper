@@ -8,22 +8,27 @@ set(CMAKE_AUTOMOC ON)
 # Garante que os arquivos .qrc sejam processados (RCC - Resource Compiler).
 set(CMAKE_AUTORCC ON) 
 
+# --- Busca de Pacotes (Qt 6) ---
+# Adicionamos WebEngineCore explicitamente para suportar as funções de download
+find_package(Qt6 REQUIRED COMPONENTS 
+    Widgets 
+    WebEngineWidgets 
+    WebEngineCore
+)
+
 # --- Definição dos Arquivos ---
-# Adicionamos o urlinterceptor.cpp aqui
 set(PIPER_SOURCES
     main.cpp
     ui/browserwindow.cpp
     ui/urlinterceptor.cpp
 )
 
-# Adicionamos o urlinterceptor.h aqui
 set(PIPER_HEADERS
     ui/browserwindow.h
     ui/urlinterceptor.h
 )
 
 # --- Definição dos Arquivos de Recursos ---
-# Declaração do nosso arquivo QRC que lista os ícones.
 set(PIPER_RESOURCES
     ../res/resources.qrc
 )
@@ -43,7 +48,9 @@ target_sources(Piper PRIVATE
 target_include_directories(Piper PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
 # --- Linkagem das Bibliotecas ---
+# Incluímos Qt6::WebEngineCore para resolver os erros de "diretório inexistente"
 target_link_libraries(Piper PRIVATE
     Qt6::Widgets
     Qt6::WebEngineWidgets
+    Qt6::WebEngineCore
 )
