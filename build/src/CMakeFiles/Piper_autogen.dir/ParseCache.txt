@@ -259,7 +259,6 @@
  mdp:/usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  mdp:/usr/include/x86_64-linux-gnu/gnu/stubs.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList
- mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/q20memory.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/q20type_traits.h
@@ -361,7 +360,6 @@
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/qxptype_traits.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtCore/qyieldcpu.h
- mdp:/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInfo
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInterceptor
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qtwebenginecore-config.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qtwebenginecoreglobal.h

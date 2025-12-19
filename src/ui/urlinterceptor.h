@@ -2,9 +2,7 @@
 #define URLINTERCEPTOR_H
 
 #include <QWebEngineUrlRequestInterceptor>
-#include <QWebEngineUrlRequestInfo>
 #include <QStringList>
-#include <QUrl>
 
 class UrlInterceptor : public QWebEngineUrlRequestInterceptor
 {
@@ -13,14 +11,17 @@ class UrlInterceptor : public QWebEngineUrlRequestInterceptor
 public:
     explicit UrlInterceptor(QObject *parent = nullptr);
 
-    // O "Cérebro" do bloqueador: este método analisa cada pedido de rede
+    // Método principal que decide o destino de cada requisição
     void interceptRequest(QWebEngineUrlRequestInfo &info) override;
 
+    // Contador global para alimentar o dashboard do PiperHub
+    static int globalAdsBlocked;
+
 private:
-    // Nossa lista de termos proibidos (Blacklist)
+    // Lista de domínios inimigos da performance
     QStringList adDomains;
-    
-    // Função auxiliar para verificar se a URL é suspeita
+
+    // Função interna para checar se a URL é lixo publicitário
     bool isAd(const QUrl &url);
 };
 
