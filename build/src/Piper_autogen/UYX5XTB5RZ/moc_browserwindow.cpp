@@ -59,7 +59,7 @@ Q_CONSTINIT static const uint qt_meta_data_ZN13BrowserWindowE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-       5,   14, // methods
+       6,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -67,11 +67,12 @@ Q_CONSTINIT static const uint qt_meta_data_ZN13BrowserWindowE[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   44,    2, 0x08,    1 /* Private */,
-       3,    0,   45,    2, 0x08,    2 /* Private */,
-       4,    0,   46,    2, 0x08,    3 /* Private */,
-       5,    1,   47,    2, 0x08,    4 /* Private */,
-       8,    1,   50,    2, 0x08,    6 /* Private */,
+       1,    0,   50,    2, 0x08,    1 /* Private */,
+       3,    0,   51,    2, 0x08,    2 /* Private */,
+       4,    0,   52,    2, 0x08,    3 /* Private */,
+       5,    1,   53,    2, 0x08,    4 /* Private */,
+       8,    1,   56,    2, 0x08,    6 /* Private */,
+       8,    0,   59,    2, 0x28,    8 /* Private | MethodCloned */,
 
  // slots: parameters
     QMetaType::Void,
@@ -79,6 +80,7 @@ Q_CONSTINIT static const uint qt_meta_data_ZN13BrowserWindowE[] = {
     QMetaType::Void,
     QMetaType::Void, 0x80000000 | 6,    7,
     QMetaType::Void, QMetaType::QUrl,    9,
+    QMetaType::Void,
 
        0        // eod
 };
@@ -103,7 +105,9 @@ Q_CONSTINIT const QMetaObject BrowserWindow::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<QWebEngineDownloadRequest *, std::false_type>,
         // method 'createNewTab'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        QtPrivate::TypeAndForceComplete<const QUrl &, std::false_type>
+        QtPrivate::TypeAndForceComplete<const QUrl &, std::false_type>,
+        // method 'createNewTab'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
 } };
@@ -118,6 +122,7 @@ void BrowserWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 2: _t->showHistory(); break;
         case 3: _t->handleDownload((*reinterpret_cast< std::add_pointer_t<QWebEngineDownloadRequest*>>(_a[1]))); break;
         case 4: _t->createNewTab((*reinterpret_cast< std::add_pointer_t<QUrl>>(_a[1]))); break;
+        case 5: _t->createNewTab(); break;
         default: ;
         }
     }
@@ -154,14 +159,14 @@ int BrowserWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 5)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 6;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 5)
+        if (_id < 6)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 5;
+        _id -= 6;
     }
     return _id;
 }

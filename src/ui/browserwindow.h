@@ -27,7 +27,7 @@ private slots:
     void openPrivateWindow();
     void showHistory();
     void handleDownload(class QWebEngineDownloadRequest *download);
-    void createNewTab(const QUrl &url); // Função para gerenciar múltiplas abas
+    void createNewTab(const QUrl &url = QUrl());
 
 private:
     // Layout e Containers
