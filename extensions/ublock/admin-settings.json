@@ -1,0 +1,19 @@
+{
+  "userSettings": {
+    "advancedUserEnabled": true,
+    "cloudStorageEnabled": false,
+    "showIconBadge": true
+  },
+  "selectedFilterLists": [
+    "user-filters",
+    "ublock-filters",
+    "ublock-badware",
+    "ublock-privacy",
+    "ublock-unbreak",
+    "ublock-annoyances",
+    "adguard-tracking-protection",
+    "adguard-annoyances",
+    "easylist",
+    "easyprivacy"
+  ]
+}

@@ -4,21 +4,22 @@
 #include <QMainWindow>
 #include <QWebEngineView>
 #include <QWebEngineProfile>
+#include <QWebEngineDownloadRequest>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
 #include <QPushButton>
 #include <QLineEdit>
 #include <QTabWidget>
-#include <QProgressBar>
 #include <QLabel>
 #include <QStringList>
+#include <QList>
+#include <QMenu>
 
 class BrowserWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
-    // Aceita um perfil (para modo privado) ou inicia com o padrão
     explicit BrowserWindow(QWebEngineProfile *profile = nullptr, QWidget *parent = nullptr);
     ~BrowserWindow();
 
@@ -26,31 +27,28 @@ private slots:
     void goHome();
     void openPrivateWindow();
     void showHistory();
-    void handleDownload(class QWebEngineDownloadRequest *download);
+    void showDownloads(); 
+    void handleDownload(QWebEngineDownloadRequest *download);
     void createNewTab(const QUrl &url = QUrl());
 
 private:
-    // Layout e Containers
     QWidget *centralWidget;
     QVBoxLayout *rootLayout;
     QWidget *topBar;
     QTabWidget *tabWidget;
     QLineEdit *urlEdit;
 
-    // Botões
     QPushButton *backButton;
     QPushButton *refreshButton;
     QPushButton *addTabButton;
     QPushButton *homeButton;
     QPushButton *historyButton;
     QPushButton *privateModeButton;
+    QPushButton *downloadButton;
 
-    // Download UI
-    QWidget *downloadWidget;
-    QProgressBar *downloadBar;
-
-    // Dados
     QStringList historyList;
+    // Lista para gerenciar os arquivos na memória e evitar erros de ponteiro
+    QList<QWebEngineDownloadRequest*> m_downloads; 
     bool m_isPrivate;
 };
 

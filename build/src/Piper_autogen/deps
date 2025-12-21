@@ -270,6 +270,7 @@ Piper_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/gnu/stubs.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
+	/usr/include/x86_64-linux-gnu/qt6/QtCore/QSet \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
 	/usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
@@ -446,6 +447,7 @@ Piper_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlexports.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlglobal.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtQmlIntegration/qqmlintegration.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineDownloadRequest \
 	/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineProfile \
 	/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInterceptor \
 	/usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qtwebenginecore-config.h \
@@ -466,7 +468,7 @@ Piper_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
-	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QProgressBar \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
@@ -479,7 +481,7 @@ Piper_autogen/timestamp: \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlineedit.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
-	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qprogressbar.h \
+	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
 	/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
