@@ -273,8 +273,11 @@
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  /usr/include/x86_64-linux-gnu/gnu/stubs.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonValue
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QList
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList
@@ -300,6 +303,8 @@
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearraylist.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayview.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborcommon.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborvalue.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcompare.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcompare_impl.h
@@ -332,6 +337,7 @@
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevicebase.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterable.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterator.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonvalue.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qlatin1stringview.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qline.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h
@@ -356,9 +362,11 @@
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocessordetection.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qregularexpression.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopedpointer.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopeguard.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qsettings.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata_impl.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qsharedpointer.h
@@ -401,6 +409,7 @@
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtypes.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qutf8stringview.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/quuid.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h
@@ -424,7 +433,6 @@
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpaintdevice.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpalette.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixelformat.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixmap.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpolygon.h
@@ -451,6 +459,10 @@
  /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlexports.h
  /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlglobal.h
  /usr/include/x86_64-linux-gnu/qt6/QtQmlIntegration/qqmlintegration.h
+ /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/QWebChannel
+ /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qtwebchannelexports.h
+ /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qwebchannel.h
+ /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qwebchannelglobal.h
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineDownloadRequest
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineProfile
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInterceptor
@@ -469,10 +481,8 @@
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qtwebenginewidgetsglobal.h
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qwebengineview.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout
@@ -480,12 +490,10 @@
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlineedit.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h
@@ -542,6 +550,93 @@
  /usr/share/cmake-3.31/Modules/CheckCXXCompilerFlag.cmake
 
 bin/Piper
+ /lib/i386-linux-gnu/libGLdispatch.so.0
+ /lib/i386-linux-gnu/libLerc.so.4
+ /lib/i386-linux-gnu/libX11.so.6
+ /lib/i386-linux-gnu/libXau.so.6
+ /lib/i386-linux-gnu/libXcomposite.so.1
+ /lib/i386-linux-gnu/libXdamage.so.1
+ /lib/i386-linux-gnu/libXdmcp.so.6
+ /lib/i386-linux-gnu/libXext.so.6
+ /lib/i386-linux-gnu/libXfixes.so.3
+ /lib/i386-linux-gnu/libXrandr.so.2
+ /lib/i386-linux-gnu/libXrender.so.1
+ /lib/i386-linux-gnu/libasound.so.2
+ /lib/i386-linux-gnu/libatomic.so.1
+ /lib/i386-linux-gnu/libblkid.so.1
+ /lib/i386-linux-gnu/libbrotlicommon.so.1
+ /lib/i386-linux-gnu/libbrotlidec.so.1
+ /lib/i386-linux-gnu/libbz2.so.1.0
+ /lib/i386-linux-gnu/libcap.so.2
+ /lib/i386-linux-gnu/libcom_err.so.2
+ /lib/i386-linux-gnu/libcrypto.so.3
+ /lib/i386-linux-gnu/libcurl-gnutls.so.4
+ /lib/i386-linux-gnu/libdbus-1.so.3
+ /lib/i386-linux-gnu/libdeflate.so.0
+ /lib/i386-linux-gnu/libdrm.so.2
+ /lib/i386-linux-gnu/libexpat.so.1
+ /lib/i386-linux-gnu/libffi.so.8
+ /lib/i386-linux-gnu/libfontconfig.so.1
+ /lib/i386-linux-gnu/libfreetype.so.6
+ /lib/i386-linux-gnu/libgbm.so.1
+ /lib/i386-linux-gnu/libgio-2.0.so.0
+ /lib/i386-linux-gnu/libglib-2.0.so.0
+ /lib/i386-linux-gnu/libgmodule-2.0.so.0
+ /lib/i386-linux-gnu/libgmp.so.10
+ /lib/i386-linux-gnu/libgnutls.so.30
+ /lib/i386-linux-gnu/libgobject-2.0.so.0
+ /lib/i386-linux-gnu/libgomp.so.1
+ /lib/i386-linux-gnu/libgraphite2.so.3
+ /lib/i386-linux-gnu/libgssapi_krb5.so.2
+ /lib/i386-linux-gnu/libharfbuzz.so.0
+ /lib/i386-linux-gnu/libhogweed.so.6
+ /lib/i386-linux-gnu/libidn2.so.0
+ /lib/i386-linux-gnu/libjbig.so.0
+ /lib/i386-linux-gnu/libjpeg.so.62
+ /lib/i386-linux-gnu/libk5crypto.so.3
+ /lib/i386-linux-gnu/libkeyutils.so.1
+ /lib/i386-linux-gnu/libkrb5.so.3
+ /lib/i386-linux-gnu/libkrb5support.so.0
+ /lib/i386-linux-gnu/liblber.so.2
+ /lib/i386-linux-gnu/liblcms2.so.2
+ /lib/i386-linux-gnu/libldap.so.2
+ /lib/i386-linux-gnu/liblzma.so.5
+ /lib/i386-linux-gnu/libmount.so.1
+ /lib/i386-linux-gnu/libnettle.so.8
+ /lib/i386-linux-gnu/libnghttp2.so.14
+ /lib/i386-linux-gnu/libnghttp3.so.9
+ /lib/i386-linux-gnu/libngtcp2.so.16
+ /lib/i386-linux-gnu/libngtcp2_crypto_gnutls.so.8
+ /lib/i386-linux-gnu/libnspr4.so
+ /lib/i386-linux-gnu/libnss3.so
+ /lib/i386-linux-gnu/libnssutil3.so
+ /lib/i386-linux-gnu/libopenjp2.so.7
+ /lib/i386-linux-gnu/libopus.so.0
+ /lib/i386-linux-gnu/libp11-kit.so.0
+ /lib/i386-linux-gnu/libpcre2-8.so.0
+ /lib/i386-linux-gnu/libplc4.so
+ /lib/i386-linux-gnu/libplds4.so
+ /lib/i386-linux-gnu/libpng16.so.16
+ /lib/i386-linux-gnu/libpsl.so.5
+ /lib/i386-linux-gnu/libresolv.so.2
+ /lib/i386-linux-gnu/librtmp.so.1
+ /lib/i386-linux-gnu/libsasl2.so.2
+ /lib/i386-linux-gnu/libselinux.so.1
+ /lib/i386-linux-gnu/libsharpyuv.so.0
+ /lib/i386-linux-gnu/libsmime3.so
+ /lib/i386-linux-gnu/libsnappy.so.1
+ /lib/i386-linux-gnu/libssh2.so.1
+ /lib/i386-linux-gnu/libssl.so.3
+ /lib/i386-linux-gnu/libsystemd.so.0
+ /lib/i386-linux-gnu/libtasn1.so.6
+ /lib/i386-linux-gnu/libtiff.so.6
+ /lib/i386-linux-gnu/libunistring.so.5
+ /lib/i386-linux-gnu/libwebp.so.7
+ /lib/i386-linux-gnu/libwebpmux.so.3
+ /lib/i386-linux-gnu/libxcb.so.1
+ /lib/i386-linux-gnu/libxkbcommon.so.0
+ /lib/i386-linux-gnu/libz.so.1
+ /lib/i386-linux-gnu/libzstd.so.1
  /lib/x86_64-linux-gnu/libEGL.so.1
  /lib/x86_64-linux-gnu/libGLdispatch.so.0
  /lib/x86_64-linux-gnu/libLerc.so.4
@@ -662,6 +757,93 @@ bin/Piper
  /usr/lib/gcc/x86_64-linux-gnu/14/libgcc.a
  /usr/lib/gcc/x86_64-linux-gnu/14/libgcc_s.so
  /usr/lib/gcc/x86_64-linux-gnu/14/libstdc++.so
+ /usr/lib/i386-linux-gnu/libGLdispatch.so.0
+ /usr/lib/i386-linux-gnu/libLerc.so.4
+ /usr/lib/i386-linux-gnu/libX11.so.6
+ /usr/lib/i386-linux-gnu/libXau.so.6
+ /usr/lib/i386-linux-gnu/libXcomposite.so.1
+ /usr/lib/i386-linux-gnu/libXdamage.so.1
+ /usr/lib/i386-linux-gnu/libXdmcp.so.6
+ /usr/lib/i386-linux-gnu/libXext.so.6
+ /usr/lib/i386-linux-gnu/libXfixes.so.3
+ /usr/lib/i386-linux-gnu/libXrandr.so.2
+ /usr/lib/i386-linux-gnu/libXrender.so.1
+ /usr/lib/i386-linux-gnu/libasound.so.2
+ /usr/lib/i386-linux-gnu/libatomic.so.1
+ /usr/lib/i386-linux-gnu/libblkid.so.1
+ /usr/lib/i386-linux-gnu/libbrotlicommon.so.1
+ /usr/lib/i386-linux-gnu/libbrotlidec.so.1
+ /usr/lib/i386-linux-gnu/libbz2.so.1.0
+ /usr/lib/i386-linux-gnu/libcap.so.2
+ /usr/lib/i386-linux-gnu/libcom_err.so.2
+ /usr/lib/i386-linux-gnu/libcrypto.so.3
+ /usr/lib/i386-linux-gnu/libcurl-gnutls.so.4
+ /usr/lib/i386-linux-gnu/libdbus-1.so.3
+ /usr/lib/i386-linux-gnu/libdeflate.so.0
+ /usr/lib/i386-linux-gnu/libdrm.so.2
+ /usr/lib/i386-linux-gnu/libexpat.so.1
+ /usr/lib/i386-linux-gnu/libffi.so.8
+ /usr/lib/i386-linux-gnu/libfontconfig.so.1
+ /usr/lib/i386-linux-gnu/libfreetype.so.6
+ /usr/lib/i386-linux-gnu/libgbm.so.1
+ /usr/lib/i386-linux-gnu/libgio-2.0.so.0
+ /usr/lib/i386-linux-gnu/libglib-2.0.so.0
+ /usr/lib/i386-linux-gnu/libgmodule-2.0.so.0
+ /usr/lib/i386-linux-gnu/libgmp.so.10
+ /usr/lib/i386-linux-gnu/libgnutls.so.30
+ /usr/lib/i386-linux-gnu/libgobject-2.0.so.0
+ /usr/lib/i386-linux-gnu/libgomp.so.1
+ /usr/lib/i386-linux-gnu/libgraphite2.so.3
+ /usr/lib/i386-linux-gnu/libgssapi_krb5.so.2
+ /usr/lib/i386-linux-gnu/libharfbuzz.so.0
+ /usr/lib/i386-linux-gnu/libhogweed.so.6
+ /usr/lib/i386-linux-gnu/libidn2.so.0
+ /usr/lib/i386-linux-gnu/libjbig.so.0
+ /usr/lib/i386-linux-gnu/libjpeg.so.62
+ /usr/lib/i386-linux-gnu/libk5crypto.so.3
+ /usr/lib/i386-linux-gnu/libkeyutils.so.1
+ /usr/lib/i386-linux-gnu/libkrb5.so.3
+ /usr/lib/i386-linux-gnu/libkrb5support.so.0
+ /usr/lib/i386-linux-gnu/liblber.so.2
+ /usr/lib/i386-linux-gnu/liblcms2.so.2
+ /usr/lib/i386-linux-gnu/libldap.so.2
+ /usr/lib/i386-linux-gnu/liblzma.so.5
+ /usr/lib/i386-linux-gnu/libmount.so.1
+ /usr/lib/i386-linux-gnu/libnettle.so.8
+ /usr/lib/i386-linux-gnu/libnghttp2.so.14
+ /usr/lib/i386-linux-gnu/libnghttp3.so.9
+ /usr/lib/i386-linux-gnu/libngtcp2.so.16
+ /usr/lib/i386-linux-gnu/libngtcp2_crypto_gnutls.so.8
+ /usr/lib/i386-linux-gnu/libnspr4.so
+ /usr/lib/i386-linux-gnu/libnss3.so
+ /usr/lib/i386-linux-gnu/libnssutil3.so
+ /usr/lib/i386-linux-gnu/libopenjp2.so.7
+ /usr/lib/i386-linux-gnu/libopus.so.0
+ /usr/lib/i386-linux-gnu/libp11-kit.so.0
+ /usr/lib/i386-linux-gnu/libpcre2-8.so.0
+ /usr/lib/i386-linux-gnu/libplc4.so
+ /usr/lib/i386-linux-gnu/libplds4.so
+ /usr/lib/i386-linux-gnu/libpng16.so.16
+ /usr/lib/i386-linux-gnu/libpsl.so.5
+ /usr/lib/i386-linux-gnu/libresolv.so.2
+ /usr/lib/i386-linux-gnu/librtmp.so.1
+ /usr/lib/i386-linux-gnu/libsasl2.so.2
+ /usr/lib/i386-linux-gnu/libselinux.so.1
+ /usr/lib/i386-linux-gnu/libsharpyuv.so.0
+ /usr/lib/i386-linux-gnu/libsmime3.so
+ /usr/lib/i386-linux-gnu/libsnappy.so.1
+ /usr/lib/i386-linux-gnu/libssh2.so.1
+ /usr/lib/i386-linux-gnu/libssl.so.3
+ /usr/lib/i386-linux-gnu/libsystemd.so.0
+ /usr/lib/i386-linux-gnu/libtasn1.so.6
+ /usr/lib/i386-linux-gnu/libtiff.so.6
+ /usr/lib/i386-linux-gnu/libunistring.so.5
+ /usr/lib/i386-linux-gnu/libwebp.so.7
+ /usr/lib/i386-linux-gnu/libwebpmux.so.3
+ /usr/lib/i386-linux-gnu/libxcb.so.1
+ /usr/lib/i386-linux-gnu/libxkbcommon.so.0
+ /usr/lib/i386-linux-gnu/libz.so.1
+ /usr/lib/i386-linux-gnu/libzstd.so.1
  /usr/lib/x86_64-linux-gnu/libGLX.so
  /usr/lib/x86_64-linux-gnu/libOpenGL.so
  /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.8.2
@@ -977,8 +1159,11 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  /usr/include/x86_64-linux-gnu/gnu/stubs.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonValue
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QList
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList
@@ -1004,6 +1189,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearraylist.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayview.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborcommon.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborvalue.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcompare.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcompare_impl.h
@@ -1036,6 +1223,7 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevicebase.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterable.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterator.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonvalue.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qlatin1stringview.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qline.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h
@@ -1060,9 +1248,11 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocessordetection.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qregularexpression.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopedpointer.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopeguard.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qsettings.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata_impl.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qsharedpointer.h
@@ -1106,6 +1296,7 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtypes.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qutf8stringview.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/quuid.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h
@@ -1129,7 +1320,6 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpaintdevice.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpalette.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixelformat.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixmap.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpolygon.h
@@ -1156,6 +1346,10 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlexports.h
  /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlglobal.h
  /usr/include/x86_64-linux-gnu/qt6/QtQmlIntegration/qqmlintegration.h
+ /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/QWebChannel
+ /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qtwebchannelexports.h
+ /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qwebchannel.h
+ /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qwebchannelglobal.h
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineDownloadRequest
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineProfile
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInterceptor
@@ -1174,10 +1368,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qtwebenginewidgetsglobal.h
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qwebengineview.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout
@@ -1185,12 +1377,10 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlineedit.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h
@@ -1530,10 +1720,12 @@ src/CMakeFiles/Piper.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDir
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonValue
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QList
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QWeakPointer
  /usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h
@@ -1556,6 +1748,8 @@ src/CMakeFiles/Piper.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearraylist.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayview.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborcommon.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborvalue.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcompare.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcompare_impl.h
@@ -1599,6 +1793,7 @@ src/CMakeFiles/Piper.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevicebase.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterable.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterator.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonvalue.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qlatin1stringview.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qline.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h
@@ -1624,9 +1819,11 @@ src/CMakeFiles/Piper.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocessordetection.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qregularexpression.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopedpointer.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopeguard.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qsettings.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata_impl.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qsharedpointer.h
@@ -1670,6 +1867,7 @@ src/CMakeFiles/Piper.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtypes.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qutf8stringview.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/quuid.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h
@@ -1697,7 +1895,6 @@ src/CMakeFiles/Piper.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpaintdevice.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpalette.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixelformat.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixmap.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpolygon.h
@@ -1724,6 +1921,10 @@ src/CMakeFiles/Piper.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlexports.h
  /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlglobal.h
  /usr/include/x86_64-linux-gnu/qt6/QtQmlIntegration/qqmlintegration.h
+ /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/QWebChannel
+ /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qtwebchannelexports.h
+ /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qwebchannel.h
+ /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qwebchannelglobal.h
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineDownloadRequest
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineProfile
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qtwebenginecore-config.h
@@ -1740,10 +1941,8 @@ src/CMakeFiles/Piper.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qwebengineview.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout
@@ -1752,12 +1951,10 @@ src/CMakeFiles/Piper.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlineedit.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h
@@ -1827,7 +2024,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/c++/14/bits/fs_fwd.h
  /usr/include/c++/14/bits/fs_ops.h
  /usr/include/c++/14/bits/fs_path.h
- /usr/include/c++/14/bits/fstream.tcc
  /usr/include/c++/14/bits/functexcept.h
  /usr/include/c++/14/bits/functional_hash.h
  /usr/include/c++/14/bits/hash_bytes.h
@@ -1930,7 +2126,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/c++/14/ext/string_conversions.h
  /usr/include/c++/14/ext/type_traits.h
  /usr/include/c++/14/filesystem
- /usr/include/c++/14/fstream
  /usr/include/c++/14/functional
  /usr/include/c++/14/initializer_list
  /usr/include/c++/14/iomanip
@@ -1987,7 +2182,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/features.h
  /usr/include/libintl.h
  /usr/include/limits.h
- /usr/include/linux/close_range.h
  /usr/include/linux/errno.h
  /usr/include/linux/limits.h
  /usr/include/linux/posix_types.h
@@ -2005,24 +2199,19 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/string.h
  /usr/include/strings.h
  /usr/include/time.h
- /usr/include/unistd.h
  /usr/include/wchar.h
  /usr/include/wctype.h
  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h
  /usr/include/x86_64-linux-gnu/bits/byteswap.h
- /usr/include/x86_64-linux-gnu/bits/confname.h
  /usr/include/x86_64-linux-gnu/bits/cpu-set.h
  /usr/include/x86_64-linux-gnu/bits/endian.h
  /usr/include/x86_64-linux-gnu/bits/endianness.h
- /usr/include/x86_64-linux-gnu/bits/environments.h
  /usr/include/x86_64-linux-gnu/bits/errno.h
  /usr/include/x86_64-linux-gnu/bits/floatn-common.h
  /usr/include/x86_64-linux-gnu/bits/floatn.h
  /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h
  /usr/include/x86_64-linux-gnu/bits/fp-fast.h
  /usr/include/x86_64-linux-gnu/bits/fp-logb.h
- /usr/include/x86_64-linux-gnu/bits/getopt_core.h
- /usr/include/x86_64-linux-gnu/bits/getopt_posix.h
  /usr/include/x86_64-linux-gnu/bits/iscanonical.h
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h
  /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h
@@ -2036,7 +2225,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/x86_64-linux-gnu/bits/mathcalls.h
  /usr/include/x86_64-linux-gnu/bits/posix1_lim.h
  /usr/include/x86_64-linux-gnu/bits/posix2_lim.h
- /usr/include/x86_64-linux-gnu/bits/posix_opt.h
  /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h
  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h
@@ -2083,7 +2271,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/x86_64-linux-gnu/bits/typesizes.h
  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h
  /usr/include/x86_64-linux-gnu/bits/uio_lim.h
- /usr/include/x86_64-linux-gnu/bits/unistd_ext.h
  /usr/include/x86_64-linux-gnu/bits/waitflags.h
  /usr/include/x86_64-linux-gnu/bits/waitstatus.h
  /usr/include/x86_64-linux-gnu/bits/wchar.h
@@ -2091,10 +2278,8 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/x86_64-linux-gnu/bits/wordsize.h
  /usr/include/x86_64-linux-gnu/bits/xopen_lim.h
  /usr/include/x86_64-linux-gnu/c++/14/bits/atomic_word.h
- /usr/include/x86_64-linux-gnu/c++/14/bits/basic_file.h
  /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h
  /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h
- /usr/include/x86_64-linux-gnu/c++/14/bits/c++io.h
  /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h
  /usr/include/x86_64-linux-gnu/c++/14/bits/cpu_defines.h
  /usr/include/x86_64-linux-gnu/c++/14/bits/ctype_base.h
@@ -2112,8 +2297,11 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDir
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QFileInfo
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonValue
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QList
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QStandardPaths
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString
@@ -2142,6 +2330,8 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearraylist.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayview.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborcommon.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborvalue.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcompare.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcompare_impl.h
@@ -2185,6 +2375,7 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevicebase.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterable.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterator.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonvalue.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qlatin1stringview.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qline.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h
@@ -2210,9 +2401,11 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocessordetection.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qregularexpression.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopedpointer.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopeguard.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qsettings.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata_impl.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qsharedpointer.h
@@ -2258,6 +2451,7 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtypes.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qutf8stringview.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/quuid.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h
@@ -2284,7 +2478,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpaintdevice.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpalette.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixelformat.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixmap.h
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpolygon.h
@@ -2311,6 +2504,10 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlexports.h
  /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlglobal.h
  /usr/include/x86_64-linux-gnu/qt6/QtQmlIntegration/qqmlintegration.h
+ /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/QWebChannel
+ /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qtwebchannelexports.h
+ /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qwebchannel.h
+ /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qwebchannelglobal.h
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineDownloadRequest
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineProfile
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineScript
@@ -2336,10 +2533,8 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qwebengineview.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFileDialog
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout
@@ -2349,12 +2544,10 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qfiledialog.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlineedit.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h

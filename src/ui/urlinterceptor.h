@@ -17,14 +17,12 @@ public:
     static int globalAdsBlocked;
 
 private:
-    QStringList trackerBases;
-    QStringList adBases;
-    QStringList pathBlacklist;
+    QSet<QString> adHosts;       // Domínios exatos de anúncios
+    QStringList adPatterns;      // Padrões de URL de rastreio
+    QStringList blacklistedPaths; // Caminhos suspeitos
 
-    bool isTracker(const QString &urlStr, const QString &host);
-    bool isAdReforço(const QString &urlStr, const QString &host);
-    bool isBlacklistedPath(const QString &path);
-    bool hasEnemySignature(const QString &urlStr);
+    void initializeLists();
+    bool shouldBlock(const QUrl &url);
 };
 
 #endif // URLINTERCEPTOR_H

@@ -272,8 +272,11 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonValue \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
@@ -299,6 +302,8 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearraylist.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayview.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborcommon.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborvalue.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcompare.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcompare_impl.h \
@@ -331,6 +336,7 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevicebase.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterable.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterator.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonvalue.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qlatin1stringview.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qline.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h \
@@ -355,9 +361,11 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocessordetection.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qregularexpression.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopedpointer.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopeguard.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qsettings.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata_impl.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qsharedpointer.h \
@@ -400,6 +408,7 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtypes.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qutf8stringview.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/quuid.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h \
@@ -423,7 +432,6 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpaintdevice.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpalette.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixelformat.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixmap.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpolygon.h \
@@ -450,6 +458,10 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlexports.h \
   /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtQmlIntegration/qqmlintegration.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/QWebChannel \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qtwebchannelexports.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qwebchannel.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qwebchannelglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineDownloadRequest \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineProfile \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInterceptor \
@@ -468,10 +480,8 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qtwebenginewidgetsglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qwebengineview.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
@@ -479,12 +489,10 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlineedit.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
@@ -540,7 +548,94 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake \
   /usr/share/cmake-3.31/Modules/CheckCXXCompilerFlag.cmake
 
-bin/Piper: /lib/x86_64-linux-gnu/libEGL.so.1 \
+bin/Piper: /lib/i386-linux-gnu/libGLdispatch.so.0 \
+  /lib/i386-linux-gnu/libLerc.so.4 \
+  /lib/i386-linux-gnu/libX11.so.6 \
+  /lib/i386-linux-gnu/libXau.so.6 \
+  /lib/i386-linux-gnu/libXcomposite.so.1 \
+  /lib/i386-linux-gnu/libXdamage.so.1 \
+  /lib/i386-linux-gnu/libXdmcp.so.6 \
+  /lib/i386-linux-gnu/libXext.so.6 \
+  /lib/i386-linux-gnu/libXfixes.so.3 \
+  /lib/i386-linux-gnu/libXrandr.so.2 \
+  /lib/i386-linux-gnu/libXrender.so.1 \
+  /lib/i386-linux-gnu/libasound.so.2 \
+  /lib/i386-linux-gnu/libatomic.so.1 \
+  /lib/i386-linux-gnu/libblkid.so.1 \
+  /lib/i386-linux-gnu/libbrotlicommon.so.1 \
+  /lib/i386-linux-gnu/libbrotlidec.so.1 \
+  /lib/i386-linux-gnu/libbz2.so.1.0 \
+  /lib/i386-linux-gnu/libcap.so.2 \
+  /lib/i386-linux-gnu/libcom_err.so.2 \
+  /lib/i386-linux-gnu/libcrypto.so.3 \
+  /lib/i386-linux-gnu/libcurl-gnutls.so.4 \
+  /lib/i386-linux-gnu/libdbus-1.so.3 \
+  /lib/i386-linux-gnu/libdeflate.so.0 \
+  /lib/i386-linux-gnu/libdrm.so.2 \
+  /lib/i386-linux-gnu/libexpat.so.1 \
+  /lib/i386-linux-gnu/libffi.so.8 \
+  /lib/i386-linux-gnu/libfontconfig.so.1 \
+  /lib/i386-linux-gnu/libfreetype.so.6 \
+  /lib/i386-linux-gnu/libgbm.so.1 \
+  /lib/i386-linux-gnu/libgio-2.0.so.0 \
+  /lib/i386-linux-gnu/libglib-2.0.so.0 \
+  /lib/i386-linux-gnu/libgmodule-2.0.so.0 \
+  /lib/i386-linux-gnu/libgmp.so.10 \
+  /lib/i386-linux-gnu/libgnutls.so.30 \
+  /lib/i386-linux-gnu/libgobject-2.0.so.0 \
+  /lib/i386-linux-gnu/libgomp.so.1 \
+  /lib/i386-linux-gnu/libgraphite2.so.3 \
+  /lib/i386-linux-gnu/libgssapi_krb5.so.2 \
+  /lib/i386-linux-gnu/libharfbuzz.so.0 \
+  /lib/i386-linux-gnu/libhogweed.so.6 \
+  /lib/i386-linux-gnu/libidn2.so.0 \
+  /lib/i386-linux-gnu/libjbig.so.0 \
+  /lib/i386-linux-gnu/libjpeg.so.62 \
+  /lib/i386-linux-gnu/libk5crypto.so.3 \
+  /lib/i386-linux-gnu/libkeyutils.so.1 \
+  /lib/i386-linux-gnu/libkrb5.so.3 \
+  /lib/i386-linux-gnu/libkrb5support.so.0 \
+  /lib/i386-linux-gnu/liblber.so.2 \
+  /lib/i386-linux-gnu/liblcms2.so.2 \
+  /lib/i386-linux-gnu/libldap.so.2 \
+  /lib/i386-linux-gnu/liblzma.so.5 \
+  /lib/i386-linux-gnu/libmount.so.1 \
+  /lib/i386-linux-gnu/libnettle.so.8 \
+  /lib/i386-linux-gnu/libnghttp2.so.14 \
+  /lib/i386-linux-gnu/libnghttp3.so.9 \
+  /lib/i386-linux-gnu/libngtcp2.so.16 \
+  /lib/i386-linux-gnu/libngtcp2_crypto_gnutls.so.8 \
+  /lib/i386-linux-gnu/libnspr4.so \
+  /lib/i386-linux-gnu/libnss3.so \
+  /lib/i386-linux-gnu/libnssutil3.so \
+  /lib/i386-linux-gnu/libopenjp2.so.7 \
+  /lib/i386-linux-gnu/libopus.so.0 \
+  /lib/i386-linux-gnu/libp11-kit.so.0 \
+  /lib/i386-linux-gnu/libpcre2-8.so.0 \
+  /lib/i386-linux-gnu/libplc4.so \
+  /lib/i386-linux-gnu/libplds4.so \
+  /lib/i386-linux-gnu/libpng16.so.16 \
+  /lib/i386-linux-gnu/libpsl.so.5 \
+  /lib/i386-linux-gnu/libresolv.so.2 \
+  /lib/i386-linux-gnu/librtmp.so.1 \
+  /lib/i386-linux-gnu/libsasl2.so.2 \
+  /lib/i386-linux-gnu/libselinux.so.1 \
+  /lib/i386-linux-gnu/libsharpyuv.so.0 \
+  /lib/i386-linux-gnu/libsmime3.so \
+  /lib/i386-linux-gnu/libsnappy.so.1 \
+  /lib/i386-linux-gnu/libssh2.so.1 \
+  /lib/i386-linux-gnu/libssl.so.3 \
+  /lib/i386-linux-gnu/libsystemd.so.0 \
+  /lib/i386-linux-gnu/libtasn1.so.6 \
+  /lib/i386-linux-gnu/libtiff.so.6 \
+  /lib/i386-linux-gnu/libunistring.so.5 \
+  /lib/i386-linux-gnu/libwebp.so.7 \
+  /lib/i386-linux-gnu/libwebpmux.so.3 \
+  /lib/i386-linux-gnu/libxcb.so.1 \
+  /lib/i386-linux-gnu/libxkbcommon.so.0 \
+  /lib/i386-linux-gnu/libz.so.1 \
+  /lib/i386-linux-gnu/libzstd.so.1 \
+  /lib/x86_64-linux-gnu/libEGL.so.1 \
   /lib/x86_64-linux-gnu/libGLdispatch.so.0 \
   /lib/x86_64-linux-gnu/libLerc.so.4 \
   /lib/x86_64-linux-gnu/libQt6DBus.so.6 \
@@ -660,6 +755,93 @@ bin/Piper: /lib/x86_64-linux-gnu/libEGL.so.1 \
   /usr/lib/gcc/x86_64-linux-gnu/14/libgcc.a \
   /usr/lib/gcc/x86_64-linux-gnu/14/libgcc_s.so \
   /usr/lib/gcc/x86_64-linux-gnu/14/libstdc++.so \
+  /usr/lib/i386-linux-gnu/libGLdispatch.so.0 \
+  /usr/lib/i386-linux-gnu/libLerc.so.4 \
+  /usr/lib/i386-linux-gnu/libX11.so.6 \
+  /usr/lib/i386-linux-gnu/libXau.so.6 \
+  /usr/lib/i386-linux-gnu/libXcomposite.so.1 \
+  /usr/lib/i386-linux-gnu/libXdamage.so.1 \
+  /usr/lib/i386-linux-gnu/libXdmcp.so.6 \
+  /usr/lib/i386-linux-gnu/libXext.so.6 \
+  /usr/lib/i386-linux-gnu/libXfixes.so.3 \
+  /usr/lib/i386-linux-gnu/libXrandr.so.2 \
+  /usr/lib/i386-linux-gnu/libXrender.so.1 \
+  /usr/lib/i386-linux-gnu/libasound.so.2 \
+  /usr/lib/i386-linux-gnu/libatomic.so.1 \
+  /usr/lib/i386-linux-gnu/libblkid.so.1 \
+  /usr/lib/i386-linux-gnu/libbrotlicommon.so.1 \
+  /usr/lib/i386-linux-gnu/libbrotlidec.so.1 \
+  /usr/lib/i386-linux-gnu/libbz2.so.1.0 \
+  /usr/lib/i386-linux-gnu/libcap.so.2 \
+  /usr/lib/i386-linux-gnu/libcom_err.so.2 \
+  /usr/lib/i386-linux-gnu/libcrypto.so.3 \
+  /usr/lib/i386-linux-gnu/libcurl-gnutls.so.4 \
+  /usr/lib/i386-linux-gnu/libdbus-1.so.3 \
+  /usr/lib/i386-linux-gnu/libdeflate.so.0 \
+  /usr/lib/i386-linux-gnu/libdrm.so.2 \
+  /usr/lib/i386-linux-gnu/libexpat.so.1 \
+  /usr/lib/i386-linux-gnu/libffi.so.8 \
+  /usr/lib/i386-linux-gnu/libfontconfig.so.1 \
+  /usr/lib/i386-linux-gnu/libfreetype.so.6 \
+  /usr/lib/i386-linux-gnu/libgbm.so.1 \
+  /usr/lib/i386-linux-gnu/libgio-2.0.so.0 \
+  /usr/lib/i386-linux-gnu/libglib-2.0.so.0 \
+  /usr/lib/i386-linux-gnu/libgmodule-2.0.so.0 \
+  /usr/lib/i386-linux-gnu/libgmp.so.10 \
+  /usr/lib/i386-linux-gnu/libgnutls.so.30 \
+  /usr/lib/i386-linux-gnu/libgobject-2.0.so.0 \
+  /usr/lib/i386-linux-gnu/libgomp.so.1 \
+  /usr/lib/i386-linux-gnu/libgraphite2.so.3 \
+  /usr/lib/i386-linux-gnu/libgssapi_krb5.so.2 \
+  /usr/lib/i386-linux-gnu/libharfbuzz.so.0 \
+  /usr/lib/i386-linux-gnu/libhogweed.so.6 \
+  /usr/lib/i386-linux-gnu/libidn2.so.0 \
+  /usr/lib/i386-linux-gnu/libjbig.so.0 \
+  /usr/lib/i386-linux-gnu/libjpeg.so.62 \
+  /usr/lib/i386-linux-gnu/libk5crypto.so.3 \
+  /usr/lib/i386-linux-gnu/libkeyutils.so.1 \
+  /usr/lib/i386-linux-gnu/libkrb5.so.3 \
+  /usr/lib/i386-linux-gnu/libkrb5support.so.0 \
+  /usr/lib/i386-linux-gnu/liblber.so.2 \
+  /usr/lib/i386-linux-gnu/liblcms2.so.2 \
+  /usr/lib/i386-linux-gnu/libldap.so.2 \
+  /usr/lib/i386-linux-gnu/liblzma.so.5 \
+  /usr/lib/i386-linux-gnu/libmount.so.1 \
+  /usr/lib/i386-linux-gnu/libnettle.so.8 \
+  /usr/lib/i386-linux-gnu/libnghttp2.so.14 \
+  /usr/lib/i386-linux-gnu/libnghttp3.so.9 \
+  /usr/lib/i386-linux-gnu/libngtcp2.so.16 \
+  /usr/lib/i386-linux-gnu/libngtcp2_crypto_gnutls.so.8 \
+  /usr/lib/i386-linux-gnu/libnspr4.so \
+  /usr/lib/i386-linux-gnu/libnss3.so \
+  /usr/lib/i386-linux-gnu/libnssutil3.so \
+  /usr/lib/i386-linux-gnu/libopenjp2.so.7 \
+  /usr/lib/i386-linux-gnu/libopus.so.0 \
+  /usr/lib/i386-linux-gnu/libp11-kit.so.0 \
+  /usr/lib/i386-linux-gnu/libpcre2-8.so.0 \
+  /usr/lib/i386-linux-gnu/libplc4.so \
+  /usr/lib/i386-linux-gnu/libplds4.so \
+  /usr/lib/i386-linux-gnu/libpng16.so.16 \
+  /usr/lib/i386-linux-gnu/libpsl.so.5 \
+  /usr/lib/i386-linux-gnu/libresolv.so.2 \
+  /usr/lib/i386-linux-gnu/librtmp.so.1 \
+  /usr/lib/i386-linux-gnu/libsasl2.so.2 \
+  /usr/lib/i386-linux-gnu/libselinux.so.1 \
+  /usr/lib/i386-linux-gnu/libsharpyuv.so.0 \
+  /usr/lib/i386-linux-gnu/libsmime3.so \
+  /usr/lib/i386-linux-gnu/libsnappy.so.1 \
+  /usr/lib/i386-linux-gnu/libssh2.so.1 \
+  /usr/lib/i386-linux-gnu/libssl.so.3 \
+  /usr/lib/i386-linux-gnu/libsystemd.so.0 \
+  /usr/lib/i386-linux-gnu/libtasn1.so.6 \
+  /usr/lib/i386-linux-gnu/libtiff.so.6 \
+  /usr/lib/i386-linux-gnu/libunistring.so.5 \
+  /usr/lib/i386-linux-gnu/libwebp.so.7 \
+  /usr/lib/i386-linux-gnu/libwebpmux.so.3 \
+  /usr/lib/i386-linux-gnu/libxcb.so.1 \
+  /usr/lib/i386-linux-gnu/libxkbcommon.so.0 \
+  /usr/lib/i386-linux-gnu/libz.so.1 \
+  /usr/lib/i386-linux-gnu/libzstd.so.1 \
   /usr/lib/x86_64-linux-gnu/libGLX.so \
   /usr/lib/x86_64-linux-gnu/libOpenGL.so \
   /usr/lib/x86_64-linux-gnu/libQt6Core.so.6.8.2 \
@@ -973,8 +1155,11 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: src/Piper_autogen
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonValue \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
@@ -1000,6 +1185,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: src/Piper_autogen
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearraylist.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayview.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborcommon.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborvalue.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcompare.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcompare_impl.h \
@@ -1032,6 +1219,7 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: src/Piper_autogen
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevicebase.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterable.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterator.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonvalue.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qlatin1stringview.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qline.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h \
@@ -1056,9 +1244,11 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: src/Piper_autogen
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocessordetection.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qregularexpression.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopedpointer.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopeguard.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qsettings.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata_impl.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qsharedpointer.h \
@@ -1102,6 +1292,7 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: src/Piper_autogen
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtypes.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qutf8stringview.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/quuid.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h \
@@ -1125,7 +1316,6 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: src/Piper_autogen
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpaintdevice.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpalette.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixelformat.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixmap.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpolygon.h \
@@ -1152,6 +1342,10 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: src/Piper_autogen
   /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlexports.h \
   /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtQmlIntegration/qqmlintegration.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/QWebChannel \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qtwebchannelexports.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qwebchannel.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qwebchannelglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineDownloadRequest \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineProfile \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInterceptor \
@@ -1170,10 +1364,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: src/Piper_autogen
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qtwebenginewidgetsglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qwebengineview.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
@@ -1181,12 +1373,10 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: src/Piper_autogen
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlineedit.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
@@ -1525,10 +1715,12 @@ src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QDir \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonValue \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
-  /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QWeakPointer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h \
@@ -1551,6 +1743,8 @@ src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearraylist.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayview.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborcommon.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborvalue.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcompare.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcompare_impl.h \
@@ -1594,6 +1788,7 @@ src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevicebase.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterable.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterator.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonvalue.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qlatin1stringview.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qline.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h \
@@ -1619,9 +1814,11 @@ src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocessordetection.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qregularexpression.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopedpointer.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopeguard.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qsettings.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata_impl.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qsharedpointer.h \
@@ -1665,6 +1862,7 @@ src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtypes.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qutf8stringview.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/quuid.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h \
@@ -1692,7 +1890,6 @@ src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpaintdevice.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpalette.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixelformat.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixmap.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpolygon.h \
@@ -1719,6 +1916,10 @@ src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlexports.h \
   /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtQmlIntegration/qqmlintegration.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/QWebChannel \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qtwebchannelexports.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qwebchannel.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qwebchannelglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineDownloadRequest \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineProfile \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qtwebenginecore-config.h \
@@ -1735,10 +1936,8 @@ src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qwebengineview.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QApplication \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
@@ -1747,12 +1946,10 @@ src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qboxlayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlineedit.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
@@ -1821,7 +2018,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/c++/14/bits/fs_fwd.h \
   /usr/include/c++/14/bits/fs_ops.h \
   /usr/include/c++/14/bits/fs_path.h \
-  /usr/include/c++/14/bits/fstream.tcc \
   /usr/include/c++/14/bits/functexcept.h \
   /usr/include/c++/14/bits/functional_hash.h \
   /usr/include/c++/14/bits/hash_bytes.h \
@@ -1924,7 +2120,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/c++/14/ext/string_conversions.h \
   /usr/include/c++/14/ext/type_traits.h \
   /usr/include/c++/14/filesystem \
-  /usr/include/c++/14/fstream \
   /usr/include/c++/14/functional \
   /usr/include/c++/14/initializer_list \
   /usr/include/c++/14/iomanip \
@@ -1981,7 +2176,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/features.h \
   /usr/include/libintl.h \
   /usr/include/limits.h \
-  /usr/include/linux/close_range.h \
   /usr/include/linux/errno.h \
   /usr/include/linux/limits.h \
   /usr/include/linux/posix_types.h \
@@ -1999,24 +2193,19 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/string.h \
   /usr/include/strings.h \
   /usr/include/time.h \
-  /usr/include/unistd.h \
   /usr/include/wchar.h \
   /usr/include/wctype.h \
   /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
   /usr/include/x86_64-linux-gnu/bits/byteswap.h \
-  /usr/include/x86_64-linux-gnu/bits/confname.h \
   /usr/include/x86_64-linux-gnu/bits/cpu-set.h \
   /usr/include/x86_64-linux-gnu/bits/endian.h \
   /usr/include/x86_64-linux-gnu/bits/endianness.h \
-  /usr/include/x86_64-linux-gnu/bits/environments.h \
   /usr/include/x86_64-linux-gnu/bits/errno.h \
   /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
   /usr/include/x86_64-linux-gnu/bits/floatn.h \
   /usr/include/x86_64-linux-gnu/bits/flt-eval-method.h \
   /usr/include/x86_64-linux-gnu/bits/fp-fast.h \
   /usr/include/x86_64-linux-gnu/bits/fp-logb.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_core.h \
-  /usr/include/x86_64-linux-gnu/bits/getopt_posix.h \
   /usr/include/x86_64-linux-gnu/bits/iscanonical.h \
   /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
   /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h \
@@ -2030,7 +2219,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/bits/mathcalls.h \
   /usr/include/x86_64-linux-gnu/bits/posix1_lim.h \
   /usr/include/x86_64-linux-gnu/bits/posix2_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/posix_opt.h \
   /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
   /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
@@ -2077,7 +2265,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/bits/typesizes.h \
   /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
   /usr/include/x86_64-linux-gnu/bits/uio_lim.h \
-  /usr/include/x86_64-linux-gnu/bits/unistd_ext.h \
   /usr/include/x86_64-linux-gnu/bits/waitflags.h \
   /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
   /usr/include/x86_64-linux-gnu/bits/wchar.h \
@@ -2085,10 +2272,8 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/bits/wordsize.h \
   /usr/include/x86_64-linux-gnu/bits/xopen_lim.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/atomic_word.h \
-  /usr/include/x86_64-linux-gnu/c++/14/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/c++config.h \
-  /usr/include/x86_64-linux-gnu/c++/14/bits/c++io.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/c++locale.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/cpu_defines.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/ctype_base.h \
@@ -2106,8 +2291,11 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QDir \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QFileInfo \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonValue \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QStandardPaths \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
@@ -2136,6 +2324,8 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearraylist.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayview.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborcommon.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborvalue.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qchar.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcompare.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcompare_impl.h \
@@ -2179,6 +2369,7 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qiodevicebase.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterable.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterator.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonvalue.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qlatin1stringview.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qline.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h \
@@ -2204,9 +2395,11 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qprocessordetection.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qrect.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qrefcount.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qregularexpression.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopedpointer.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopeguard.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qsettings.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata_impl.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qsharedpointer.h \
@@ -2252,6 +2445,7 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtypes.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qurl.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qutf8stringview.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/quuid.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qvarlengtharray.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h \
@@ -2278,7 +2472,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpaintdevice.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpalette.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixelformat.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixmap.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpolygon.h \
@@ -2305,6 +2498,10 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlexports.h \
   /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtQmlIntegration/qqmlintegration.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/QWebChannel \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qtwebchannelexports.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qwebchannel.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qwebchannelglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineDownloadRequest \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineProfile \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineScript \
@@ -2330,10 +2527,8 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qwebengineview.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFileDialog \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
@@ -2343,12 +2538,10 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qfiledialog.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlayoutitem.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlineedit.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
@@ -2801,23 +2994,7 @@ src/CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.o: /home/kayogs/Piper/src/ui/urli
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer:
 
-/usr/include/x86_64-linux-gnu/qt6/QtCore/QStandardPaths:
-
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QFileInfo:
-
-/usr/include/x86_64-linux-gnu/c++/14/bits/basic_file.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_posix.h:
-
-/usr/include/x86_64-linux-gnu/bits/environments.h:
-
-/usr/include/x86_64-linux-gnu/bits/confname.h:
-
-/usr/include/linux/close_range.h:
-
-/usr/include/c++/14/fstream:
-
-/usr/include/c++/14/bits/fstream.tcc:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFileDialog:
 
@@ -2825,13 +3002,9 @@ src/CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.o: /home/kayogs/Piper/src/ui/urli
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qinputmethod.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtGui/QIcon:
-
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qfileinfo.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qelapsedtimer.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qdirlisting.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qdeadlinetimer.h:
 
@@ -2844,8 +3017,6 @@ src/CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.o: /home/kayogs/Piper/src/ui/urli
 /usr/include/x86_64-linux-gnu/c++/14/bits/time_members.h:
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/ctype_inline.h:
-
-/usr/include/wctype.h:
 
 /usr/include/c++/14/sstream:
 
@@ -2875,11 +3046,7 @@ src/CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.o: /home/kayogs/Piper/src/ui/urli
 
 /usr/include/c++/14/bits/istream.tcc:
 
-/usr/include/c++/14/bits/fs_ops.h:
-
 /usr/include/c++/14/bits/fs_fwd.h:
-
-/usr/include/c++/14/bits/basic_ios.tcc:
 
 /usr/lib/gcc/x86_64-linux-gnu/14/include/syslimits.h:
 
@@ -2891,8 +3058,6 @@ src/CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.o: /home/kayogs/Piper/src/ui/urli
 
 /usr/include/x86_64-linux-gnu/bits/mathcalls-helper-functions.h:
 
-/usr/include/x86_64-linux-gnu/c++/14/bits/c++io.h:
-
 /usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
@@ -2902,8 +3067,6 @@ src/CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.o: /home/kayogs/Piper/src/ui/urli
 /usr/include/c++/14/stdlib.h:
 
 /usr/include/c++/14/pstl/pstl_config.h:
-
-/usr/include/c++/14/pstl/glue_memory_defs.h:
 
 /usr/include/c++/14/pstl/glue_algorithm_defs.h:
 
@@ -2921,10 +3084,6 @@ src/CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o:
 
 /usr/lib/x86_64-linux-gnu/libQt6QmlWorkerScript.so.6.8.2:
 
-/usr/lib/x86_64-linux-gnu/libQt6QmlMeta.so.6.8.2:
-
-/usr/lib/x86_64-linux-gnu/libQt6Qml.so.6.8.2:
-
 /usr/lib/x86_64-linux-gnu/libQt6PrintSupport.so.6.8.2:
 
 /usr/lib/x86_64-linux-gnu/libQt6Positioning.so.6.8.2:
@@ -2932,6 +3091,100 @@ src/CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o:
 /usr/lib/x86_64-linux-gnu/libQt6OpenGL.so.6.8.2:
 
 /usr/lib/x86_64-linux-gnu/libOpenGL.so:
+
+/usr/lib/i386-linux-gnu/libwebpmux.so.3:
+
+/usr/lib/i386-linux-gnu/libwebp.so.7:
+
+/usr/lib/i386-linux-gnu/libunistring.so.5:
+
+/usr/lib/i386-linux-gnu/libtiff.so.6:
+
+/usr/lib/i386-linux-gnu/libtasn1.so.6:
+
+/usr/lib/i386-linux-gnu/libsystemd.so.0:
+
+/usr/lib/i386-linux-gnu/libssl.so.3:
+
+/usr/lib/i386-linux-gnu/libssh2.so.1:
+
+/usr/lib/i386-linux-gnu/libselinux.so.1:
+
+/usr/lib/i386-linux-gnu/libsasl2.so.2:
+
+/usr/lib/i386-linux-gnu/libpsl.so.5:
+
+/usr/include/x86_64-linux-gnu/qt6/QtGui/QIcon:
+
+/usr/lib/i386-linux-gnu/libpng16.so.16:
+
+/usr/lib/i386-linux-gnu/libplds4.so:
+
+/usr/lib/i386-linux-gnu/libopus.so.0:
+
+/usr/lib/i386-linux-gnu/libnssutil3.so:
+
+/usr/lib/i386-linux-gnu/libngtcp2_crypto_gnutls.so.8:
+
+/usr/lib/i386-linux-gnu/libnghttp3.so.9:
+
+/usr/lib/i386-linux-gnu/libnss3.so:
+
+/usr/lib/i386-linux-gnu/libnghttp2.so.14:
+
+/usr/lib/i386-linux-gnu/libldap.so.2:
+
+/usr/lib/i386-linux-gnu/libkeyutils.so.1:
+
+/usr/lib/x86_64-linux-gnu/libQt6Qml.so.6.8.2:
+
+/usr/lib/i386-linux-gnu/libk5crypto.so.3:
+
+/usr/lib/i386-linux-gnu/libjpeg.so.62:
+
+/usr/lib/i386-linux-gnu/libharfbuzz.so.0:
+
+/usr/lib/i386-linux-gnu/libgssapi_krb5.so.2:
+
+/usr/lib/i386-linux-gnu/libgomp.so.1:
+
+/usr/lib/i386-linux-gnu/libgobject-2.0.so.0:
+
+/usr/lib/i386-linux-gnu/libgio-2.0.so.0:
+
+/usr/lib/i386-linux-gnu/libffi.so.8:
+
+/usr/lib/i386-linux-gnu/libexpat.so.1:
+
+/usr/lib/i386-linux-gnu/libdrm.so.2:
+
+/usr/lib/i386-linux-gnu/libdeflate.so.0:
+
+/usr/lib/i386-linux-gnu/libcrypto.so.3:
+
+/usr/lib/i386-linux-gnu/libcom_err.so.2:
+
+/usr/lib/i386-linux-gnu/libxkbcommon.so.0:
+
+/usr/lib/i386-linux-gnu/libbrotlidec.so.1:
+
+/usr/include/c++/14/bits/fs_ops.h:
+
+/usr/lib/i386-linux-gnu/libbrotlicommon.so.1:
+
+/usr/lib/i386-linux-gnu/libblkid.so.1:
+
+/usr/lib/i386-linux-gnu/libasound.so.2:
+
+/usr/lib/i386-linux-gnu/libXext.so.6:
+
+/usr/lib/i386-linux-gnu/libXdamage.so.1:
+
+/usr/lib/i386-linux-gnu/libXau.so.6:
+
+/usr/lib/i386-linux-gnu/libX11.so.6:
+
+/usr/lib/i386-linux-gnu/libLerc.so.4:
 
 /usr/lib/gcc/x86_64-linux-gnu/14/libgcc_s.so:
 
@@ -2943,8 +3196,6 @@ src/CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o:
 
 /usr/lib/x86_64-linux-gnu/libm.so:
 
-/usr/lib/x86_64-linux-gnu/crtn.o:
-
 /lib/x86_64-linux-gnu/libzstd.so.1:
 
 /lib/x86_64-linux-gnu/libz.so.1:
@@ -2954,6 +3205,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o:
 /lib/x86_64-linux-gnu/libxkbfile.so.1:
 
 /lib/x86_64-linux-gnu/libwebpdemux.so.2:
+
+/usr/lib/i386-linux-gnu/liblcms2.so.2:
 
 /lib/x86_64-linux-gnu/libtasn1.so.6:
 
@@ -2965,8 +3218,6 @@ src/CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o:
 
 /lib/x86_64-linux-gnu/libssh2.so.1:
 
-/lib/x86_64-linux-gnu/libsnappy.so.1:
-
 /lib/x86_64-linux-gnu/libsharpyuv.so.0:
 
 /lib/x86_64-linux-gnu/librtmp.so.1:
@@ -2975,9 +3226,7 @@ src/CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o:
 
 /lib/x86_64-linux-gnu/libpng16.so.16:
 
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qtmochelpers.h:
-
-/lib/x86_64-linux-gnu/libplds4.so:
+/usr/lib/i386-linux-gnu/libjbig.so.0:
 
 /lib/x86_64-linux-gnu/libpcre2-8.so.0:
 
@@ -3007,15 +3256,21 @@ src/Piper_autogen/mocs_compilation.cpp:
 
 /lib/x86_64-linux-gnu/libldap.so.2:
 
+/usr/lib/i386-linux-gnu/liblber.so.2:
+
+/usr/lib/i386-linux-gnu/libXfixes.so.3:
+
 /lib/x86_64-linux-gnu/liblcms2.so.2:
 
 /lib/x86_64-linux-gnu/liblber.so.2:
 
 /lib/x86_64-linux-gnu/libkrb5.so.3:
 
-/lib/x86_64-linux-gnu/libkeyutils.so.1:
+/usr/lib/i386-linux-gnu/libresolv.so.2:
 
 /lib/x86_64-linux-gnu/libidn2.so.0:
+
+/usr/lib/i386-linux-gnu/libplc4.so:
 
 /lib/x86_64-linux-gnu/libicui18n.so.76:
 
@@ -3045,11 +3300,7 @@ src/Piper_autogen/mocs_compilation.cpp:
 
 /lib/x86_64-linux-gnu/libgio-2.0.so.0:
 
-/lib/x86_64-linux-gnu/libgbm.so.1:
-
 /lib/x86_64-linux-gnu/libfreetype.so.6:
-
-/lib/x86_64-linux-gnu/libffi.so.8:
 
 /lib/x86_64-linux-gnu/libexpat.so.1:
 
@@ -3059,6 +3310,8 @@ src/Piper_autogen/mocs_compilation.cpp:
 
 /lib/x86_64-linux-gnu/libduktape.so.207:
 
+/usr/lib/i386-linux-gnu/libfreetype.so.6:
+
 /lib/x86_64-linux-gnu/libdrm.so.2:
 
 /usr/include/x86_64-linux-gnu/sys/single_threaded.h:
@@ -3066,8 +3319,6 @@ src/Piper_autogen/mocs_compilation.cpp:
 /lib/x86_64-linux-gnu/libdouble-conversion.so.3:
 
 /lib/x86_64-linux-gnu/libcurl-gnutls.so.4:
-
-/lib/x86_64-linux-gnu/libcap.so.2:
 
 /lib/x86_64-linux-gnu/libc.so.6:
 
@@ -3089,15 +3340,155 @@ src/CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.o:
 
 /lib/x86_64-linux-gnu/libX11.so.6:
 
-/usr/include/x86_64-linux-gnu/qt6/QtCore/QCoreApplication:
-
-/lib/x86_64-linux-gnu/libQt6QuickWidgets.so.6:
-
 /lib/x86_64-linux-gnu/libQt6DBus.so.6:
+
+/lib/x86_64-linux-gnu/libLerc.so.4:
+
+/lib/x86_64-linux-gnu/libxcb.so.1:
+
+/lib/x86_64-linux-gnu/libGLdispatch.so.0:
+
+/lib/i386-linux-gnu/libzstd.so.1:
+
+/lib/i386-linux-gnu/libunistring.so.5:
+
+/usr/lib/x86_64-linux-gnu/libQt6QmlMeta.so.6.8.2:
+
+/lib/i386-linux-gnu/libtasn1.so.6:
+
+/usr/lib/x86_64-linux-gnu/crtn.o:
+
+/lib/i386-linux-gnu/libssl.so.3:
+
+/lib/i386-linux-gnu/libsmime3.so:
+
+/lib/i386-linux-gnu/libsharpyuv.so.0:
+
+/lib/i386-linux-gnu/libselinux.so.1:
+
+/lib/i386-linux-gnu/libresolv.so.2:
+
+/lib/i386-linux-gnu/libpsl.so.5:
+
+/lib/i386-linux-gnu/libwebp.so.7:
+
+/lib/i386-linux-gnu/libpcre2-8.so.0:
+
+/lib/i386-linux-gnu/libopus.so.0:
+
+/lib/i386-linux-gnu/libopenjp2.so.7:
+
+/lib/x86_64-linux-gnu/libcap.so.2:
+
+/lib/i386-linux-gnu/libnss3.so:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qdirlisting.h:
+
+/lib/i386-linux-gnu/libnettle.so.8:
+
+/lib/i386-linux-gnu/libmount.so.1:
+
+/lib/i386-linux-gnu/libldap.so.2:
+
+/lib/i386-linux-gnu/liblcms2.so.2:
+
+/lib/i386-linux-gnu/libkrb5support.so.0:
+
+/lib/i386-linux-gnu/libkrb5.so.3:
+
+/lib/i386-linux-gnu/libkeyutils.so.1:
+
+/usr/include/c++/14/pstl/glue_memory_defs.h:
+
+/lib/i386-linux-gnu/libk5crypto.so.3:
+
+/lib/i386-linux-gnu/libjpeg.so.62:
+
+/lib/i386-linux-gnu/libjbig.so.0:
+
+/lib/i386-linux-gnu/libidn2.so.0:
+
+/lib/i386-linux-gnu/libhogweed.so.6:
+
+/lib/i386-linux-gnu/libharfbuzz.so.0:
+
+/usr/lib/i386-linux-gnu/libkrb5support.so.0:
+
+/lib/i386-linux-gnu/libgraphite2.so.3:
+
+/lib/i386-linux-gnu/libgomp.so.1:
+
+/lib/x86_64-linux-gnu/libffi.so.8:
+
+/lib/i386-linux-gnu/libgobject-2.0.so.0:
+
+/lib/i386-linux-gnu/libgnutls.so.30:
+
+/lib/i386-linux-gnu/libglib-2.0.so.0:
+
+/lib/i386-linux-gnu/libgio-2.0.so.0:
+
+/lib/i386-linux-gnu/libfreetype.so.6:
+
+/lib/i386-linux-gnu/libfontconfig.so.1:
+
+/lib/i386-linux-gnu/libdeflate.so.0:
+
+/lib/x86_64-linux-gnu/libkeyutils.so.1:
+
+/lib/i386-linux-gnu/libcurl-gnutls.so.4:
+
+/lib/i386-linux-gnu/libssh2.so.1:
+
+/lib/i386-linux-gnu/libcrypto.so.3:
+
+/lib/i386-linux-gnu/libcap.so.2:
+
+/lib/i386-linux-gnu/libbz2.so.1.0:
+
+/lib/i386-linux-gnu/libbrotlicommon.so.1:
+
+/lib/i386-linux-gnu/libblkid.so.1:
+
+/lib/x86_64-linux-gnu/libsnappy.so.1:
+
+/lib/i386-linux-gnu/libasound.so.2:
+
+/lib/i386-linux-gnu/libXrender.so.1:
+
+/lib/i386-linux-gnu/libXrandr.so.2:
+
+/lib/x86_64-linux-gnu/libgbm.so.1:
+
+/lib/i386-linux-gnu/libXfixes.so.3:
+
+/usr/lib/i386-linux-gnu/libsnappy.so.1:
+
+/lib/i386-linux-gnu/libXext.so.6:
+
+/lib/i386-linux-gnu/libXdamage.so.1:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qtmochelpers.h:
+
+/lib/x86_64-linux-gnu/libplds4.so:
+
+/lib/i386-linux-gnu/libXcomposite.so.1:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QStandardPaths:
+
+/lib/i386-linux-gnu/libXau.so.6:
+
+/lib/i386-linux-gnu/libLerc.so.4:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicToolHelpers.cmake:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicTestHelpers.cmake:
 
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicExternalProjectHelpers.cmake:
+
+/lib/i386-linux-gnu/libxcb.so.1:
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h:
 
@@ -3133,8 +3524,6 @@ src/Piper_autogen/moc_predefs.h:
 
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
-
 /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineframe.h:
 
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
@@ -3143,13 +3532,19 @@ src/Piper_autogen/moc_predefs.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
+/usr/lib/i386-linux-gnu/libsmime3.so:
+
 /usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringlist.h:
 
 /usr/include/time.h:
 
+/lib/i386-linux-gnu/liblzma.so.5:
+
 /usr/include/c++/14/initializer_list:
+
+/usr/lib/i386-linux-gnu/libpcre2-8.so.0:
 
 /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h:
 
@@ -3163,6 +3558,8 @@ src/Piper_autogen/moc_predefs.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qpair.h:
 
+/lib/i386-linux-gnu/libnspr4.so:
+
 /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qtwebenginecoreglobal.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
@@ -3175,13 +3572,21 @@ src/Piper_autogen/moc_predefs.h:
 
 /lib/x86_64-linux-gnu/libjbig.so.0:
 
+/lib/i386-linux-gnu/libgssapi_krb5.so.2:
+
 /usr/lib/linux/uapi/x86/asm/errno.h:
+
+/usr/include/wctype.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtypeinfo.h:
 
 /usr/include/linux/types.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtcore-config.h:
+
+/lib/i386-linux-gnu/libpng16.so.16:
 
 /usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h:
 
@@ -3221,6 +3626,8 @@ src/Piper_autogen/moc_predefs.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/14/include/stdarg.h:
 
+/usr/lib/i386-linux-gnu/libnettle.so.8:
+
 /usr/include/x86_64-linux-gnu/bits/waitstatus.h:
 
 /lib64/ld-linux-x86-64.so.2:
@@ -3239,6 +3646,10 @@ src/Piper_autogen/moc_predefs.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qfunctionpointer.h:
 
+/usr/include/c++/14/bits/basic_ios.tcc:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qjsonvalue.h:
+
 /usr/include/c++/14/tr1/hypergeometric.tcc:
 
 /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslcertificate.h:
@@ -3248,6 +3659,8 @@ src/Piper_autogen/moc_predefs.h:
 /usr/include/c++/14/tr1/exp_integral.tcc:
 
 /usr/include/c++/14/tr1/ell_integral.tcc:
+
+/lib/i386-linux-gnu/libffi.so.8:
 
 /usr/include/c++/14/bits/move.h:
 
@@ -3261,9 +3674,13 @@ src/Piper_autogen/moc_predefs.h:
 
 /usr/include/c++/14/memory:
 
+/lib/i386-linux-gnu/libdbus-1.so.3:
+
 /usr/include/c++/14/list:
 
 /usr/include/c++/14/bits/char_traits.h:
+
+/usr/lib/i386-linux-gnu/libbz2.so.1.0:
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/gthr.h:
 
@@ -3278,6 +3695,8 @@ src/Piper_autogen/moc_predefs.h:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qalgorithms.h:
 
 /usr/include/c++/14/ext/type_traits.h:
+
+/lib/i386-linux-gnu/libgmodule-2.0.so.0:
 
 /usr/include/c++/14/ext/concurrence.h:
 
@@ -3301,8 +3720,6 @@ src/Piper_autogen/moc_predefs.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/QWebEngineView:
 
-/usr/include/x86_64-linux-gnu/bits/posix_opt.h:
-
 /usr/include/c++/14/bits/nested_exception.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication_platform.h:
@@ -3312,6 +3729,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qcryptographichash.h:
 
 /usr/include/c++/14/bits/memoryfwd.h:
+
+/lib/i386-linux-gnu/libsnappy.so.1:
 
 /usr/include/c++/14/ext/alloc_traits.h:
 
@@ -3331,11 +3750,17 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
+/usr/lib/i386-linux-gnu/libXcomposite.so.1:
+
 /usr/include/endian.h:
 
 /usr/include/stdint.h:
 
 /usr/include/c++/14/bits/localefwd.h:
+
+/usr/lib/i386-linux-gnu/libz.so.1:
+
+/usr/lib/i386-linux-gnu/libopenjp2.so.7:
 
 /usr/include/pthread.h:
 
@@ -3349,9 +3774,13 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/14/tr1/legendre_function.tcc:
 
+/lib/i386-linux-gnu/libX11.so.6:
+
 /usr/include/c++/14/bits/exception_defines.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qsettings.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qfontmetrics.h:
 
@@ -3361,15 +3790,17 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/14/bits/functional_hash.h:
 
-/usr/include/x86_64-linux-gnu/bits/unistd_ext.h:
-
 /usr/include/c++/14/limits:
 
 /usr/include/c++/14/bits/fs_path.h:
 
+/lib/i386-linux-gnu/libsasl2.so.2:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qfunctionaltools_impl.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qaction.h:
+
+/lib/i386-linux-gnu/libz.so.1:
 
 /usr/include/c++/14/bits/enable_special_members.h:
 
@@ -3379,6 +3810,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/14/chrono:
 
+/usr/lib/i386-linux-gnu/libgmp.so.10:
+
 /usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
 /lib/x86_64-linux-gnu/libunistring.so.5:
@@ -3387,6 +3820,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/14/bits/cxxabi_init_exception.h:
 
+/usr/lib/i386-linux-gnu/libXrandr.so.2:
+
 /usr/include/c++/14/bits/cpp_type_traits.h:
 
 /usr/include/c++/14/tr1/riemann_zeta.tcc:
@@ -3394,8 +3829,6 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /lib/x86_64-linux-gnu/libp11-kit.so.0:
 
 /usr/include/c++/14/bits/basic_string.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h:
 
 /usr/include/c++/14/bits/basic_string.tcc:
 
@@ -3439,6 +3872,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/14/bits/stl_tree.h:
 
+/lib/i386-linux-gnu/libGLdispatch.so.0:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qiterator.h:
 
 /usr/include/c++/14/tr1/gamma.tcc:
@@ -3452,6 +3887,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /usr/include/c++/14/bits/allocator.h:
 
 /usr/lib/x86_64-linux-gnu/libproxy.so.1:
+
+/lib/i386-linux-gnu/libp11-kit.so.0:
 
 /usr/include/c++/14/bits/exception_ptr.h:
 
@@ -3487,7 +3924,13 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/bin/cmake:
 
+/lib/i386-linux-gnu/libexpat.so.1:
+
 /usr/include/c++/14/bits/stl_pair.h:
+
+/usr/lib/i386-linux-gnu/libzstd.so.1:
+
+/usr/lib/i386-linux-gnu/libp11-kit.so.0:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicSbomHelpers.cmake:
 
@@ -3523,6 +3966,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/14/bits/shared_ptr.h:
 
+/usr/lib/i386-linux-gnu/libXdmcp.so.6:
+
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qtgui-config.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/FILE.h:
@@ -3536,6 +3981,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicPluginHelpers.cmake:
 
 /usr/include/asm-generic/int-ll64.h:
+
+/lib/i386-linux-gnu/libxkbcommon.so.0:
 
 /usr/include/alloca.h:
 
@@ -3603,15 +4050,17 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/14/bits/hashtable.h:
 
-/lib/x86_64-linux-gnu/libLerc.so.4:
-
 /usr/include/c++/14/array:
+
+/lib/i386-linux-gnu/libdrm.so.2:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qassert.h:
 
 /usr/include/c++/14/backward/binders.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qatomic.h:
+
+/lib/i386-linux-gnu/libgmp.so.10:
 
 /usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
 
@@ -3651,6 +4100,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/14/bits/stl_numeric.h:
 
+/lib/i386-linux-gnu/libXdmcp.so.6:
+
 /usr/include/c++/14/bits/predefined_ops.h:
 
 /usr/include/c++/14/bits/range_access.h:
@@ -3664,6 +4115,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /lib/x86_64-linux-gnu/libdeflate.so.0:
 
 /usr/include/c++/14/bits/refwrap.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QObject:
 
 /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
 
@@ -3683,6 +4136,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qguiapplication_platform.h:
 
+/lib/i386-linux-gnu/libatomic.so.1:
+
 /usr/include/c++/14/bits/std_abs.h:
 
 /usr/include/c++/14/bits/stl_algo.h:
@@ -3695,6 +4150,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/14/iterator:
 
+/usr/lib/i386-linux-gnu/libcap.so.2:
+
 /usr/include/c++/14/bits/unique_ptr.h:
 
 /lib/x86_64-linux-gnu/libicuuc.so.76:
@@ -3703,13 +4160,13 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtconfigmacros.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h:
-
 /lib/x86_64-linux-gnu/libm.so.6:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixmap.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qdialog.h:
+
+/usr/lib/i386-linux-gnu/libmount.so.1:
 
 /usr/include/c++/14/ext/numeric_traits.h:
 
@@ -3721,6 +4178,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /lib/x86_64-linux-gnu/libpcre2-16.so.0:
 
+/lib/i386-linux-gnu/librtmp.so.1:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringview.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearraylist.h:
@@ -3730,8 +4189,6 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /usr/include/assert.h:
 
 /usr/include/x86_64-linux-gnu/bits/wchar.h:
-
-/usr/include/c++/14/bits/stl_iterator_base_types.h:
 
 /usr/include/c++/14/new:
 
@@ -3743,6 +4200,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
 
+/usr/lib/i386-linux-gnu/libxcb.so.1:
+
 /lib/x86_64-linux-gnu/libfontconfig.so.1:
 
 /usr/lib/linux/uapi/x86/asm/posix_types_64.h:
@@ -3752,6 +4211,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /usr/include/c++/14/bits/stl_raw_storage_iter.h:
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/ctype_base.h:
+
+/usr/lib/i386-linux-gnu/libgraphite2.so.3:
 
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
@@ -3783,6 +4244,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata_impl.h:
 
+/lib/i386-linux-gnu/libtiff.so.6:
+
 /usr/include/c++/14/bits/uses_allocator_args.h:
 
 /usr/include/c++/14/bits/vector.tcc:
@@ -3790,6 +4253,10 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/14/include/stddef.h:
+
+/lib/x86_64-linux-gnu/libXdamage.so.1:
+
+/usr/include/c++/14/bits/version.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgets-config.h:
 
@@ -3799,17 +4266,29 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/14/cassert:
 
+/usr/lib/i386-linux-gnu/libfontconfig.so.1:
+
 /usr/include/c++/14/map:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicFinalizerHelpers.cmake:
 
 /home/kayogs/Piper/src/ui/urlinterceptor.h:
 
+/usr/include/c++/14/bits/stl_iterator_base_types.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qcborvalue.h:
+
+/usr/lib/i386-linux-gnu/librtmp.so.1:
+
+/usr/lib/i386-linux-gnu/libngtcp2.so.16:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qsysinfo.h:
 
 /usr/include/c++/14/debug/assertions.h:
 
 /usr/include/c++/14/cerrno:
+
+/lib/i386-linux-gnu/libnghttp3.so.9:
 
 /usr/include/c++/14/string:
 
@@ -3839,6 +4318,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/14/cwchar:
 
+/lib/i386-linux-gnu/libplc4.so:
+
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtFeature.cmake:
 
 /usr/include/c++/14/bits/charconv.h:
@@ -3865,6 +4346,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/x86_64-linux-gnu/sys/cdefs.h:
 
+/usr/lib/i386-linux-gnu/libgmodule-2.0.so.0:
+
 /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringmatcher.h:
@@ -3880,6 +4363,18 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QList:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QCoreApplication:
+
+/lib/x86_64-linux-gnu/libQt6QuickWidgets.so.6:
+
+/lib/i386-linux-gnu/libngtcp2.so.16:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonValue:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qstringbuilder.h:
+
+/usr/lib/i386-linux-gnu/libcurl-gnutls.so.4:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF:
 
@@ -3897,6 +4392,12 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/q20memory.h:
 
+/usr/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/q23utility.h:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydata.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qtwebenginecore-config.h:
@@ -3908,6 +4409,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydataops.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qarraydatapointer.h:
+
+/usr/lib/i386-linux-gnu/libsharpyuv.so.0:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qanystringview.h:
 
@@ -3936,6 +4439,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayalgorithms.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qcalendar.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qcborcommon.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qcompare.h:
 
@@ -3969,9 +4474,13 @@ src/CMakeFiles/Piper.dir/main.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qfloat16.h:
 
+/lib/i386-linux-gnu/libngtcp2_crypto_gnutls.so.8:
+
 /usr/include/c++/14/unordered_map:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qnamespace.h:
+
+/lib/i386-linux-gnu/libnssutil3.so:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qglobal.h:
 
@@ -4005,6 +4514,8 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qmap.h:
 
+/lib/i386-linux-gnu/libwebpmux.so.3:
+
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qmalloc.h:
@@ -4031,7 +4542,15 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h:
 
+/usr/lib/i386-linux-gnu/libgnutls.so.30:
+
+/lib/x86_64-linux-gnu/libEGL.so.1:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qnumeric.h:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject_impl.h:
+
+/usr/lib/i386-linux-gnu/libkrb5.so.3:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qoverload.h:
 
@@ -4051,6 +4570,10 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qrgb.h:
 
+/usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qwebchannelglobal.h:
+
+/usr/lib/i386-linux-gnu/libatomic.so.1:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qscopedpointer.h:
 
 /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
@@ -4060,6 +4583,8 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h:
 
 /lib/x86_64-linux-gnu/libasound.so.2:
+
+/lib/i386-linux-gnu/libgbm.so.1:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qshareddata.h:
 
@@ -4073,15 +4598,17 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringalgorithms.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qstringbuilder.h:
-
-/usr/include/unistd.h:
-
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringconverter_base.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringliteral.h:
 
+/usr/lib/i386-linux-gnu/libnspr4.so:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringtokenizer.h:
+
+/lib/i386-linux-gnu/libplds4.so:
+
+/lib/i386-linux-gnu/libcom_err.so.2:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtaggedpointer.h:
 
@@ -4097,9 +4624,9 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtdeprecationmarkers.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel:
-
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtmetamacros.h:
+
+/usr/lib/i386-linux-gnu/liblzma.so.5:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtresource.h:
 
@@ -4111,13 +4638,11 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtversionchecks.h:
 
+/usr/lib/i386-linux-gnu/libidn2.so.0:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qutf8stringview.h:
 
-/lib/x86_64-linux-gnu/libXdamage.so.1:
-
-/usr/include/c++/14/bits/version.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu:
+/usr/include/x86_64-linux-gnu/qt6/QtCore/quuid.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qxptype_traits.h:
 
@@ -4205,7 +4730,19 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtQml/qtqmlglobal.h:
 
+/lib/i386-linux-gnu/liblber.so.2:
+
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicGitHelpers.cmake:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWebChannel/QWebChannel:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qregularexpression.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qtwebchannelexports.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWebChannel/qwebchannel.h:
+
+/usr/lib/i386-linux-gnu/libdbus-1.so.3:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineProfile:
 
@@ -4225,6 +4762,8 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineprofile.h:
 
+/usr/lib/i386-linux-gnu/libhogweed.so.6:
+
 /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginequotarequest.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineurlrequestinfo.h:
@@ -4239,15 +4778,9 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget:
 
+/usr/lib/i386-linux-gnu/libXrender.so.1:
+
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qframe.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlabel.h:
-
-/lib/x86_64-linux-gnu/libselinux.so.1:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/QString:
-
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineScript:
 
@@ -4273,6 +4806,8 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h:
 
+/lib/i386-linux-gnu/libsystemd.so.0:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qhashfunctions.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h:
@@ -4289,9 +4824,17 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsexports.h:
 
+/lib/x86_64-linux-gnu/libselinux.so.1:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QString:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qwidget.h:
+
 src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
+
+/usr/lib/i386-linux-gnu/libglib-2.0.so.0:
 
 /lib/x86_64-linux-gnu/libXfixes.so.3:
 
@@ -4304,6 +4847,8 @@ src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp:
 /usr/lib/linux/uapi/x86/asm/bitsperlong.h:
 
 /usr/lib/linux/uapi/x86/asm/posix_types.h:
+
+/usr/lib/i386-linux-gnu/libGLdispatch.so.0:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigExtras.cmake:
 
@@ -4318,6 +4863,8 @@ src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp:
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Targets.cmake:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtFeatureCommon.cmake:
+
+/lib/i386-linux-gnu/libbrotlidec.so.1:
 
 /usr/include/c++/14/system_error:
 
@@ -4345,6 +4892,8 @@ src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qeventloop.h:
 
+/lib/i386-linux-gnu/libnghttp2.so.14:
+
 /usr/share/cmake-3.31/Modules/CheckCXXCompilerFlag.cmake:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicSbomGenerationHelpers.cmake:
@@ -4353,22 +4902,6 @@ src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicSbomOpsHelpers.cmake:
 
+/usr/lib/i386-linux-gnu/libgbm.so.1:
+
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicSbomSystemDepHelpers.cmake:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicTestHelpers.cmake:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicToolHelpers.cmake:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/q23utility.h:
-
-/usr/share/cmake-3.31/Modules/CMakeFindDependencyMacro.cmake:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qnumeric.h:
-
-/lib/x86_64-linux-gnu/libEGL.so.1:
-
-/lib/x86_64-linux-gnu/libxcb.so.1:
-
-/lib/x86_64-linux-gnu/libGLdispatch.so.0:

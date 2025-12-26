@@ -10,18 +10,31 @@
 #include <QPushButton>
 #include <QLineEdit>
 #include <QTabWidget>
-#include <QLabel>
-#include <QStringList>
-#include <QList>
-#include <QMenu>
+#include <QSettings>
+#include <QWebChannel> // Necessário para comunicação JS -> C++
 
 class BrowserWindow : public QMainWindow
 {
     Q_OBJECT
+    // Propriedades expostas para o JavaScript
+    Q_PROPERTY(QString currentTheme READ getTheme WRITE applyTheme NOTIFY themeChanged)
 
 public:
     explicit BrowserWindow(QWebEngineProfile *profile = nullptr, QWidget *parent = nullptr);
     ~BrowserWindow();
+
+    QString getTheme() const { return currentTheme; }
+
+public slots:
+    // Funções chamadas pelo botão de engrenagem no HTML
+    void changeBackgroundImage();
+    void setThemeLight();
+    void setThemeDark();
+    void setThemeDefault();
+    void applyTheme(const QString &themeName);
+
+signals:
+    void themeChanged();
 
 private slots:
     void goHome();
@@ -30,6 +43,8 @@ private slots:
     void showDownloads(); 
     void handleDownload(QWebEngineDownloadRequest *download);
     void createNewTab(const QUrl &url = QUrl());
+    void loadSettings();
+    void saveSettings();
 
 private:
     QWidget *centralWidget;
@@ -47,9 +62,12 @@ private:
     QPushButton *downloadButton;
 
     QStringList historyList;
-    // Lista para gerenciar os arquivos na memória e evitar erros de ponteiro
     QList<QWebEngineDownloadRequest*> m_downloads; 
     bool m_isPrivate;
+
+    QString currentTheme;
+    QString currentBgPath;
+    QWebChannel *m_channel; // Canal de comunicação
 };
 
 #endif // BROWSERWINDOW_H
