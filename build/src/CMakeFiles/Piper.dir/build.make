@@ -72,7 +72,7 @@ include src/CMakeFiles/Piper.dir/flags.make
 src/Piper_autogen/timestamp: /usr/lib/qt6/libexec/moc
 src/Piper_autogen/timestamp: src/CMakeFiles/Piper.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/kayogs/Piper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC for target Piper"
-	cd /home/kayogs/Piper/build/src && /usr/bin/cmake -E cmake_autogen /home/kayogs/Piper/build/src/CMakeFiles/Piper_autogen.dir/AutogenInfo.json ""
+	cd /home/kayogs/Piper/build/src && /usr/bin/cmake -E cmake_autogen /home/kayogs/Piper/build/src/CMakeFiles/Piper_autogen.dir/AutogenInfo.json Debug
 	cd /home/kayogs/Piper/build/src && /usr/bin/cmake -E touch /home/kayogs/Piper/build/src/Piper_autogen/timestamp
 
 src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp: /home/kayogs/Piper/res/resources.qrc
@@ -85,7 +85,7 @@ src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp: /home/kayogs/Piper/res/icons/hom
 src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp: /usr/lib/qt6/libexec/rcc
 src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp: /usr/lib/qt6/libexec/rcc
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/home/kayogs/Piper/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Automatic RCC for ../res/resources.qrc"
-	cd /home/kayogs/Piper/build/src && /usr/bin/cmake -E cmake_autorcc /home/kayogs/Piper/build/src/CMakeFiles/Piper_autogen.dir/AutoRcc_resources_DQCCZ5YITF_Info.json 
+	cd /home/kayogs/Piper/build/src && /usr/bin/cmake -E cmake_autorcc /home/kayogs/Piper/build/src/CMakeFiles/Piper_autogen.dir/AutoRcc_resources_DQCCZ5YITF_Info.json Debug
 
 src/CMakeFiles/Piper.dir/codegen:
 .PHONY : src/CMakeFiles/Piper.dir/codegen

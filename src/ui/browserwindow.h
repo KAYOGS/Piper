@@ -11,27 +11,45 @@
 #include <QLineEdit>
 #include <QTabWidget>
 #include <QSettings>
-#include <QWebChannel> // Necessário para comunicação JS -> C++
+#include <QWebChannel>
+#include <QStringList>
+#include <QListWidget>
+#include <QDialog>
+#include <QLabel>
+
+// Dashboard Minimalista
+class HomeView : public QWidget {
+    Q_OBJECT
+public:
+    explicit HomeView(QWidget *parent = nullptr);
+signals:
+    void changeThemeRequested(const QString &theme);
+    void changeBgRequested();
+protected:
+    void paintEvent(QPaintEvent *event) override;
+    void resizeEvent(QResizeEvent *event) override;
+private:
+    QPushButton *settingsBtn;
+};
 
 class BrowserWindow : public QMainWindow
 {
     Q_OBJECT
-    // Propriedades expostas para o JavaScript
     Q_PROPERTY(QString currentTheme READ getTheme WRITE applyTheme NOTIFY themeChanged)
 
 public:
     explicit BrowserWindow(QWebEngineProfile *profile = nullptr, QWidget *parent = nullptr);
     ~BrowserWindow();
-
     QString getTheme() const { return currentTheme; }
 
 public slots:
-    // Funções chamadas pelo botão de engrenagem no HTML
     void changeBackgroundImage();
     void setThemeLight();
     void setThemeDark();
     void setThemeDefault();
     void applyTheme(const QString &themeName);
+    void addFavorite();
+    void showFavoritesMenu();
 
 signals:
     void themeChanged();
@@ -45,6 +63,11 @@ private slots:
     void createNewTab(const QUrl &url = QUrl());
     void loadSettings();
     void saveSettings();
+    void syncTabButtonPos(); 
+    void handleUrlEntered();
+
+protected:
+    void resizeEvent(QResizeEvent *event) override;
 
 private:
     QWidget *centralWidget;
@@ -53,21 +76,18 @@ private:
     QTabWidget *tabWidget;
     QLineEdit *urlEdit;
 
-    QPushButton *backButton;
-    QPushButton *refreshButton;
-    QPushButton *addTabButton;
-    QPushButton *homeButton;
-    QPushButton *historyButton;
-    QPushButton *privateModeButton;
-    QPushButton *downloadButton;
+    QPushButton *backButton, *refreshButton, *addTabButton;
+    QPushButton *homeButton, *historyButton, *privateModeButton, *downloadButton;
+    QPushButton *favAddButton, *favListButton;
 
     QStringList historyList;
+    QStringList favoritesList; 
     QList<QWebEngineDownloadRequest*> m_downloads; 
     bool m_isPrivate;
+    QString currentTheme, currentBgPath;
+    QWebChannel *m_channel;
 
-    QString currentTheme;
-    QString currentBgPath;
-    QWebChannel *m_channel; // Canal de comunicação
+    void updateIconsStyle(const QString &color, const QString &addButtonColor = "");
 };
 
-#endif // BROWSERWINDOW_H
+#endif
