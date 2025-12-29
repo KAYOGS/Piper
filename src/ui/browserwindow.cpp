@@ -83,18 +83,18 @@ BrowserWindow::BrowserWindow(QWebEngineProfile *profile, QWidget *parent)
 
     // Barra de Ferramentas Superior
     topBar = new QWidget();
-    topBar->setFixedHeight(52);
+    topBar->setFixedHeight(35);
     QHBoxLayout *topLayout = new QHBoxLayout(topBar);
     topLayout->setContentsMargins(10, 0, 10, 0);
 
     auto styleBtn = [](QPushButton* b, QString t, QString tip) {
-        b->setText(t); b->setToolTip(tip); b->setFixedSize(38, 38); b->setCursor(Qt::PointingHandCursor);
+        b->setText(t); b->setToolTip(tip); b->setFixedSize(30, 30); b->setCursor(Qt::PointingHandCursor);
     };
 
     backButton = new QPushButton(); styleBtn(backButton, "←", "Voltar");
     refreshButton = new QPushButton(); styleBtn(refreshButton, "↻", "Atualizar");
     urlEdit = new QLineEdit(); 
-    urlEdit->setFixedHeight(34);
+    urlEdit->setFixedHeight(25);
     urlEdit->setPlaceholderText("Pesquise no Google ou digite um site...");
 
     favAddButton = new QPushButton(); styleBtn(favAddButton, "⭐", "Favoritar");
@@ -121,7 +121,7 @@ BrowserWindow::BrowserWindow(QWebEngineProfile *profile, QWidget *parent)
 
     // Botão "+" (Posicionamento Dinâmico)
     addTabButton = new QPushButton("+", tabWidget);
-    addTabButton->setFixedSize(32, 28);
+    addTabButton->setFixedSize(20, 20);
     addTabButton->setCursor(Qt::PointingHandCursor);
     addTabButton->raise();
 
@@ -218,7 +218,7 @@ void BrowserWindow::createNewTab(const QUrl &url) {
 
         connect(view, &QWebEngineView::titleChanged, [this, view](const QString &t){
             int i = tabWidget->indexOf(view);
-            if(i != -1) tabWidget->setTabText(i, t.isEmpty() ? "Nova Aba" : t.left(15));
+            if(i != -1) tabWidget->setTabText(i, t.isEmpty() ? "Nova Aba" : t);
         });
         
         connect(view, &QWebEngineView::urlChanged, [this, view](const QUrl &u){
@@ -271,21 +271,21 @@ void BrowserWindow::applyTheme(const QString &theme) {
         this->setStyleSheet("QMainWindow { background: #121212; }");
         topBar->setStyleSheet("background: #1f1f1f; border-bottom: 1px solid #333;");
         urlEdit->setStyleSheet("background: #2c2c2c; color: white; border: 1px solid #444; border-radius: 8px; padding: 0 12px;");
-        tabWidget->setStyleSheet("QTabWidget::pane { border: none; } QTabBar::tab { background: #1f1f1f; color: #888; padding: 12px 20px; border: none; } "
+        tabWidget->setStyleSheet("QTabWidget::pane { border: none; } QTabBar::tab { background: #1f1f1f; width: 150px; color: #888; padding: 5px 15px; border: none; } "
                                  "QTabBar::tab:selected { background: #121212; color: white; border-bottom: 2px solid #4169E1; }");
         updateIconsStyle("white", "#444");
     } else if (theme == "light") {
         this->setStyleSheet("QMainWindow { background: white; }");
         topBar->setStyleSheet("background: #f8f9fa; border-bottom: 1px solid #ddd;");
         urlEdit->setStyleSheet("background: white; color: black; border: 1px solid #ccc; border-radius: 8px; padding: 0 12px;");
-        tabWidget->setStyleSheet("QTabWidget::pane { border: none; } QTabBar::tab { background: #e9ecef; color: #555; padding: 12px 20px; border: none; } "
+        tabWidget->setStyleSheet("QTabWidget::pane { border: none; } QTabBar::tab { background: #e9ecef; width: 150px; color: #555; padding: 5px 15px; border: none; } "
                                  "QTabBar::tab:selected { background: white; color: black; border-bottom: 2px solid #4169E1; }");
         updateIconsStyle("black", "#888"); 
     } else { // DEFAULT (Piper Azul)
         this->setStyleSheet("QMainWindow { background: #f0f2f5; }");
         topBar->setStyleSheet("background: #4169E1; border: none;");
         urlEdit->setStyleSheet("background: white; color: black; border: none; border-radius: 8px; padding: 0 12px;");
-        tabWidget->setStyleSheet("QTabWidget::pane { border: none; } QTabBar::tab { background: #3456b8; color: white; padding: 12px 20px; border: none; } "
+        tabWidget->setStyleSheet("QTabWidget::pane { border: none; } QTabBar::tab { background: #3456b8; width: 150px; color: white; padding: 5px 15px; border: none; } "
                                  "QTabBar::tab:selected { background: #f0f2f5; color: #4169E1; font-weight: bold; }");
         updateIconsStyle("white", "#27408B"); 
     }
