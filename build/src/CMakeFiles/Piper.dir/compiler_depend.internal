@@ -272,15 +272,18 @@
  /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  /usr/include/x86_64-linux-gnu/gnu/stubs.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonValue
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QList
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QMap
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QWeakPointer
  /usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h
@@ -298,6 +301,7 @@
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qatomic.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qatomic_cxx11.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasicatomic.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbindingstorage.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearray.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayalgorithms.h
@@ -399,6 +403,7 @@
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtdeprecationmarkers.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtenvironmentvariables.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtextstream.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtmetamacros.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtnoop.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtpreprocessorsupport.h
@@ -1179,15 +1184,18 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  /usr/include/x86_64-linux-gnu/gnu/stubs.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonValue
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QList
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QMap
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QWeakPointer
  /usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h
@@ -1205,6 +1213,7 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qatomic.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qatomic_cxx11.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasicatomic.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbindingstorage.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearray.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayalgorithms.h
@@ -1306,6 +1315,7 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtdeprecationmarkers.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtenvironmentvariables.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtextstream.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtmetamacros.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtmochelpers.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtnoop.h
@@ -1759,16 +1769,19 @@ src/CMakeFiles/Piper.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/c++/14/bits/time_members.h
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  /usr/include/x86_64-linux-gnu/gnu/stubs.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDir
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonValue
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QList
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QMap
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QString
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QWeakPointer
  /usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h
@@ -1786,6 +1799,7 @@ src/CMakeFiles/Piper.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qatomic.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qatomic_cxx11.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasicatomic.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbindingstorage.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearray.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayalgorithms.h
@@ -1899,6 +1913,7 @@ src/CMakeFiles/Piper.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtdeprecationmarkers.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtenvironmentvariables.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtextstream.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimezone.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtmetamacros.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtnoop.h
@@ -2356,11 +2371,13 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/x86_64-linux-gnu/c++/14/bits/time_members.h
  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h
  /usr/include/x86_64-linux-gnu/gnu/stubs.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDir
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QFileInfo
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonValue
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QList
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/QMap
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings

@@ -193,6 +193,10 @@ static constexpr auto qt_meta_stringdata_ZN13BrowserWindowE = QtMocHelpers::stri
     "saveSettings",
     "syncTabButtonPos",
     "handleUrlEntered",
+    "showAbout",
+    "onTabChanged",
+    "index",
+    "checkTabActivity",
     "currentTheme"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
@@ -205,35 +209,38 @@ Q_CONSTINIT static const uint qt_meta_data_ZN13BrowserWindowE[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      19,   14, // methods
-       1,  153, // properties
+      22,   14, // methods
+       1,  176, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
        1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  128,    2, 0x06,    2 /* Public */,
+       1,    0,  146,    2, 0x06,    2 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       3,    0,  129,    2, 0x0a,    3 /* Public */,
-       4,    0,  130,    2, 0x0a,    4 /* Public */,
-       5,    0,  131,    2, 0x0a,    5 /* Public */,
-       6,    0,  132,    2, 0x0a,    6 /* Public */,
-       7,    1,  133,    2, 0x0a,    7 /* Public */,
-       9,    0,  136,    2, 0x0a,    9 /* Public */,
-      10,    0,  137,    2, 0x0a,   10 /* Public */,
-      11,    0,  138,    2, 0x08,   11 /* Private */,
-      12,    0,  139,    2, 0x08,   12 /* Private */,
-      13,    0,  140,    2, 0x08,   13 /* Private */,
-      14,    0,  141,    2, 0x08,   14 /* Private */,
-      15,    1,  142,    2, 0x08,   15 /* Private */,
-      18,    1,  145,    2, 0x08,   17 /* Private */,
-      18,    0,  148,    2, 0x28,   19 /* Private | MethodCloned */,
-      20,    0,  149,    2, 0x08,   20 /* Private */,
-      21,    0,  150,    2, 0x08,   21 /* Private */,
-      22,    0,  151,    2, 0x08,   22 /* Private */,
-      23,    0,  152,    2, 0x08,   23 /* Private */,
+       3,    0,  147,    2, 0x0a,    3 /* Public */,
+       4,    0,  148,    2, 0x0a,    4 /* Public */,
+       5,    0,  149,    2, 0x0a,    5 /* Public */,
+       6,    0,  150,    2, 0x0a,    6 /* Public */,
+       7,    1,  151,    2, 0x0a,    7 /* Public */,
+       9,    0,  154,    2, 0x0a,    9 /* Public */,
+      10,    0,  155,    2, 0x0a,   10 /* Public */,
+      11,    0,  156,    2, 0x08,   11 /* Private */,
+      12,    0,  157,    2, 0x08,   12 /* Private */,
+      13,    0,  158,    2, 0x08,   13 /* Private */,
+      14,    0,  159,    2, 0x08,   14 /* Private */,
+      15,    1,  160,    2, 0x08,   15 /* Private */,
+      18,    1,  163,    2, 0x08,   17 /* Private */,
+      18,    0,  166,    2, 0x28,   19 /* Private | MethodCloned */,
+      20,    0,  167,    2, 0x08,   20 /* Private */,
+      21,    0,  168,    2, 0x08,   21 /* Private */,
+      22,    0,  169,    2, 0x08,   22 /* Private */,
+      23,    0,  170,    2, 0x08,   23 /* Private */,
+      24,    0,  171,    2, 0x08,   24 /* Private */,
+      25,    1,  172,    2, 0x08,   25 /* Private */,
+      27,    0,  175,    2, 0x08,   27 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
@@ -257,9 +264,12 @@ Q_CONSTINIT static const uint qt_meta_data_ZN13BrowserWindowE[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void, QMetaType::Int,   26,
+    QMetaType::Void,
 
  // properties: name, type, flags, notifyId, revision
-      24, QMetaType::QString, 0x00015003, uint(0), 0,
+      28, QMetaType::QString, 0x00015003, uint(0), 0,
 
        0        // eod
 };
@@ -315,6 +325,13 @@ Q_CONSTINIT const QMetaObject BrowserWindow::staticMetaObject = { {
         // method 'syncTabButtonPos'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'handleUrlEntered'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'showAbout'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'onTabChanged'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
+        // method 'checkTabActivity'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -344,6 +361,9 @@ void BrowserWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _i
         case 16: _t->saveSettings(); break;
         case 17: _t->syncTabButtonPos(); break;
         case 18: _t->handleUrlEntered(); break;
+        case 19: _t->showAbout(); break;
+        case 20: _t->onTabChanged((*reinterpret_cast< std::add_pointer_t<int>>(_a[1]))); break;
+        case 21: _t->checkTabActivity(); break;
         default: ;
         }
     }
@@ -404,14 +424,14 @@ int BrowserWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 19)
+        if (_id < 22)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 19;
+        _id -= 22;
     }
     if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 19)
+        if (_id < 22)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 19;
+        _id -= 22;
     }
     if (_c == QMetaObject::ReadProperty || _c == QMetaObject::WriteProperty
             || _c == QMetaObject::ResetProperty || _c == QMetaObject::BindableProperty

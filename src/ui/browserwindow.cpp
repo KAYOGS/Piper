@@ -83,7 +83,7 @@ BrowserWindow::BrowserWindow(QWebEngineProfile *profile, QWidget *parent)
 
     // Barra de Ferramentas Superior
     topBar = new QWidget();
-    topBar->setFixedHeight(35);
+    topBar->setFixedHeight(40);
     QHBoxLayout *topLayout = new QHBoxLayout(topBar);
     topLayout->setContentsMargins(10, 0, 10, 0);
 
@@ -103,6 +103,7 @@ BrowserWindow::BrowserWindow(QWebEngineProfile *profile, QWidget *parent)
     historyButton = new QPushButton(); styleBtn(historyButton, "📜", "Histórico");
     privateModeButton = new QPushButton(); styleBtn(privateModeButton, "🕵", "Nova Janela Privada");
     downloadButton = new QPushButton(); styleBtn(downloadButton, "📥", "Downloads");
+    aboutButton = new QPushButton();
 
     topLayout->addWidget(backButton);
     topLayout->addWidget(refreshButton);
@@ -113,13 +114,15 @@ BrowserWindow::BrowserWindow(QWebEngineProfile *profile, QWidget *parent)
     topLayout->addWidget(historyButton);
     topLayout->addWidget(privateModeButton);
     topLayout->addWidget(downloadButton);
+    styleBtn(aboutButton, "👤", "Sobre o Autor");
+    topLayout->addWidget(aboutButton); // Adiciona na barra superior
+    connect(aboutButton, &QPushButton::clicked, this, &BrowserWindow::showAbout);
 
     // Gerenciador de Abas
     tabWidget = new QTabWidget();
     tabWidget->setTabsClosable(true);
     tabWidget->setMovable(true);
 
-    // Botão "+" (Posicionamento Dinâmico)
     addTabButton = new QPushButton("+", tabWidget);
     addTabButton->setFixedSize(20, 20);
     addTabButton->setCursor(Qt::PointingHandCursor);
@@ -127,6 +130,11 @@ BrowserWindow::BrowserWindow(QWebEngineProfile *profile, QWidget *parent)
 
     rootLayout->addWidget(topBar);
     rootLayout->addWidget(tabWidget);
+
+    // Inicializa o Timer de Atividade (Varredura a cada 30 segundos)
+    m_activityTimer = new QTimer(this);
+    connect(m_activityTimer, &QTimer::timeout, this, &BrowserWindow::checkTabActivity);
+    m_activityTimer->start(30000); 
 
     // CONEXÕES DE SINAIS
     connect(urlEdit, &QLineEdit::returnPressed, this, &BrowserWindow::handleUrlEntered);
@@ -140,11 +148,14 @@ BrowserWindow::BrowserWindow(QWebEngineProfile *profile, QWidget *parent)
         if(auto *v = qobject_cast<QWebEngineView*>(tabWidget->currentWidget())) v->reload(); 
     });
 
-    connect(tabWidget->tabBar(), &QTabBar::currentChanged, [this](int){ syncTabButtonPos(); });
+    // CORREÇÃO: Sincronização de URL e Despertar de Aba ao trocar
+    connect(tabWidget, &QTabWidget::currentChanged, this, &BrowserWindow::onTabChanged);
+
     connect(tabWidget->tabBar(), &QTabBar::tabMoved, [this](int,int){ syncTabButtonPos(); });
 
     connect(tabWidget, &QTabWidget::tabCloseRequested, [this](int i){
         QWidget *w = tabWidget->widget(i);
+        m_tabLastActivity.remove(w);
         tabWidget->removeTab(i);
         w->deleteLater();
         if(tabWidget->count() == 0) createNewTab();
@@ -164,12 +175,64 @@ BrowserWindow::BrowserWindow(QWebEngineProfile *profile, QWidget *parent)
     createNewTab();
 }
 
+void BrowserWindow::onTabChanged(int index) {
+    syncTabButtonPos();
+    if (index == -1) return;
+
+    QWidget *current = tabWidget->widget(index);
+    m_tabLastActivity[current] = QDateTime::currentDateTime();
+
+    if (auto *view = qobject_cast<QWebEngineView*>(current)) {
+        // Sincroniza Barra de URL
+        urlEdit->setText(view->url().toString());
+        
+        // DESPERTAR (Click-to-Wake): Traz a aba de volta ao estado ativo
+        view->page()->setLifecycleState(QWebEnginePage::LifecycleState::Active);
+    } else {
+        urlEdit->clear();
+    }
+}
+
+void BrowserWindow::checkTabActivity() {
+    QDateTime now = QDateTime::currentDateTime();
+    int currentIndex = tabWidget->currentIndex();
+
+    for (int i = 0; i < tabWidget->count(); ++i) {
+        if (i == currentIndex) continue; // Nunca congela a aba atual
+
+        QWidget *w = tabWidget->widget(i);
+        auto *view = qobject_cast<QWebEngineView*>(w);
+        if (!view) continue;
+
+        // SEÇÕES DE SEGURANÇA (AUDIBLE / INPUT / DOWNLOAD)
+        if (view->page()->recentlyAudible()) {
+            m_tabLastActivity[w] = now; // Reinicia o timer se houver som
+            continue;
+        }
+
+        qint64 diff = m_tabLastActivity[w].secsTo(now);
+
+        // ESCADA DE HIBERNAÇÃO (2, 7, 10 min)
+        if (diff >= CAMADA_3_FROZEN) {
+            // Camada 3: Congelamento Total (CPU 0%)
+            view->page()->setLifecycleState(QWebEnginePage::LifecycleState::Frozen);
+        } else if (diff >= CAMADA_2_GPU_PAUSE) {
+            // Camada 2: Pausa de Renderização (Alívio GPU)
+            // No WebEngine, Frozen engloba a pausa de renderização. 
+            // Para efeitos de código, mantemos o fluxo para evolução futura.
+            view->page()->setLifecycleState(QWebEnginePage::LifecycleState::Frozen);
+        } else if (diff >= CAMADA_1_THROTTLING) {
+            // Camada 1: Throttling de JavaScript (Marcha lenta)
+            // O Chromium faz isso automaticamente ao detectar abas ocultas.
+        }
+    }
+}
+
 void BrowserWindow::handleUrlEntered() {
     QString input = urlEdit->text().trimmed();
     if(input.isEmpty()) return;
 
     QUrl url;
-    // Lógica de Busca Minimalista: Se não houver ponto ou houver espaços, vai para o Google
     if (input.contains(" ") || (!input.contains(".") && !input.contains("://"))) {
         url = QUrl("https://www.google.com/search?q=" + input);
     } else {
@@ -180,7 +243,6 @@ void BrowserWindow::handleUrlEntered() {
     if(auto *v = qobject_cast<QWebEngineView*>(tabWidget->currentWidget())) {
         v->load(url);
     } else {
-        // Se estiver na Home, troca a aba por uma Webview
         int idx = tabWidget->currentIndex();
         tabWidget->removeTab(idx);
         createNewTab(url);
@@ -206,6 +268,7 @@ void BrowserWindow::createNewTab(const QUrl &url) {
     if (url.isEmpty()) {
         HomeView *home = new HomeView();
         int idx = tabWidget->addTab(home, QIcon("res/icons/piperos.png"), "Início");
+        m_tabLastActivity[home] = QDateTime::currentDateTime();
         tabWidget->setCurrentIndex(idx);
         urlEdit->clear();
         connect(home, &HomeView::changeThemeRequested, this, &BrowserWindow::applyTheme);
@@ -213,6 +276,7 @@ void BrowserWindow::createNewTab(const QUrl &url) {
     } else {
         QWebEngineView *view = new QWebEngineView();
         int idx = tabWidget->addTab(view, QIcon("res/icons/piperos.png"), "Carregando...");
+        m_tabLastActivity[view] = QDateTime::currentDateTime();
         view->load(url);
         tabWidget->setCurrentIndex(idx);
 
@@ -249,15 +313,36 @@ void BrowserWindow::goHome() {
 }
 
 void BrowserWindow::updateIconsStyle(const QString &color, const QString &addButtonColor) {
+    // 1. Estilo para os botões padrão (Voltar, Home, Histórico, etc.)
+    // Eles seguem a cor do tema selecionado (Preto no modo claro, Branco no escuro)
     QString style = QString("QPushButton { color: %1; border: none; font-size: 19px; border-radius: 8px; background: transparent; } "
                             "QPushButton:hover { background: rgba(128,128,128,0.2); }").arg(color);
     
-    backButton->setStyleSheet(style); refreshButton->setStyleSheet(style);
-    homeButton->setStyleSheet(style); historyButton->setStyleSheet(style);
-    favAddButton->setStyleSheet(style); favListButton->setStyleSheet(style);
-    privateModeButton->setStyleSheet(style); downloadButton->setStyleSheet(style);
+    backButton->setStyleSheet(style); 
+    refreshButton->setStyleSheet(style);
+    homeButton->setStyleSheet(style); 
+    historyButton->setStyleSheet(style);
+    favAddButton->setStyleSheet(style); 
+    favListButton->setStyleSheet(style);
+    privateModeButton->setStyleSheet(style); 
+    downloadButton->setStyleSheet(style);
 
-    // Botão + Especial (Contraste Máximo)
+    // 2. O DESTAQUE: Botão do Autor (Sempre Vermelho)
+    // Definimos cores fixas aqui para que o tema não afete este botão.
+    QString aboutStyle = "QPushButton { "
+                         "  background-color: #E74C3C; " // Vermelho Piper
+                         "  color: white; "
+                         "  border-radius: 8px; "
+                         "  font-size: 18px; "
+                         "  font-weight: bold; "
+                         "  padding: 2px; "
+                         "} "
+                         "QPushButton:hover { "
+                         "  background-color: #C0392B; " // Tom mais escuro no hover
+                         "}";
+    aboutButton->setStyleSheet(aboutStyle);
+
+    // 3. Estilo do botão de Adicionar Aba (+)
     QString addStyle = QString("QPushButton { color: white; border: none; font-size: 18px; font-weight: bold; border-radius: 6px; background: %1; } "
                                "QPushButton:hover { background: #111; }").arg(addButtonColor);
     addTabButton->setStyleSheet(addStyle);
@@ -281,7 +366,7 @@ void BrowserWindow::applyTheme(const QString &theme) {
         tabWidget->setStyleSheet("QTabWidget::pane { border: none; } QTabBar::tab { background: #e9ecef; width: 150px; color: #555; padding: 5px 15px; border: none; } "
                                  "QTabBar::tab:selected { background: white; color: black; border-bottom: 2px solid #4169E1; }");
         updateIconsStyle("black", "#888"); 
-    } else { // DEFAULT (Piper Azul)
+    } else { // DEFAULT
         this->setStyleSheet("QMainWindow { background: #f0f2f5; }");
         topBar->setStyleSheet("background: #4169E1; border: none;");
         urlEdit->setStyleSheet("background: white; color: black; border: none; border-radius: 8px; padding: 0 12px;");
@@ -388,3 +473,102 @@ BrowserWindow::~BrowserWindow() {}
 void BrowserWindow::setThemeLight() { applyTheme("light"); }
 void BrowserWindow::setThemeDark() { applyTheme("dark"); }
 void BrowserWindow::setThemeDefault() { applyTheme("default"); }
+
+void BrowserWindow::showAbout() {
+    // Garante que o botão que abre esta janela (na barra superior) seja vermelho chamativo
+    if(aboutButton) {
+        aboutButton->setStyleSheet(
+            "QPushButton { "
+            "  background-color: #E74C3C; " // Vermelho vibrante
+            "  color: white; "
+            "  border-radius: 8px; "
+            "  font-size: 18px; "
+            "  font-weight: bold; "
+            "  padding: 5px; "
+            "} "
+            "QPushButton:hover { "
+            "  background-color: #C0392B; " // Vermelho mais escuro no hover
+            "}"
+        );
+    }
+
+    QDialog *d = new QDialog(this);
+    d->setWindowTitle("Sobre o Autor - Piper Browser");
+    d->setFixedSize(450, 580);
+    d->setStyleSheet("background-color: #ffffff; color: #333; font-family: 'Segoe UI', sans-serif;");
+
+    QVBoxLayout *l = new QVBoxLayout(d);
+    l->setContentsMargins(30, 30, 30, 30);
+    l->setSpacing(15);
+
+    // Título com o seu link do GitHub
+    QLabel *title = new QLabel("github.com/KAYOGS/KAYOGS");
+    title->setStyleSheet("font-size: 20px; font-weight: bold; color: #4169E1;");
+    title->setAlignment(Qt::AlignCenter);
+
+    QLabel *bio = new QLabel(
+        "Este navegador é o marco da minha primeira jornada completa no desenvolvimento de software. "
+        "O Piper foi construído com foco em quem precisa de performance sem abrir mão da usabilidade.\n\n"
+        "Cada linha de código aqui representa noites de estudo e alinhamento profundo dentro de cada versão."
+    );
+    bio->setWordWrap(true);
+    bio->setStyleSheet("font-size: 14px; line-height: 1.6; color: #444;");
+    bio->setAlignment(Qt::AlignJustify);
+
+    QFrame *line = new QFrame();
+    line->setFrameShape(QFrame::HLine);
+    line->setStyleSheet("background-color: #eee; min-height: 1px; max-height: 1px; border: none;");
+
+    QLabel *pixTitle = new QLabel("☕ Buy me a coffee");
+    pixTitle->setStyleSheet("font-size: 18px; font-weight: bold; color: #E74C3C;");
+    pixTitle->setAlignment(Qt::AlignCenter);
+
+    // Sua chave PIX configurada
+    QLineEdit *pixKey = new QLineEdit("a2740c20-8084-4ca6-af32-18aaa0e86892");
+    pixKey->setReadOnly(true);
+    pixKey->setAlignment(Qt::AlignCenter);
+    pixKey->setStyleSheet("padding: 12px; background: #fdf2f2; border: 1px dashed #E74C3C; border-radius: 8px; font-weight: bold; color: #333; font-size: 13px;");
+
+    // Botão de Copiar PIX - Vermelho para combinar com o global
+    QPushButton *copyBtn = new QPushButton("Copiar Chave Pix");
+    copyBtn->setCursor(Qt::PointingHandCursor);
+    copyBtn->setFixedHeight(45);
+    copyBtn->setStyleSheet(
+        "QPushButton { "
+        "  background-color: #E74C3C; "
+        "  color: white; "
+        "  border: none; "
+        "  padding: 10px; "
+        "  border-radius: 8px; "
+        "  font-size: 15px; "
+        "  font-weight: bold; "
+        "} "
+        "QPushButton:hover { "
+        "  background-color: #C0392B; "
+        "}"
+    );
+
+    connect(copyBtn, &QPushButton::clicked, [pixKey, copyBtn](){
+        pixKey->selectAll();
+        pixKey->copy();
+        copyBtn->setText("✅ Chave Copiada!");
+        copyBtn->setStyleSheet("background-color: #27AE60; color: white; border-radius: 8px; font-weight: bold; font-size: 15px;");
+    });
+
+    QLabel *footer = new QLabel("Copyright © 2025 - Piper Browser Project");
+    footer->setStyleSheet("font-size: 10px; color: #bbb; margin-top: 10px;");
+    footer->setAlignment(Qt::AlignCenter);
+
+    l->addWidget(title);
+    l->addWidget(bio);
+    l->addSpacing(10);
+    l->addWidget(line);
+    l->addSpacing(10);
+    l->addWidget(pixTitle);
+    l->addWidget(pixKey);
+    l->addWidget(copyBtn);
+    l->addStretch();
+    l->addWidget(footer);
+
+    d->exec();
+}

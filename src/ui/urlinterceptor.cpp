@@ -48,12 +48,21 @@ void UrlInterceptor::initializeLists()
     ethicalHosts << "uol.com.br/sexo" << "terrasexo.com.br" << "privacy.com.br";
 }
 
+void UrlInterceptor::applyGlobalOptimizations(QWebEngineUrlRequestInfo &info)
+{
+    // 1. User Agent de ChromeOS: Equilíbrio entre Desktop e Otimização de hardware limitado
+    QByteArray chromeOS_UA = "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
+    info.setHttpHeader("User-Agent", chromeOS_UA);
+
+    // 2. Header Save-Data: Avisa ao site para enviar menos lixo e imagens comprimidas
+    info.setHttpHeader("Save-Data", "on");
+}
+
 bool UrlInterceptor::isEthicalBlock(const QString &urlStr, const QString &host) const
 {
-    // --- PROTEÇÃO PARA O YOUTUBE E GOOGLE ---
-    // Impede que o "tube" ou "sexy" (em outros contextos) bloqueie sites legítimos
-    if (host.contains("youtube.com") || host.contains("googlevideo.com") || 
-        host.contains("ytimg.com") || host.contains("google.com")) {
+    // --- EXCEÇÃO PARA SITES ESSENCIAIS (Evita falsos positivos como o do YouTube/Google) ---
+    if (host.contains("youtube.com") || host.contains("google.com") || 
+        host.contains("gstatic.com") || host.contains("ytimg.com")) {
         return false;
     }
 
@@ -67,25 +76,12 @@ bool UrlInterceptor::isEthicalBlock(const QString &urlStr, const QString &host) 
         if (urlStr.contains(key) || host.contains(key)) return true;
     }
 
-    // Verifica Hosts específicos da Ethical List
+    // Verifica Hosts específicos
     for (const QString &eHost : ethicalHosts) {
         if (host.contains(eHost)) return true;
     }
 
     return false;
-}
-
-bool UrlInterceptor::isYouTubeRequest(const QUrl &url) const
-{
-    QString host = url.host().toLower();
-    return host.contains("youtube.com") || host.contains("googlevideo.com");
-}
-
-void UrlInterceptor::applyLegacyUserAgent(QWebEngineUrlRequestInfo &info)
-{
-    // Força H.264 no YouTube para economizar CPU em hardware antigo
-    QByteArray legacyUA = "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/14.1.2 Safari/605.1.15";
-    info.setHttpHeader("User-Agent", legacyUA);
 }
 
 void UrlInterceptor::interceptRequest(QWebEngineUrlRequestInfo &info)
@@ -95,28 +91,24 @@ void UrlInterceptor::interceptRequest(QWebEngineUrlRequestInfo &info)
     QString urlStr = url.toString().toLower();
     QString path = url.path().toLower();
 
-    // 1. BLOQUEIO ÉTICO PRIORITÁRIO
+    // APLICA OTIMIZAÇÃO GLOBAL (UA ChromeOS + Save-Data)
+    applyGlobalOptimizations(info);
+
+    // 1. BLOQUEIO ÉTICO PRIORITÁRIO (Zero tolerância para Apostas e +18)
     if (isEthicalBlock(urlStr, host)) {
         info.block(true);
         qDebug() << "[PIPER ETHICS] Bloqueado (Site Proibido):" << host;
         return;
     }
 
-    // 2. OTIMIZAÇÃO YOUTUBE (USER-AGENT SPOOFING)
-    if (isYouTubeRequest(url)) {
-        applyLegacyUserAgent(info);
-        // Não bloqueamos nada dentro do domínio do vídeo para não quebrar o player
-        if (host.contains("googlevideo.com")) return;
-    }
-
-    // 3. EXCEÇÕES TÉCNICAS (RECAPTCHA E ESSENCIAIS)
+    // 2. EXCEÇÕES DE SEGURANÇA (WHITELIST)
     if (host.contains("google.com/recaptcha") || host.contains("gstatic.com/recaptcha")) {
         return;
     }
 
     bool block = false;
     
-    // 4. BLOQUEIO DE PERFORMANCE: HOSTS (Ads/Fonts)
+    // 3. BLOQUEIO DE PERFORMANCE: HOSTS (Ads/Fonts)
     for (const QString &adHost : adHosts) {
         if (host == adHost || host.endsWith("." + adHost)) {
             block = true;
@@ -124,7 +116,7 @@ void UrlInterceptor::interceptRequest(QWebEngineUrlRequestInfo &info)
         }
     }
 
-    // 5. BLOQUEIO DE PERFORMANCE: FONTES (.woff2, etc)
+    // 4. BLOQUEIO DE PERFORMANCE: FONTES (.woff2, etc)
     if (!block) {
         for (const QString &ext : fontExtensions) {
             if (path.endsWith(ext)) {
@@ -134,7 +126,7 @@ void UrlInterceptor::interceptRequest(QWebEngineUrlRequestInfo &info)
         }
     }
 
-    // 6. BLOQUEIO DE PERFORMANCE: PADRÕES (Scripts de Ad)
+    // 5. BLOQUEIO DE PERFORMANCE: PADRÕES (Scripts de Ad)
     if (!block) {
         for (const QString &pattern : adPatterns) {
             if (urlStr.contains(pattern)) {
@@ -147,7 +139,7 @@ void UrlInterceptor::interceptRequest(QWebEngineUrlRequestInfo &info)
     if (block) {
         info.block(true);
         globalAdsBlocked++;
-        // Log para debug de performance se necessário
+        // Log comentado para não poluir o terminal, apenas o Ethics fica ativo
         qDebug() << "[PIPER OPTIMIZER] Bloqueado (Recurso Pesado):" << host;
     }
 }

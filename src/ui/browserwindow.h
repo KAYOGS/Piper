@@ -16,6 +16,9 @@
 #include <QListWidget>
 #include <QDialog>
 #include <QLabel>
+#include <QTimer>
+#include <QDateTime>
+#include <QMap>
 
 // Dashboard Minimalista
 class HomeView : public QWidget {
@@ -65,6 +68,11 @@ private slots:
     void saveSettings();
     void syncTabButtonPos(); 
     void handleUrlEntered();
+    void showAbout();
+    
+    // --- NOVOS SLOTS PARA PERFORMANCE E SINCRONIZAÇÃO ---
+    void onTabChanged(int index);
+    void checkTabActivity(); // Varredura das camadas de hibernação
 
 protected:
     void resizeEvent(QResizeEvent *event) override;
@@ -76,6 +84,7 @@ private:
     QTabWidget *tabWidget;
     QLineEdit *urlEdit;
 
+    QPushButton *aboutButton;
     QPushButton *backButton, *refreshButton, *addTabButton;
     QPushButton *homeButton, *historyButton, *privateModeButton, *downloadButton;
     QPushButton *favAddButton, *favListButton;
@@ -86,6 +95,16 @@ private:
     bool m_isPrivate;
     QString currentTheme, currentBgPath;
     QWebChannel *m_channel;
+
+    // --- VARIÁVEIS DE CONTROLE DA ESCADA DE HIBERNAÇÃO ---
+    QTimer *m_activityTimer;
+    // Mapeia o ponteiro da aba (QWidget*) para o último momento de atividade (QDateTime)
+    QMap<QWidget*, QDateTime> m_tabLastActivity;
+
+    // Definição dos tempos (em segundos) - 2min, 7min, 10min
+    const int CAMADA_1_THROTTLING = 120; 
+    const int CAMADA_2_GPU_PAUSE  = 420; 
+    const int CAMADA_3_FROZEN     = 600; 
 
     void updateIconsStyle(const QString &color, const QString &addButtonColor = "");
 };

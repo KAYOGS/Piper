@@ -8,8 +8,8 @@
 
 /**
  * @class UrlInterceptor
- * @brief Gerencia o bloqueio ético (Apostas/Adulto), anúncios, fontes 
- * e otimização de requisições para hardware legado (Piper Browser).
+ * @brief Gerencia o bloqueio ético (Apostas/Adulto), performance (Ads/Fontes)
+ * e aplica otimizações globais de cabeçalho (ChromeOS + Save-Data).
  */
 class UrlInterceptor : public QWebEngineUrlRequestInterceptor
 {
@@ -20,7 +20,7 @@ public:
     
     /**
      * @brief Intercepta todas as requisições do motor WebEngine.
-     * Implementa lógica de bloqueio silencioso e spoofing de cabeçalhos.
+     * Implementa lógica de bloqueio silencioso e injeção de headers de otimização.
      */
     void interceptRequest(QWebEngineUrlRequestInfo &info) override;
 
@@ -34,8 +34,8 @@ private:
     QStringList blacklistedPaths; // Caminhos proibidos
     QStringList fontExtensions;   // Extensões de fontes externas (.woff2, etc)
 
-    // --- LISTAS DE BLOQUEIO ÉTICO (NOVO) ---
-    QStringList bettingKeywords;  // Termos de apostas/cassinos (Tigrinho, Bet, etc)
+    // --- LISTAS DE BLOQUEIO ÉTICO ---
+    QStringList bettingKeywords;  // Termos de apostas/cassinos
     QStringList adultKeywords;    // Termos de conteúdo adulto (+18)
     QSet<QString> ethicalHosts;   // Domínios específicos de apostas e adulto
 
@@ -45,18 +45,13 @@ private:
     void initializeLists();
 
     /**
-     * @brief Verifica se a requisição é destinada ao YouTube para aplicar o codec H.264.
+     * @brief Aplica o perfil global de ChromeOS e o header Save-Data.
+     * Esta função otimiza a identidade do navegador para todos os sites.
      */
-    bool isYouTubeRequest(const QUrl &url) const;
-
-    /**
-     * @brief Aplica um User-Agent compatível com hardware antigo para forçar codecs leves.
-     */
-    void applyLegacyUserAgent(QWebEngineUrlRequestInfo &info);
+    void applyGlobalOptimizations(QWebEngineUrlRequestInfo &info);
 
     /**
      * @brief Verifica se a URL contém termos de apostas ou conteúdo adulto.
-     * @return true se deve ser bloqueado silenciosamente.
      */
     bool isEthicalBlock(const QString &urlStr, const QString &host) const;
 };

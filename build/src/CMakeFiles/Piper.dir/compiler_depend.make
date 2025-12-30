@@ -271,15 +271,18 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonValue \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QMap \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QWeakPointer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h \
@@ -297,6 +300,7 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qatomic.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qatomic_cxx11.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasicatomic.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbindingstorage.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearray.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayalgorithms.h \
@@ -398,6 +402,7 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtdeprecationmarkers.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtenvironmentvariables.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtextstream.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtmetamacros.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtnoop.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtpreprocessorsupport.h \
@@ -1175,15 +1180,18 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: src/Piper_autogen
   /usr/include/x86_64-linux-gnu/c++/14/bits/os_defines.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonValue \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QMap \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QWeakPointer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h \
@@ -1201,6 +1209,7 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: src/Piper_autogen
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qatomic.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qatomic_cxx11.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasicatomic.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbindingstorage.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearray.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayalgorithms.h \
@@ -1302,6 +1311,7 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: src/Piper_autogen
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtdeprecationmarkers.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtenvironmentvariables.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtextstream.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtmetamacros.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtmochelpers.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtnoop.h \
@@ -1754,16 +1764,19 @@ src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp \
   /usr/include/x86_64-linux-gnu/c++/14/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QDebug \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QDir \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonValue \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QMap \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QWeakPointer \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h \
@@ -1781,6 +1794,7 @@ src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qatomic.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qatomic_cxx11.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasicatomic.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbindingstorage.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearray.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qbytearrayalgorithms.h \
@@ -1894,6 +1908,7 @@ src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtdeprecationmarkers.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtenvironmentvariables.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtextstream.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtimezone.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtmetamacros.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qtnoop.h \
@@ -2350,11 +2365,13 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/c++/14/bits/time_members.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
   /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QDir \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QFileInfo \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QFlags \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QJsonValue \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QMap \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings \
@@ -3066,10 +3083,6 @@ src/CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.o: /home/kayogs/Piper/src/ui/urli
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstandardpaths.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer:
-
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QFileInfo:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QFileDialog:
@@ -3594,6 +3607,14 @@ src/CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.o:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicAppleHelpers.cmake:
 
+/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtFeatureCommon.cmake:
+
+/lib/i386-linux-gnu/libplc4.so:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtFeature.cmake:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Targets.cmake:
+
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake:
@@ -3810,6 +3831,10 @@ src/Piper_autogen/moc_predefs.h:
 
 /usr/include/c++/14/ext/type_traits.h:
 
+/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6VersionlessAliasTargets.cmake:
+
+/usr/include/c++/14/ext/string_conversions.h:
+
 /lib/i386-linux-gnu/libgmodule-2.0.so.0:
 
 /usr/include/c++/14/ext/concurrence.h:
@@ -3927,8 +3952,6 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /usr/include/c++/14/bits/std_function.h:
 
 /usr/include/c++/14/atomic:
-
-/usr/include/c++/14/chrono:
 
 /usr/lib/i386-linux-gnu/libgmp.so.10:
 
@@ -4151,6 +4174,12 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /usr/include/features.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetworkexports.h:
+
+/lib/i386-linux-gnu/libbrotlidec.so.1:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtInstallPaths.cmake:
+
+/usr/include/c++/14/system_error:
 
 /lib/x86_64-linux-gnu/libplc4.so:
 
@@ -4434,10 +4463,6 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/14/cwchar:
 
-/lib/i386-linux-gnu/libplc4.so:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtFeature.cmake:
-
 /usr/include/c++/14/bits/charconv.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qvariant.h:
@@ -4488,6 +4513,16 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qstringbuilder.h:
 
+/usr/include/c++/14/chrono:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QMap:
+
+/usr/lib/i386-linux-gnu/libglib-2.0.so.0:
+
+/lib/x86_64-linux-gnu/libXfixes.so.3:
+
+/usr/include/x86_64-linux-gnu/sys/types.h:
+
 /usr/lib/i386-linux-gnu/libcurl-gnutls.so.4:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF:
@@ -4497,6 +4532,10 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicTargetHelpers.cmake:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QTimer:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsexports.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/q20functional.h:
 
@@ -4537,6 +4576,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /usr/include/x86_64-linux-gnu/qt6/QtGui/QDesktopServices:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qbasicatomic.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qbasictimer.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qbindingstorage.h:
 
@@ -4611,10 +4652,6 @@ src/Piper_autogen/UYX5XTB5RZ/moc_browserwindow.cpp:
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qregion.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qline.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qtypes.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h:
 
@@ -4734,6 +4771,8 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 
 /usr/include/c++/14/exception:
 
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime:
+
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtdeprecationdefinitions.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qeventloop.h:
@@ -4747,6 +4786,10 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtdeprecationmarkers.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qtypes.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qtimer.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel:
 
@@ -4964,10 +5007,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h:
 
-/usr/include/c++/14/ext/string_conversions.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6VersionlessAliasTargets.cmake:
-
 /usr/include/x86_64-linux-gnu/qt6/QtQmlIntegration/qqmlintegration.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainerinfo.h:
@@ -4980,17 +5019,9 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtwidgetsexports.h:
-
 src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
-
-/usr/lib/i386-linux-gnu/libglib-2.0.so.0:
-
-/lib/x86_64-linux-gnu/libXfixes.so.3:
-
-/usr/include/x86_64-linux-gnu/sys/types.h:
 
 /usr/include/c++/14/bits/uses_allocator.h:
 
@@ -5011,13 +5042,3 @@ src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtconfiginclude.h:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Dependencies.cmake:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Targets.cmake:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtFeatureCommon.cmake:
-
-/lib/i386-linux-gnu/libbrotlidec.so.1:
-
-/usr/include/c++/14/system_error:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6/QtInstallPaths.cmake:
