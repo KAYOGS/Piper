@@ -74,6 +74,7 @@
 		"QT_CORE_LIB",
 		"QT_GUI_LIB",
 		"QT_NETWORK_LIB",
+		"QT_NO_DEBUG",
 		"QT_OPENGL_LIB",
 		"QT_POSITIONING_LIB",
 		"QT_PRINTSUPPORT_LIB",
@@ -137,7 +138,7 @@
 	"MOC_PATH_PREFIX" : false,
 	"MOC_PREDEFS_CMD" : 
 	[
-		"/usr/bin/g++",
+		"/usr/bin/c++",
 		"-dM",
 		"-E",
 		"-c",
