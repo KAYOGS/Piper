@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Piper Browser
+Comment=Navegador leve e eficiente
+Exec=/home/kayogs/Piper/build/bin/Piper
+Icon=/home/kayogs/Piper/res/icon.png
+Terminal=false
+Type=Application
+Categories=Network;WebBrowser;
+Name[pt_BR]=Piper Browser
