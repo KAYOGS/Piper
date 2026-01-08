@@ -1,7 +1,7 @@
 # Piper Browser - Beta v0.1.0
 
 O **Piper Browser** é um navegador leve e eficiente desenvolvido em **C++/Qt6**. Foi projetado especificamente para máquinas com hardware limitado, utilizando técnicas de otimização de recursos e uma interface simplificada para garantir uma navegação fluida.
-
+##Versão beta!
 ## 🚀 Diferenciais Técnicos
 
 * **Escada de Hibernação:** Sistema inteligente de gestão de memória que coloca abas inativas em hibernação após 2, 7 e 10 minutos, libertando RAM e CPU.
