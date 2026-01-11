@@ -501,6 +501,8 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QMap \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmap.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
  /home/kayogs/Piper/src/ui/urlinterceptor.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInterceptor \
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineurlrequestinterceptor.h \
@@ -546,13 +548,9 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainter.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineSettings \
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginesettings.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabBar \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QFileInfo \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qfileinfo.h \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/QDesktopServices \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qdesktopservices.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QStandardPaths \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qstandardpaths.h
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QAction \
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qaction.h

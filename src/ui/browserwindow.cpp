@@ -11,44 +11,20 @@
 #include <QTabBar>
 #include <QFileInfo>
 #include <QWebChannel>
-#include <QDesktopServices>
-#include <QStandardPaths>
+#include <QAction>
 
-// --- IMPLEMENTAÇÃO DA DASHBOARD (HOMEVIEW) ---
+// --- HOMEVIEW ---
 HomeView::HomeView(QWidget *parent) : QWidget(parent) {
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->setAlignment(Qt::AlignCenter);
-
-    QLabel *logo = new QLabel("");
-    logo->setStyleSheet("font-size: 85px; font-weight: bold; color: #4169E1; letter-spacing: 15px;");
-    
-    QLabel *sub = new QLabel("");
-    sub->setStyleSheet("font-size: 14px; color: #666; letter-spacing: 3px; font-weight: 300;");
-
+    QLabel *logo = new QLabel("PIPER");
+    logo->setStyleSheet("font-size: 85px; font-weight: bold; color: #4169E1; letter-spacing: 15px; background: transparent;");
+    QLabel *sub = new QLabel("Navegação Veloz para Hardware Modesto");
+    sub->setStyleSheet("font-size: 14px; color: #bbb; letter-spacing: 3px; font-weight: 300; background: transparent;");
     layout->addStretch();
     layout->addWidget(logo, 0, Qt::AlignCenter);
     layout->addWidget(sub, 0, Qt::AlignCenter);
     layout->addStretch();
-
-    settingsBtn = new QPushButton("⚙️", this);
-    settingsBtn->setFixedSize(50, 50);
-    settingsBtn->setCursor(Qt::PointingHandCursor);
-    settingsBtn->setStyleSheet("background: rgba(255,255,255,0.8); border-radius: 25px; border: 1px solid #ddd; font-size: 22px;");
-    
-    connect(settingsBtn, &QPushButton::clicked, [this](){
-        QMenu m(this);
-        m.setStyleSheet("QMenu { background: #fff; border: 1px solid #ccc; } QMenu::item { padding: 8px 25px; } QMenu::item:selected { background: #4169E1; color: white; }");
-        m.addAction("Tema Escuro", [this](){ emit changeThemeRequested("dark"); });
-        m.addAction("Tema Claro", [this](){ emit changeThemeRequested("light"); });
-        m.addAction("Tema Piper (Azul)", [this](){ emit changeThemeRequested("default"); });
-        m.addSeparator();
-        m.addAction("Trocar Papel de Parede", [this](){ emit changeBgRequested(); });
-        m.exec(QCursor::pos());
-    });
-}
-
-void HomeView::resizeEvent(QResizeEvent *) {
-    settingsBtn->move(width() - 70, height() - 70);
 }
 
 void HomeView::paintEvent(QPaintEvent *) {
@@ -57,12 +33,10 @@ void HomeView::paintEvent(QPaintEvent *) {
     QString bg = s.value("background").toString();
     if(!bg.isEmpty() && QFile::exists(bg)) {
         p.drawPixmap(rect(), QPixmap(bg).scaled(size(), Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation));
-    } else {
-        p.fillRect(rect(), QColor("#f5f7ff"));
-    }
+    } else { p.fillRect(rect(), QColor("#121212")); }
 }
 
-// --- IMPLEMENTAÇÃO DA JANELA PRINCIPAL (BROWSERWINDOW) ---
+// --- BROWSERWINDOW ---
 BrowserWindow::BrowserWindow(QWebEngineProfile *profile, QWidget *parent)
     : QMainWindow(parent), m_isPrivate(false)
 {
@@ -81,78 +55,60 @@ BrowserWindow::BrowserWindow(QWebEngineProfile *profile, QWidget *parent)
     rootLayout->setContentsMargins(0, 0, 0, 0);
     rootLayout->setSpacing(0);
 
-    // Barra de Ferramentas Superior
     topBar = new QWidget();
-    topBar->setFixedHeight(40);
+    topBar->setFixedHeight(45);
     QHBoxLayout *topLayout = new QHBoxLayout(topBar);
-    topLayout->setContentsMargins(10, 0, 10, 0);
+    topLayout->setContentsMargins(10, 5, 10, 5);
 
     auto styleBtn = [](QPushButton* b, QString t, QString tip) {
-        b->setText(t); b->setToolTip(tip); b->setFixedSize(30, 30); b->setCursor(Qt::PointingHandCursor);
+        b->setText(t); b->setToolTip(tip); b->setFixedSize(34, 34); b->setCursor(Qt::PointingHandCursor);
     };
 
     backButton = new QPushButton(); styleBtn(backButton, "←", "Voltar");
     refreshButton = new QPushButton(); styleBtn(refreshButton, "↻", "Atualizar");
-    urlEdit = new QLineEdit(); 
-    urlEdit->setFixedHeight(25);
-    urlEdit->setPlaceholderText("Pesquise no Google ou digite um site...");
-
+    homeButton = new QPushButton(); styleBtn(homeButton, "🏠", "Home");
     favAddButton = new QPushButton(); styleBtn(favAddButton, "⭐", "Favoritar");
-    favListButton = new QPushButton(); styleBtn(favListButton, "🔖", "Ver Favoritos");
-    homeButton = new QPushButton(); styleBtn(homeButton, "🏠", "Ir para Home");
-    historyButton = new QPushButton(); styleBtn(historyButton, "📜", "Histórico");
-    privateModeButton = new QPushButton(); styleBtn(privateModeButton, "🕵", "Nova Janela Privada");
-    downloadButton = new QPushButton(); styleBtn(downloadButton, "📥", "Downloads");
-    aboutButton = new QPushButton();
+    menuButton = new QPushButton(); styleBtn(menuButton, "☰", "Menu");
+
+    urlEdit = new QLineEdit(); 
+    urlEdit->setFixedHeight(30);
+    urlEdit->setPlaceholderText("Pesquise ou digite a URL...");
 
     topLayout->addWidget(backButton);
     topLayout->addWidget(refreshButton);
+    topLayout->addWidget(homeButton);
     topLayout->addWidget(urlEdit, 1);
     topLayout->addWidget(favAddButton);
-    topLayout->addWidget(favListButton);
-    topLayout->addWidget(homeButton);
-    topLayout->addWidget(historyButton);
-    topLayout->addWidget(privateModeButton);
-    topLayout->addWidget(downloadButton);
-    styleBtn(aboutButton, "👤", "Sobre o Autor");
-    topLayout->addWidget(aboutButton); // Adiciona na barra superior
-    connect(aboutButton, &QPushButton::clicked, this, &BrowserWindow::showAbout);
+    topLayout->addWidget(menuButton);
 
-    // Gerenciador de Abas
     tabWidget = new QTabWidget();
     tabWidget->setTabsClosable(true);
     tabWidget->setMovable(true);
+    
+    // ATIVAÇÃO DO SCROLL LATERAL NAS ABAS
+    tabWidget->setUsesScrollButtons(true);
+    tabWidget->tabBar()->setExpanding(false);
+    tabWidget->tabBar()->setElideMode(Qt::ElideRight);
 
     addTabButton = new QPushButton("+", tabWidget);
-    addTabButton->setFixedSize(20, 20);
+    addTabButton->setFixedSize(22, 22);
     addTabButton->setCursor(Qt::PointingHandCursor);
-    addTabButton->raise();
 
     rootLayout->addWidget(topBar);
     rootLayout->addWidget(tabWidget);
 
-    // Inicializa o Timer de Atividade (Varredura a cada 30 segundos)
     m_activityTimer = new QTimer(this);
     connect(m_activityTimer, &QTimer::timeout, this, &BrowserWindow::checkTabActivity);
     m_activityTimer->start(30000); 
 
-    // CONEXÕES DE SINAIS
     connect(urlEdit, &QLineEdit::returnPressed, this, &BrowserWindow::handleUrlEntered);
     connect(addTabButton, &QPushButton::clicked, [this](){ createNewTab(); });
-    
-    connect(backButton, &QPushButton::clicked, [this](){ 
-        if(auto *v = qobject_cast<QWebEngineView*>(tabWidget->currentWidget())) v->back(); 
-    });
-    
-    connect(refreshButton, &QPushButton::clicked, [this](){ 
-        if(auto *v = qobject_cast<QWebEngineView*>(tabWidget->currentWidget())) v->reload(); 
-    });
-
-    // CORREÇÃO: Sincronização de URL e Despertar de Aba ao trocar
+    connect(backButton, &QPushButton::clicked, [this](){ if(auto *v = qobject_cast<QWebEngineView*>(tabWidget->currentWidget())) v->back(); });
+    connect(refreshButton, &QPushButton::clicked, [this](){ if(auto *v = qobject_cast<QWebEngineView*>(tabWidget->currentWidget())) v->reload(); });
+    connect(homeButton, &QPushButton::clicked, this, &BrowserWindow::goHome);
+    connect(favAddButton, &QPushButton::clicked, this, &BrowserWindow::addFavorite);
+    connect(menuButton, &QPushButton::clicked, this, &BrowserWindow::showMainMenu);
     connect(tabWidget, &QTabWidget::currentChanged, this, &BrowserWindow::onTabChanged);
-
-    connect(tabWidget->tabBar(), &QTabBar::tabMoved, [this](int,int){ syncTabButtonPos(); });
-
     connect(tabWidget, &QTabWidget::tabCloseRequested, [this](int i){
         QWidget *w = tabWidget->widget(i);
         m_tabLastActivity.remove(w);
@@ -161,92 +117,144 @@ BrowserWindow::BrowserWindow(QWebEngineProfile *profile, QWidget *parent)
         if(tabWidget->count() == 0) createNewTab();
         syncTabButtonPos();
     });
-
-    connect(homeButton, &QPushButton::clicked, this, &BrowserWindow::goHome);
-    connect(historyButton, &QPushButton::clicked, this, &BrowserWindow::showHistory);
-    connect(favAddButton, &QPushButton::clicked, this, &BrowserWindow::addFavorite);
-    connect(favListButton, &QPushButton::clicked, this, &BrowserWindow::showFavoritesMenu);
-    connect(privateModeButton, &QPushButton::clicked, this, &BrowserWindow::openPrivateWindow);
-    connect(downloadButton, &QPushButton::clicked, this, &BrowserWindow::showDownloads);
     
     connect(profile, &QWebEngineProfile::downloadRequested, this, &BrowserWindow::handleDownload);
 
     loadSettings();
+    applyDarkTheme();
     createNewTab();
 }
 
-void BrowserWindow::onTabChanged(int index) {
-    syncTabButtonPos();
-    if (index == -1) return;
-
-    QWidget *current = tabWidget->widget(index);
-    m_tabLastActivity[current] = QDateTime::currentDateTime();
-
-    if (auto *view = qobject_cast<QWebEngineView*>(current)) {
-        // Sincroniza Barra de URL
-        urlEdit->setText(view->url().toString());
-        
-        // DESPERTAR (Click-to-Wake): Traz a aba de volta ao estado ativo
-        view->page()->setLifecycleState(QWebEnginePage::LifecycleState::Active);
-    } else {
-        urlEdit->clear();
-    }
+void BrowserWindow::applyDarkTheme() {
+    this->setStyleSheet("QMainWindow { background: #121212; }");
+    topBar->setStyleSheet("background: #1f1f1f; border-bottom: 1px solid #333;");
+    urlEdit->setStyleSheet("background: #2c2c2c; color: white; border: 1px solid #444; border-radius: 8px; padding: 0 12px;");
+    
+    // CSS REFORMULADO PARA ABAS COM SUPORTE A SCROLL E ICONES
+    tabWidget->setStyleSheet(
+        "QTabWidget::pane { border: none; } "
+        "QTabBar::tab { background: #1f1f1f; min-width: 140px; max-width: 180px; color: #888; padding: 6px 10px; border-right: 1px solid #333; font-size: 12px; } "
+        "QTabBar::tab:selected { background: #121212; color: white; border-bottom: 2px solid #4169E1; } "
+        "QTabBar::close-button { image: url(res/icons/close.png); subcontrol-position: right; } "
+        "QTabBar::close-button:hover { background: rgba(255,0,0,0.2); border-radius: 2px; }"
+    );
+    updateIconsStyle();
 }
 
-void BrowserWindow::checkTabActivity() {
-    QDateTime now = QDateTime::currentDateTime();
-    int currentIndex = tabWidget->currentIndex();
-
-    for (int i = 0; i < tabWidget->count(); ++i) {
-        if (i == currentIndex) continue; // Nunca congela a aba atual
-
-        QWidget *w = tabWidget->widget(i);
-        auto *view = qobject_cast<QWebEngineView*>(w);
-        if (!view) continue;
-
-        // SEÇÕES DE SEGURANÇA (AUDIBLE / INPUT / DOWNLOAD)
-        if (view->page()->recentlyAudible()) {
-            m_tabLastActivity[w] = now; // Reinicia o timer se houver som
-            continue;
-        }
-
-        qint64 diff = m_tabLastActivity[w].secsTo(now);
-
-        // ESCADA DE HIBERNAÇÃO (2, 7, 10 min)
-        if (diff >= CAMADA_3_FROZEN) {
-            // Camada 3: Congelamento Total (CPU 0%)
-            view->page()->setLifecycleState(QWebEnginePage::LifecycleState::Frozen);
-        } else if (diff >= CAMADA_2_GPU_PAUSE) {
-            // Camada 2: Pausa de Renderização (Alívio GPU)
-            // No WebEngine, Frozen engloba a pausa de renderização. 
-            // Para efeitos de código, mantemos o fluxo para evolução futura.
-            view->page()->setLifecycleState(QWebEnginePage::LifecycleState::Frozen);
-        } else if (diff >= CAMADA_1_THROTTLING) {
-            // Camada 1: Throttling de JavaScript (Marcha lenta)
-            // O Chromium faz isso automaticamente ao detectar abas ocultas.
-        }
-    }
+void BrowserWindow::updateIconsStyle() {
+    QString style = "QPushButton { color: white; border: none; font-size: 19px; border-radius: 8px; background: transparent; } "
+                    "QPushButton:hover { background: rgba(128,128,128,0.2); }";
+    backButton->setStyleSheet(style); refreshButton->setStyleSheet(style);
+    homeButton->setStyleSheet(style); favAddButton->setStyleSheet(style); menuButton->setStyleSheet(style);
+    addTabButton->setStyleSheet("QPushButton { color: white; border: none; font-size: 18px; font-weight: bold; border-radius: 6px; background: #444; } QPushButton:hover { background: #111; }");
 }
 
 void BrowserWindow::handleUrlEntered() {
     QString input = urlEdit->text().trimmed();
     if(input.isEmpty()) return;
+    
+    QUrl url = (input.contains(" ") || (!input.contains(".") && !input.contains("://"))) 
+               ? QUrl("https://www.google.com/search?q=" + input)
+               : QUrl::fromUserInput(input.contains("://") ? input : "https://" + input);
 
-    QUrl url;
-    if (input.contains(" ") || (!input.contains(".") && !input.contains("://"))) {
-        url = QUrl("https://www.google.com/search?q=" + input);
-    } else {
-        if (!input.contains("://")) input = "https://" + input;
-        url = QUrl::fromUserInput(input);
-    }
+    int currentIndex = tabWidget->currentIndex();
+    QWidget *currentWidget = tabWidget->currentWidget();
 
-    if(auto *v = qobject_cast<QWebEngineView*>(tabWidget->currentWidget())) {
+    // BUG FIX: Se estiver na HomeView, transforma a aba atual em WebView em vez de abrir nova
+    if (qobject_cast<HomeView*>(currentWidget)) {
+        QWebEngineView *view = new QWebEngineView();
+        setupWebView(view);
+        tabWidget->removeTab(currentIndex);
+        currentIndex = tabWidget->insertTab(currentIndex, view, QIcon("res/icons/piperos.png"), "Carregando...");
+        tabWidget->setCurrentIndex(currentIndex);
+        currentWidget->deleteLater(); 
+        view->load(url);
+    } else if (auto *v = qobject_cast<QWebEngineView*>(currentWidget)) {
         v->load(url);
-    } else {
-        int idx = tabWidget->currentIndex();
-        tabWidget->removeTab(idx);
-        createNewTab(url);
     }
+}
+
+void BrowserWindow::setupWebView(QWebEngineView* view) {
+    m_tabLastActivity[view] = QDateTime::currentDateTime();
+    
+    // ATUALIZAÇÃO DINÂMICA DE TÍTULO E FAVICON
+    connect(view, &QWebEngineView::titleChanged, [this, view](const QString &t){
+        int i = tabWidget->indexOf(view);
+        if(i != -1) tabWidget->setTabText(i, t.isEmpty() ? "Nova Aba" : t);
+    });
+    
+    connect(view, &QWebEngineView::iconChanged, [this, view](const QIcon &icon){
+        int i = tabWidget->indexOf(view);
+        if(i != -1) tabWidget->setTabIcon(i, icon.isNull() ? QIcon("res/icons/piperos.png") : icon);
+    });
+
+    connect(view, &QWebEngineView::urlChanged, [this, view](const QUrl &u){
+        if(tabWidget->currentWidget() == view) urlEdit->setText(u.toString());
+        if(!m_isPrivate) {
+            historyList.append(u.toString());
+            if(historyList.size() > 1000) historyList.removeFirst();
+            saveSettings();
+        }
+    });
+}
+
+void BrowserWindow::createNewTab(const QUrl &url) {
+    if (url.isEmpty()) {
+        HomeView *home = new HomeView();
+        int idx = tabWidget->addTab(home, QIcon("res/icons/piperos.png"), "Início");
+        tabWidget->setCurrentIndex(idx);
+        urlEdit->clear();
+        urlEdit->setFocus();
+    } else {
+        QWebEngineView *view = new QWebEngineView();
+        setupWebView(view);
+        int idx = tabWidget->addTab(view, QIcon("res/icons/piperos.png"), "Carregando...");
+        view->load(url);
+        tabWidget->setCurrentIndex(idx);
+    }
+    syncTabButtonPos();
+}
+
+void BrowserWindow::goHome() {
+    int idx = tabWidget->currentIndex();
+    if(idx != -1) {
+        QWidget *w = tabWidget->widget(idx);
+        tabWidget->removeTab(idx);
+        w->deleteLater();
+        createNewTab(QUrl());
+    }
+}
+
+void BrowserWindow::onTabChanged(int index) {
+    syncTabButtonPos();
+    if (index == -1) return;
+    QWidget *current = tabWidget->widget(index);
+    m_tabLastActivity[current] = QDateTime::currentDateTime();
+    if (auto *view = qobject_cast<QWebEngineView*>(current)) {
+        urlEdit->setText(view->url().toString());
+        view->page()->setLifecycleState(QWebEnginePage::LifecycleState::Active);
+    } else { 
+        urlEdit->clear(); 
+        urlEdit->setFocus();
+    }
+}
+
+// ... Restante das funções permanecem conforme o padrão consolidado anteriormente ...
+
+void BrowserWindow::showMainMenu() {
+    QMenu menu(this);
+    menu.setFixedWidth(240);
+    menu.setStyleSheet("QMenu { background-color: #1f1f1f; color: white; border: 1px solid #333; padding: 5px; } "
+                       "QMenu::item { padding: 10px 25px; border-radius: 4px; } "
+                       "QMenu::item:selected { background-color: #4169E1; }");
+    connect(menu.addAction("🔖 Ver Favoritos"), &QAction::triggered, this, &BrowserWindow::showFavoritesMenu);
+    connect(menu.addAction("📜 Histórico"), &QAction::triggered, this, &BrowserWindow::showHistory);
+    connect(menu.addAction("📥 Downloads"), &QAction::triggered, this, &BrowserWindow::showDownloads);
+    connect(menu.addAction("🕵 Nova Janela Privada"), &QAction::triggered, this, &BrowserWindow::openPrivateWindow);
+    connect(menu.addAction("🖼️ Alterar Papel de Parede"), &QAction::triggered, this, &BrowserWindow::changeBackgroundImage);
+    menu.addSeparator();
+    connect(menu.addAction("👤 Sobre o Autor"), &QAction::triggered, this, &BrowserWindow::showAbout);
+    menu.exec(menuButton->mapToGlobal(QPoint(0, menuButton->height())));
 }
 
 void BrowserWindow::syncTabButtonPos() {
@@ -259,316 +267,85 @@ void BrowserWindow::syncTabButtonPos() {
     });
 }
 
-void BrowserWindow::resizeEvent(QResizeEvent *e) {
-    QMainWindow::resizeEvent(e);
-    syncTabButtonPos();
+void BrowserWindow::resizeEvent(QResizeEvent *e) { QMainWindow::resizeEvent(e); syncTabButtonPos(); }
+void BrowserWindow::loadSettings() {
+    QSettings s("PiperOrg", "PiperBrowser");
+    currentBgPath = s.value("background", "").toString();
+    favoritesList = s.value("favorites").toStringList();
+    historyList = s.value("history").toStringList();
 }
-
-void BrowserWindow::createNewTab(const QUrl &url) {
-    if (url.isEmpty()) {
-        HomeView *home = new HomeView();
-        int idx = tabWidget->addTab(home, QIcon("res/icons/piperos.png"), "Início");
-        m_tabLastActivity[home] = QDateTime::currentDateTime();
-        tabWidget->setCurrentIndex(idx);
-        urlEdit->clear();
-        connect(home, &HomeView::changeThemeRequested, this, &BrowserWindow::applyTheme);
-        connect(home, &HomeView::changeBgRequested, this, &BrowserWindow::changeBackgroundImage);
-    } else {
-        QWebEngineView *view = new QWebEngineView();
-        int idx = tabWidget->addTab(view, QIcon("res/icons/piperos.png"), "Carregando...");
-        m_tabLastActivity[view] = QDateTime::currentDateTime();
-        view->load(url);
-        tabWidget->setCurrentIndex(idx);
-
-        connect(view, &QWebEngineView::titleChanged, [this, view](const QString &t){
-            int i = tabWidget->indexOf(view);
-            if(i != -1) tabWidget->setTabText(i, t.isEmpty() ? "Nova Aba" : t);
-        });
-        
-        connect(view, &QWebEngineView::urlChanged, [this, view](const QUrl &u){
-            if(tabWidget->currentWidget() == view) urlEdit->setText(u.toString());
-            if(!m_isPrivate) {
-                historyList.append(u.toString());
-                if(historyList.size() > 1000) historyList.removeFirst();
-                saveSettings();
-            }
-        });
-
-        connect(view, &QWebEngineView::loadProgress, [this, view](int p){
-            if(tabWidget->currentWidget() == view) {
-                if(p < 100) refreshButton->setText("✖");
-                else refreshButton->setText("↻");
-            }
-        });
-    }
-    syncTabButtonPos();
+void BrowserWindow::saveSettings() {
+    QSettings s("PiperOrg", "PiperBrowser");
+    s.setValue("background", currentBgPath);
+    s.setValue("favorites", favoritesList);
+    s.setValue("history", historyList);
 }
-
-void BrowserWindow::goHome() {
-    int idx = tabWidget->currentIndex();
-    if(idx != -1) {
-        tabWidget->removeTab(idx);
-        createNewTab(QUrl()); 
-    }
+void BrowserWindow::changeBackgroundImage() {
+    QString p = QFileDialog::getOpenFileName(this, "Escolher Papel de Parede", "", "Imagens (*.png *.jpg *.jpeg)");
+    if(!p.isEmpty()) { currentBgPath = p; saveSettings(); repaint(); }
 }
-
-void BrowserWindow::updateIconsStyle(const QString &color, const QString &addButtonColor) {
-    // 1. Estilo para os botões padrão (Voltar, Home, Histórico, etc.)
-    // Eles seguem a cor do tema selecionado (Preto no modo claro, Branco no escuro)
-    QString style = QString("QPushButton { color: %1; border: none; font-size: 19px; border-radius: 8px; background: transparent; } "
-                            "QPushButton:hover { background: rgba(128,128,128,0.2); }").arg(color);
-    
-    backButton->setStyleSheet(style); 
-    refreshButton->setStyleSheet(style);
-    homeButton->setStyleSheet(style); 
-    historyButton->setStyleSheet(style);
-    favAddButton->setStyleSheet(style); 
-    favListButton->setStyleSheet(style);
-    privateModeButton->setStyleSheet(style); 
-    downloadButton->setStyleSheet(style);
-
-    // 2. O DESTAQUE: Botão do Autor (Sempre Vermelho)
-    // Definimos cores fixas aqui para que o tema não afete este botão.
-    QString aboutStyle = "QPushButton { "
-                         "  background-color: #E74C3C; " // Vermelho Piper
-                         "  color: white; "
-                         "  border-radius: 8px; "
-                         "  font-size: 18px; "
-                         "  font-weight: bold; "
-                         "  padding: 2px; "
-                         "} "
-                         "QPushButton:hover { "
-                         "  background-color: #C0392B; " // Tom mais escuro no hover
-                         "}";
-    aboutButton->setStyleSheet(aboutStyle);
-
-    // 3. Estilo do botão de Adicionar Aba (+)
-    QString addStyle = QString("QPushButton { color: white; border: none; font-size: 18px; font-weight: bold; border-radius: 6px; background: %1; } "
-                               "QPushButton:hover { background: #111; }").arg(addButtonColor);
-    addTabButton->setStyleSheet(addStyle);
-}
-
-void BrowserWindow::applyTheme(const QString &theme) {
-    currentTheme = theme;
-    saveSettings();
-
-    if (theme == "dark") {
-        this->setStyleSheet("QMainWindow { background: #121212; }");
-        topBar->setStyleSheet("background: #1f1f1f; border-bottom: 1px solid #333;");
-        urlEdit->setStyleSheet("background: #2c2c2c; color: white; border: 1px solid #444; border-radius: 8px; padding: 0 12px;");
-        tabWidget->setStyleSheet("QTabWidget::pane { border: none; } QTabBar::tab { background: #1f1f1f; width: 150px; color: #888; padding: 5px 15px; border: none; } "
-                                 "QTabBar::tab:selected { background: #121212; color: white; border-bottom: 2px solid #4169E1; }");
-        updateIconsStyle("white", "#444");
-    } else if (theme == "light") {
-        this->setStyleSheet("QMainWindow { background: white; }");
-        topBar->setStyleSheet("background: #f8f9fa; border-bottom: 1px solid #ddd;");
-        urlEdit->setStyleSheet("background: white; color: black; border: 1px solid #ccc; border-radius: 8px; padding: 0 12px;");
-        tabWidget->setStyleSheet("QTabWidget::pane { border: none; } QTabBar::tab { background: #e9ecef; width: 150px; color: #555; padding: 5px 15px; border: none; } "
-                                 "QTabBar::tab:selected { background: white; color: black; border-bottom: 2px solid #4169E1; }");
-        updateIconsStyle("black", "#888"); 
-    } else { // DEFAULT
-        this->setStyleSheet("QMainWindow { background: #f0f2f5; }");
-        topBar->setStyleSheet("background: #4169E1; border: none;");
-        urlEdit->setStyleSheet("background: white; color: black; border: none; border-radius: 8px; padding: 0 12px;");
-        tabWidget->setStyleSheet("QTabWidget::pane { border: none; } QTabBar::tab { background: #3456b8; width: 150px; color: white; padding: 5px 15px; border: none; } "
-                                 "QTabBar::tab:selected { background: #f0f2f5; color: #4169E1; font-weight: bold; }");
-        updateIconsStyle("white", "#27408B"); 
-    }
-    for(int i=0; i<tabWidget->count(); ++i) if(auto h = qobject_cast<HomeView*>(tabWidget->widget(i))) h->update();
-}
-
-void BrowserWindow::showHistory() {
-    QDialog d(this); d.setWindowTitle("Histórico do Piper"); d.resize(500, 600);
-    QVBoxLayout *l = new QVBoxLayout(&d);
-    QListWidget *lw = new QListWidget();
-    for(int i=historyList.size()-1; i>=0; --i) lw->addItem(historyList.at(i));
-    l->addWidget(new QLabel("Dê um duplo clique para abrir o link:")); l->addWidget(lw);
-    d.setStyleSheet("background: #1a1a1a; color: white;");
-    connect(lw, &QListWidget::itemDoubleClicked, [this, &d](QListWidgetItem *it){
-        createNewTab(QUrl(it->text())); d.accept();
-    });
-    d.exec();
-}
-
 void BrowserWindow::addFavorite() {
     if(auto v = qobject_cast<QWebEngineView*>(tabWidget->currentWidget())) {
         QString f = v->title() + "|" + v->url().toString();
-        if(!favoritesList.contains(f)) { 
-            favoritesList.append(f); saveSettings(); 
-            favAddButton->setText("🌟"); QTimer::singleShot(1000, [this](){ favAddButton->setText("⭐"); });
-        }
+        if(!favoritesList.contains(f)) { favoritesList.append(f); saveSettings(); }
     }
 }
-
 void BrowserWindow::showFavoritesMenu() {
     QMenu m(this);
-    m.setStyleSheet("QMenu { background: #fff; color: #333; } QMenu::item:selected { background: #4169E1; color: white; }");
-    if(favoritesList.isEmpty()) {
-        m.addAction("Nenhum favorito salvo");
-    } else {
-        for(const QString &f : favoritesList) {
-            QStringList parts = f.split("|");
-            m.addAction(parts.first(), [this, parts](){ createNewTab(QUrl(parts.last())); });
-        }
+    m.setStyleSheet("QMenu { background: #1f1f1f; color: white; } QMenu::item:selected { background: #4169E1; }");
+    for(const QString &f : favoritesList) {
+        QStringList p = f.split("|");
+        m.addAction(p.first(), [this, p](){ createNewTab(QUrl(p.last())); });
     }
-    m.exec(favListButton->mapToGlobal(QPoint(0, 40)));
+    m.exec(QCursor::pos());
 }
-
-void BrowserWindow::changeBackgroundImage() {
-    QString p = QFileDialog::getOpenFileName(this, "Escolher Papel de Parede", "", "Imagens (*.png *.jpg *.jpeg *.bmp)");
-    if(!p.isEmpty()) { 
-        currentBgPath = p; 
-        saveSettings(); 
-        applyTheme(currentTheme); 
-    }
-}
-
 void BrowserWindow::handleDownload(QWebEngineDownloadRequest *d) {
-    QString p = QFileDialog::getSaveFileName(this, "Salvar Arquivo", QDir::homePath() + "/" + d->downloadFileName());
-    if(p.isEmpty()) { d->cancel(); return; }
-    d->setDownloadDirectory(QFileInfo(p).absolutePath());
-    d->setDownloadFileName(QFileInfo(p).fileName());
-    d->accept();
-    m_downloads.append(d);
+    QString p = QFileDialog::getSaveFileName(this, "Salvar", QDir::homePath() + "/" + d->downloadFileName());
+    if(p.isEmpty()) d->cancel(); else { d->setDownloadDirectory(QFileInfo(p).absolutePath()); d->setDownloadFileName(QFileInfo(p).fileName()); d->accept(); m_downloads.append(d); }
 }
-
 void BrowserWindow::showDownloads() {
     QMenu m(this);
-    m.setStyleSheet("QMenu { background: #222; color: white; }");
-    if(m_downloads.isEmpty()) m.addAction("Nenhum download na sessão");
-    else for(auto *d : m_downloads) {
-        QString status = (d->state() == QWebEngineDownloadRequest::DownloadCompleted) ? " (OK)" : " (Baixando...)";
-        m.addAction(d->downloadFileName() + status);
-    }
-    m.exec(downloadButton->mapToGlobal(QPoint(0, 40)));
+    m.setStyleSheet("QMenu { background: #1f1f1f; color: white; }");
+    for(auto *d : m_downloads) m.addAction(d->downloadFileName() + (d->state()==QWebEngineDownloadRequest::DownloadCompleted ? " (OK)" : " (...)"));
+    m.exec(QCursor::pos());
 }
-
+void BrowserWindow::showHistory() {
+    QDialog d(this); d.setWindowTitle("Histórico"); d.resize(400, 500); d.setStyleSheet("background: #121212; color: white;");
+    QVBoxLayout *l = new QVBoxLayout(&d); QListWidget *lw = new QListWidget();
+    for(int i=historyList.size()-1; i>=0; --i) lw->addItem(historyList.at(i));
+    l->addWidget(lw);
+    connect(lw, &QListWidget::itemDoubleClicked, [this, &d](QListWidgetItem *it){ createNewTab(QUrl(it->text())); d.accept(); });
+    d.exec();
+}
+void BrowserWindow::showAbout() {
+    QDialog d(this); d.setWindowTitle("Sobre o Autor"); d.setFixedSize(400, 500); d.setStyleSheet("background: white; color: #333;");
+    QVBoxLayout *l = new QVBoxLayout(&d);
+    QLabel *t = new QLabel("Piper Browser - Projeto 2025"); t->setStyleSheet("font-size: 18px; font-weight: bold; color: #4169E1;");
+    QLabel *pTitle = new QLabel("☕ Buy me a coffee"); pTitle->setStyleSheet("color: #E74C3C; font-weight: bold;");
+    QLineEdit *pKey = new QLineEdit("a2740c20-8084-4ca6-af32-18aaa0e86892"); pKey->setReadOnly(true);
+    QPushButton *c = new QPushButton("Copiar PIX");
+    c->setStyleSheet("background: #E74C3C; color: white; border-radius: 5px; height: 40px;");
+    connect(c, &QPushButton::clicked, [pKey, c](){ pKey->selectAll(); pKey->copy(); c->setText("Copiado!"); });
+    l->addWidget(t, 0, Qt::AlignCenter); l->addSpacing(20); l->addWidget(pTitle, 0, Qt::AlignCenter); l->addWidget(pKey); l->addWidget(c); d.exec();
+}
 void BrowserWindow::openPrivateWindow() {
     QWebEngineProfile *p = new QWebEngineProfile(this);
     BrowserWindow *pw = new BrowserWindow(p);
     pw->m_isPrivate = true;
     pw->setWindowTitle("Piper (Modo Privado)");
-    pw->applyTheme("dark");
     pw->show();
+    pw->urlEdit->setFocus();
 }
-
-void BrowserWindow::loadSettings() {
-    QSettings s("PiperOrg", "PiperBrowser");
-    currentTheme = s.value("theme", "default").toString();
-    currentBgPath = s.value("background", "").toString();
-    favoritesList = s.value("favorites").toStringList();
-    historyList = s.value("history").toStringList();
-    applyTheme(currentTheme);
-}
-
-void BrowserWindow::saveSettings() {
-    QSettings s("PiperOrg", "PiperBrowser");
-    s.setValue("theme", currentTheme);
-    s.setValue("background", currentBgPath);
-    s.setValue("favorites", favoritesList);
-    s.setValue("history", historyList);
-}
-
-BrowserWindow::~BrowserWindow() {}
-void BrowserWindow::setThemeLight() { applyTheme("light"); }
-void BrowserWindow::setThemeDark() { applyTheme("dark"); }
-void BrowserWindow::setThemeDefault() { applyTheme("default"); }
-
-void BrowserWindow::showAbout() {
-    // Garante que o botão que abre esta janela (na barra superior) seja vermelho chamativo
-    if(aboutButton) {
-        aboutButton->setStyleSheet(
-            "QPushButton { "
-            "  background-color: #E74C3C; " // Vermelho vibrante
-            "  color: white; "
-            "  border-radius: 8px; "
-            "  font-size: 18px; "
-            "  font-weight: bold; "
-            "  padding: 5px; "
-            "} "
-            "QPushButton:hover { "
-            "  background-color: #C0392B; " // Vermelho mais escuro no hover
-            "}"
-        );
+void BrowserWindow::checkTabActivity() {
+    QDateTime now = QDateTime::currentDateTime();
+    for (int i = 0; i < tabWidget->count(); ++i) {
+        if (i == tabWidget->currentIndex()) continue;
+        QWidget *w = tabWidget->widget(i);
+        if (auto *view = qobject_cast<QWebEngineView*>(w)) {
+            if (view->page()->recentlyAudible()) continue;
+            if (m_tabLastActivity[w].secsTo(now) >= CAMADA_3_FROZEN) 
+                view->page()->setLifecycleState(QWebEnginePage::LifecycleState::Frozen);
+        }
     }
-
-    QDialog *d = new QDialog(this);
-    d->setWindowTitle("Sobre o Autor - Piper Browser");
-    d->setFixedSize(450, 580);
-    d->setStyleSheet("background-color: #ffffff; color: #333; font-family: 'Segoe UI', sans-serif;");
-
-    QVBoxLayout *l = new QVBoxLayout(d);
-    l->setContentsMargins(30, 30, 30, 30);
-    l->setSpacing(15);
-
-    // Título com o seu link do GitHub
-    QLabel *title = new QLabel("github.com/KAYOGS/KAYOGS");
-    title->setStyleSheet("font-size: 20px; font-weight: bold; color: #4169E1;");
-    title->setAlignment(Qt::AlignCenter);
-
-    QLabel *bio = new QLabel(
-        "Este navegador é o marco da minha primeira jornada completa no desenvolvimento de software. "
-        "O Piper foi construído com foco em quem precisa de performance sem abrir mão da usabilidade.\n\n"
-        "Cada linha de código aqui representa noites de estudo e alinhamento profundo dentro de cada versão."
-    );
-    bio->setWordWrap(true);
-    bio->setStyleSheet("font-size: 14px; line-height: 1.6; color: #444;");
-    bio->setAlignment(Qt::AlignJustify);
-
-    QFrame *line = new QFrame();
-    line->setFrameShape(QFrame::HLine);
-    line->setStyleSheet("background-color: #eee; min-height: 1px; max-height: 1px; border: none;");
-
-    QLabel *pixTitle = new QLabel("☕ Buy me a coffee");
-    pixTitle->setStyleSheet("font-size: 18px; font-weight: bold; color: #E74C3C;");
-    pixTitle->setAlignment(Qt::AlignCenter);
-
-    // Sua chave PIX configurada
-    QLineEdit *pixKey = new QLineEdit("a2740c20-8084-4ca6-af32-18aaa0e86892");
-    pixKey->setReadOnly(true);
-    pixKey->setAlignment(Qt::AlignCenter);
-    pixKey->setStyleSheet("padding: 12px; background: #fdf2f2; border: 1px dashed #E74C3C; border-radius: 8px; font-weight: bold; color: #333; font-size: 13px;");
-
-    // Botão de Copiar PIX - Vermelho para combinar com o global
-    QPushButton *copyBtn = new QPushButton("Copiar Chave Pix");
-    copyBtn->setCursor(Qt::PointingHandCursor);
-    copyBtn->setFixedHeight(45);
-    copyBtn->setStyleSheet(
-        "QPushButton { "
-        "  background-color: #E74C3C; "
-        "  color: white; "
-        "  border: none; "
-        "  padding: 10px; "
-        "  border-radius: 8px; "
-        "  font-size: 15px; "
-        "  font-weight: bold; "
-        "} "
-        "QPushButton:hover { "
-        "  background-color: #C0392B; "
-        "}"
-    );
-
-    connect(copyBtn, &QPushButton::clicked, [pixKey, copyBtn](){
-        pixKey->selectAll();
-        pixKey->copy();
-        copyBtn->setText("✅ Chave Copiada!");
-        copyBtn->setStyleSheet("background-color: #27AE60; color: white; border-radius: 8px; font-weight: bold; font-size: 15px;");
-    });
-
-    QLabel *footer = new QLabel("Copyright © 2025 - Piper Browser Project");
-    footer->setStyleSheet("font-size: 10px; color: #bbb; margin-top: 10px;");
-    footer->setAlignment(Qt::AlignCenter);
-
-    l->addWidget(title);
-    l->addWidget(bio);
-    l->addSpacing(10);
-    l->addWidget(line);
-    l->addSpacing(10);
-    l->addWidget(pixTitle);
-    l->addWidget(pixKey);
-    l->addWidget(copyBtn);
-    l->addStretch();
-    l->addWidget(footer);
-
-    d->exec();
 }
+BrowserWindow::~BrowserWindow() {}

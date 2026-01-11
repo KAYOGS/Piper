@@ -864,6 +864,7 @@
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QListWidget
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout
@@ -884,6 +885,7 @@
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistview.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qlistwidget.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmainwindow.h
+ mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h
  mdp:/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h

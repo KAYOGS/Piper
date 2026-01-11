@@ -19,43 +19,29 @@
 #include <QTimer>
 #include <QDateTime>
 #include <QMap>
+#include <QMenu>
 
-// Dashboard Minimalista
 class HomeView : public QWidget {
     Q_OBJECT
 public:
     explicit HomeView(QWidget *parent = nullptr);
-signals:
-    void changeThemeRequested(const QString &theme);
-    void changeBgRequested();
 protected:
     void paintEvent(QPaintEvent *event) override;
-    void resizeEvent(QResizeEvent *event) override;
-private:
-    QPushButton *settingsBtn;
 };
 
 class BrowserWindow : public QMainWindow
 {
     Q_OBJECT
-    Q_PROPERTY(QString currentTheme READ getTheme WRITE applyTheme NOTIFY themeChanged)
 
 public:
     explicit BrowserWindow(QWebEngineProfile *profile = nullptr, QWidget *parent = nullptr);
     ~BrowserWindow();
-    QString getTheme() const { return currentTheme; }
 
 public slots:
     void changeBackgroundImage();
-    void setThemeLight();
-    void setThemeDark();
-    void setThemeDefault();
-    void applyTheme(const QString &themeName);
+    void applyDarkTheme();
     void addFavorite();
     void showFavoritesMenu();
-
-signals:
-    void themeChanged();
 
 private slots:
     void goHome();
@@ -69,10 +55,10 @@ private slots:
     void syncTabButtonPos(); 
     void handleUrlEntered();
     void showAbout();
+    void showMainMenu();
     
-    // --- NOVOS SLOTS PARA PERFORMANCE E SINCRONIZAÇÃO ---
     void onTabChanged(int index);
-    void checkTabActivity(); // Varredura das camadas de hibernação
+    void checkTabActivity();
 
 protected:
     void resizeEvent(QResizeEvent *event) override;
@@ -84,29 +70,24 @@ private:
     QTabWidget *tabWidget;
     QLineEdit *urlEdit;
 
-    QPushButton *aboutButton;
-    QPushButton *backButton, *refreshButton, *addTabButton;
-    QPushButton *homeButton, *historyButton, *privateModeButton, *downloadButton;
-    QPushButton *favAddButton, *favListButton;
+    QPushButton *backButton, *refreshButton, *homeButton, *favAddButton, *menuButton;
+    QPushButton *addTabButton;
 
     QStringList historyList;
     QStringList favoritesList; 
     QList<QWebEngineDownloadRequest*> m_downloads; 
     bool m_isPrivate;
-    QString currentTheme, currentBgPath;
+    QString currentBgPath;
     QWebChannel *m_channel;
 
-    // --- VARIÁVEIS DE CONTROLE DA ESCADA DE HIBERNAÇÃO ---
     QTimer *m_activityTimer;
-    // Mapeia o ponteiro da aba (QWidget*) para o último momento de atividade (QDateTime)
     QMap<QWidget*, QDateTime> m_tabLastActivity;
 
-    // Definição dos tempos (em segundos) - 2min, 7min, 10min
-    const int CAMADA_1_THROTTLING = 120; 
-    const int CAMADA_2_GPU_PAUSE  = 420; 
-    const int CAMADA_3_FROZEN     = 600; 
+    const int CAMADA_3_FROZEN = 600; 
 
-    void updateIconsStyle(const QString &color, const QString &addButtonColor = "");
+    void updateIconsStyle();
+    // Função auxiliar para configurar a WebView com conexões de ícone e título
+    void setupWebView(QWebEngineView* view);
 };
 
 #endif

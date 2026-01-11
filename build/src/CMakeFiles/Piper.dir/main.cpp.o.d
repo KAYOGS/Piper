@@ -544,4 +544,6 @@ src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDateTime \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QMap \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qmap.h
+ /usr/include/x86_64-linux-gnu/qt6/QtCore/qmap.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h

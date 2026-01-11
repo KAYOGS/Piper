@@ -32,7 +32,7 @@ void UrlInterceptor::initializeLists()
 
 void UrlInterceptor::applyGlobalOptimizations(QWebEngineUrlRequestInfo &info)
 {
-    QByteArray chromeOS_UA = "Mozilla/5.0 (X11; CrOS x86_64 14541.0.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
+    QByteArray chromeOS_UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
     info.setHttpHeader("User-Agent", chromeOS_UA);
 
     info.setHttpHeader("Save-Data", "on");
