@@ -2361,6 +2361,7 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qxptype_traits.h
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qyieldcpu.h
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/QAction
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QIcon
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QPageLayout
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QPainter
@@ -2442,7 +2443,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollBar
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabBar
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout
@@ -2467,7 +2467,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollbar.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyle.h

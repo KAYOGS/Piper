@@ -18,9 +18,9 @@ HomeView::HomeView(QWidget *parent) : QWidget(parent) {
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->setAlignment(Qt::AlignCenter);
     QLabel *logo = new QLabel("PIPER");
-    logo->setStyleSheet("font-size: 85px; font-weight: bold; color: #4169E1; letter-spacing: 15px; background: transparent;");
+    logo->setStyleSheet("font-size: 50px; font-weight: bold; color: #4169E1; letter-spacing: 15px; background: transparent;");
     QLabel *sub = new QLabel("Navegação Veloz para Hardware Modesto");
-    sub->setStyleSheet("font-size: 14px; color: #bbb; letter-spacing: 3px; font-weight: 300; background: transparent;");
+    sub->setStyleSheet("font-size: 20px; color: #4169E1; letter-spacing: 3px; font-weight: 300; background: transparent;");
     layout->addStretch();
     layout->addWidget(logo, 0, Qt::AlignCenter);
     layout->addWidget(sub, 0, Qt::AlignCenter);
@@ -135,8 +135,7 @@ void BrowserWindow::applyDarkTheme() {
         "QTabWidget::pane { border: none; } "
         "QTabBar::tab { background: #1f1f1f; min-width: 140px; max-width: 180px; color: #888; padding: 6px 10px; border-right: 1px solid #333; font-size: 12px; } "
         "QTabBar::tab:selected { background: #121212; color: white; border-bottom: 2px solid #4169E1; } "
-        "QTabBar::close-button { image: url(res/icons/close.png); subcontrol-position: right; } "
-        "QTabBar::close-button:hover { background: rgba(255,0,0,0.2); border-radius: 2px; }"
+        "QTabBar::close-button { image: url(res/icons/close.png); subcontrol-position: right; background: rgba(255,0,0,0.2); border-radius: 2px;} "
     );
     updateIconsStyle();
 }

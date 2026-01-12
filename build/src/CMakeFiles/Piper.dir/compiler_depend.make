@@ -2355,6 +2355,7 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qversiontagging.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qxptype_traits.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qyieldcpu.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/QAction \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QIcon \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QPageLayout \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QPainter \
@@ -2436,7 +2437,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollBar \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabBar \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
@@ -2461,7 +2461,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollbar.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyle.h \
@@ -3501,8 +3500,6 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/14/tr1/legendre_function.tcc:
 
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollbar.h:
-
 /usr/include/c++/14/bits/exception_defines.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
@@ -3959,8 +3956,6 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qsysinfo.h:
 
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollBar:
-
 /usr/include/c++/14/debug/assertions.h:
 
 /usr/include/c++/14/cerrno:
@@ -4362,6 +4357,8 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qrgba64.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextoption.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtGui/QAction:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextcursor.h:
 
