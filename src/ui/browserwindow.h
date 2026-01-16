@@ -9,7 +9,7 @@
 #include <QVBoxLayout>
 #include <QPushButton>
 #include <QLineEdit>
-#include <QTabWidget>
+#include <QStackedWidget>
 #include <QSettings>
 #include <QWebChannel>
 #include <QStringList>
@@ -20,6 +20,7 @@
 #include <QDateTime>
 #include <QMap>
 #include <QMenu>
+#include <QScrollArea>
 
 class HomeView : public QWidget {
     Q_OBJECT
@@ -52,13 +53,12 @@ private slots:
     void createNewTab(const QUrl &url = QUrl());
     void loadSettings();
     void saveSettings();
-    void syncTabButtonPos(); 
     void handleUrlEntered();
     void showAbout();
     void showMainMenu();
-    
-    void onTabChanged(int index);
+    void toggleTabSwitcher();
     void checkTabActivity();
+    void clearAllTabs();
 
 protected:
     void resizeEvent(QResizeEvent *event) override;
@@ -67,11 +67,16 @@ private:
     QWidget *centralWidget;
     QVBoxLayout *rootLayout;
     QWidget *topBar;
-    QTabWidget *tabWidget;
+    QStackedWidget *stackedWidget;
     QLineEdit *urlEdit;
 
     QPushButton *backButton, *refreshButton, *homeButton, *favAddButton, *menuButton;
-    QPushButton *addTabButton;
+    QPushButton *tabsButton, *addTabButton;
+
+    QWidget *tabSwitcherWidget;
+    QScrollArea *tabScrollArea;
+    QWidget *tabGridContainer;
+    QGridLayout *tabGridLayout;
 
     QStringList historyList;
     QStringList favoritesList; 
@@ -79,15 +84,20 @@ private:
     bool m_isPrivate;
     QString currentBgPath;
     QWebChannel *m_channel;
-
     QTimer *m_activityTimer;
-    QMap<QWidget*, QDateTime> m_tabLastActivity;
 
-    const int CAMADA_3_FROZEN = 600; 
+    struct TabInfo {
+        QWidget* widget;
+        QString title;
+        QPixmap thumbnail;
+    };
+    QList<TabInfo> m_tabs;
 
     void updateIconsStyle();
-    // Função auxiliar para configurar a WebView com conexões de ícone e título
     void setupWebView(QWebEngineView* view);
+    void refreshTabGrid();
+    void updateCurrentThumbnail();
+    void updateUrlBar(int index);
 };
 
 #endif

@@ -499,8 +499,8 @@ src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextformat.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextoption.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QStackedWidget \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstackedwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qsettings.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/QWebChannel \
@@ -546,4 +546,6 @@ src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QMap \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmap.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollArea \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h

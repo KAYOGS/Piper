@@ -454,8 +454,8 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextformat.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextoption.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QStackedWidget \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstackedwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qsettings.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/QWebChannel \
@@ -503,13 +503,8 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmap.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
- /home/kayogs/Piper/src/ui/urlinterceptor.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInterceptor \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineurlrequestinterceptor.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineurlrequestinfo.h \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet \
- /usr/include/x86_64-linux-gnu/qt6/QtCore/qset.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollArea \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QDir \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdir.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdirlisting.h \
@@ -548,9 +543,9 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainter.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineSettings \
  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginesettings.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabBar \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QFileInfo \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qfileinfo.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/QAction \
- /usr/include/x86_64-linux-gnu/qt6/QtGui/qaction.h
+ /usr/include/x86_64-linux-gnu/qt6/QtGui/qaction.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollBar \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollbar.h

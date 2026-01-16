@@ -253,10 +253,10 @@ CMAKE_TAPI:FILEPATH=CMAKE_TAPI-NOTFOUND
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Path to a file.
-CUPS_INCLUDE_DIR:PATH=CUPS_INCLUDE_DIR-NOTFOUND
+CUPS_INCLUDE_DIR:PATH=/usr/include
 
 //Path to a library.
-CUPS_LIBRARIES:FILEPATH=CUPS_LIBRARIES-NOTFOUND
+CUPS_LIBRARIES:FILEPATH=/usr/lib/x86_64-linux-gnu/libcups.so
 
 //Path to a file.
 OPENGL_EGL_INCLUDE_DIR:PATH=/usr/include
@@ -413,10 +413,10 @@ Vulkan_INCLUDE_DIR:PATH=/usr/include
 Vulkan_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libvulkan.so
 
 //Path to a file.
-XKB_INCLUDE_DIR:PATH=XKB_INCLUDE_DIR-NOTFOUND
+XKB_INCLUDE_DIR:PATH=/usr/include
 
 //Path to a library.
-XKB_LIBRARY:FILEPATH=XKB_LIBRARY-NOTFOUND
+XKB_LIBRARY:FILEPATH=/usr/lib/x86_64-linux-gnu/libxkbcommon.so
 
 
 ########################
@@ -590,6 +590,8 @@ CMAKE_VERBOSE_MAKEFILE-ADVANCED:INTERNAL=1
 CUPS_INCLUDE_DIR-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CUPS_LIBRARIES
 CUPS_LIBRARIES-ADVANCED:INTERNAL=1
+//Details about finding Cups
+FIND_PACKAGE_MESSAGE_DETAILS_Cups:INTERNAL=[/usr/lib/x86_64-linux-gnu/libcups.so][/usr/include][v2.4.10()]
 //Details about finding OpenGL
 FIND_PACKAGE_MESSAGE_DETAILS_OpenGL:INTERNAL=[/usr/lib/x86_64-linux-gnu/libOpenGL.so][/usr/lib/x86_64-linux-gnu/libGLX.so][/usr/include][c ][v()]
 //Details about finding Threads
@@ -600,6 +602,8 @@ FIND_PACKAGE_MESSAGE_DETAILS_WrapAtomic:INTERNAL=[1][v()]
 FIND_PACKAGE_MESSAGE_DETAILS_WrapOpenGL:INTERNAL=[ON][v()]
 //Details about finding WrapVulkanHeaders
 FIND_PACKAGE_MESSAGE_DETAILS_WrapVulkanHeaders:INTERNAL=[/usr/include][v()]
+//Details about finding XKB
+FIND_PACKAGE_MESSAGE_DETAILS_XKB:INTERNAL=[/usr/lib/x86_64-linux-gnu/libxkbcommon.so][/usr/include][v(0.5.0)]
 //Test HAVE_STDATOMIC
 HAVE_STDATOMIC:INTERNAL=1
 //ADVANCED property for variable: OPENGL_EGL_INCLUDE_DIR

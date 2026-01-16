@@ -53,6 +53,7 @@
   /lib/x86_64-linux-gnu/libQt6QuickWidgets.so.6 \
   /usr/lib/x86_64-linux-gnu/libQt6PrintSupport.so.6.8.2 \
   /usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.8.2 \
+  /usr/lib/x86_64-linux-gnu/libQt6WebChannel.so.6.8.2 \
   /usr/lib/x86_64-linux-gnu/libQt6Positioning.so.6.8.2 \
   /lib/x86_64-linux-gnu/libnss3.so \
   /lib/x86_64-linux-gnu/libnssutil3.so \
@@ -281,6 +282,8 @@ CMakeFiles/Piper.dir/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp.o:
 /usr/lib/x86_64-linux-gnu/libQt6PrintSupport.so.6.8.2:
 
 /usr/lib/x86_64-linux-gnu/libQt6Quick.so.6.8.2:
+
+/usr/lib/x86_64-linux-gnu/libQt6WebChannel.so.6.8.2:
 
 /usr/lib/x86_64-linux-gnu/libQt6Positioning.so.6.8.2:
 

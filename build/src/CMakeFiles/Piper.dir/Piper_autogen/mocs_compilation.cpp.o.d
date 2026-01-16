@@ -456,8 +456,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextformat.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpen.h \
  /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextoption.h \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabwidget.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QStackedWidget \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstackedwidget.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qsettings.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWebChannel/QWebChannel \
@@ -505,6 +505,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qmap.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollArea \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h \
  /usr/include/x86_64-linux-gnu/qt6/QtCore/qtmochelpers.h \
  /home/kayogs/Piper/build/src/Piper_autogen/UYX5XTB5RZ/moc_urlinterceptor.cpp \
  /home/kayogs/Piper/build/src/Piper_autogen/UYX5XTB5RZ/../../../../src/ui/urlinterceptor.h \

@@ -32,8 +32,9 @@ void UrlInterceptor::initializeLists()
 
 void UrlInterceptor::applyGlobalOptimizations(QWebEngineUrlRequestInfo &info)
 {
-    QByteArray chromeOS_UA = "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36";
-    info.setHttpHeader("User-Agent", chromeOS_UA);
+    // User Agent do Firefox para máxima compatibilidade
+    QByteArray firefox_UA = "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:120.0) Gecko/20100101 Firefox/120.0";
+    info.setHttpHeader("User-Agent", firefox_UA);
 
     info.setHttpHeader("Save-Data", "on");
 }

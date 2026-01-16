@@ -496,7 +496,8 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollArea \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QStackedWidget \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemdelegate.h \
@@ -518,8 +519,10 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstackedwidget.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyle.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyleoption.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h \
@@ -1234,7 +1237,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: src/Piper_autogen
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollArea \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QStackedWidget \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemdelegate.h \
@@ -1256,8 +1260,10 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o: src/Piper_autogen
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstackedwidget.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyle.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyleoption.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h \
@@ -1835,7 +1841,8 @@ src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollArea \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QStackedWidget \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemdelegate.h \
@@ -1858,8 +1865,10 @@ src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstackedwidget.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyle.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyleoption.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h \
@@ -1886,7 +1895,6 @@ src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp \
 
 src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/browserwindow.cpp \
   /home/kayogs/Piper/src/ui/browserwindow.h \
-  /home/kayogs/Piper/src/ui/urlinterceptor.h \
   /usr/include/alloca.h \
   /usr/include/asm-generic/bitsperlong.h \
   /usr/include/asm-generic/errno-base.h \
@@ -2205,7 +2213,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QMap \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
-  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
@@ -2412,7 +2419,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineDownloadRequest \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineProfile \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineSettings \
-  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/QWebEngineUrlRequestInterceptor \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qtwebenginecore-config.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qtwebenginecoreglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineclientcertificateselection.h \
@@ -2423,8 +2429,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineprofile.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginequotarequest.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebenginesettings.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineurlrequestinfo.h \
-  /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineurlrequestinterceptor.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/QWebEngineView \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qtwebenginewidgetsglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qwebengineview.h \
@@ -2437,8 +2441,9 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMainWindow \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QPushButton \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabBar \
-  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollArea \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollBar \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QStackedWidget \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QVBoxLayout \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qabstractitemdelegate.h \
@@ -2461,8 +2466,11 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qrubberband.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollbar.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qsizepolicy.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qslider.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstackedwidget.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyle.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstyleoption.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qtabbar.h \
@@ -3222,6 +3230,10 @@ src/CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.o:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersionImpl.cmake:
 
+/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersion.cmake:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigExtras.cmake:
+
 /usr/include/x86_64-linux-gnu/bits/waitflags.h:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicCMakeVersionHelpers.cmake:
@@ -3295,8 +3307,6 @@ src/Piper_autogen/moc_predefs.h:
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
 
 /usr/include/wchar.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabBar:
 
 /usr/include/stdio.h:
 
@@ -3500,6 +3510,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/14/tr1/legendre_function.tcc:
 
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollbar.h:
+
 /usr/include/c++/14/bits/exception_defines.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/error_t.h:
@@ -3585,10 +3597,6 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /usr/include/c++/14/bits/stl_tree.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qitemselectionmodel.h:
-
-/usr/include/x86_64-linux-gnu/qt6/QtCore/qiterator.h:
-
-/usr/include/c++/14/tr1/gamma.tcc:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QListWidget:
 
@@ -3737,6 +3745,12 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtInstallPaths.cmake:
 
 /usr/include/c++/14/system_error:
+
+/lib/x86_64-linux-gnu/libatomic.so.1:
+
+/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake:
+
+/usr/include/c++/14/cstdlib:
 
 /lib/x86_64-linux-gnu/libplc4.so:
 
@@ -3916,6 +3930,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/c++/14/bits/new_allocator.h:
 
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h:
 
 /usr/include/c++/14/bits/streambuf_iterator.h:
@@ -3946,8 +3962,6 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontiguouscache.h:
 
-/usr/include/c++/14/cassert:
-
 /home/kayogs/Piper/src/ui/urlinterceptor.h:
 
 /usr/include/c++/14/bits/stl_iterator_base_types.h:
@@ -3955,6 +3969,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qcborvalue.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qsysinfo.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollBar:
 
 /usr/include/c++/14/debug/assertions.h:
 
@@ -3973,12 +3989,6 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /usr/include/c++/14/bits/locale_classes.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetwork-config.h:
-
-/lib/x86_64-linux-gnu/libatomic.so.1:
-
-/usr/include/c++/14/cstdlib:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6Config.cmake:
 
 /usr/include/c++/14/debug/debug.h:
 
@@ -4164,6 +4174,10 @@ src/Piper_autogen/UYX5XTB5RZ/moc_browserwindow.cpp:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qlist.h:
 
+/usr/include/c++/14/cassert:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/qstackedwidget.h:
+
 src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qlogging.h:
@@ -4261,6 +4275,12 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtclasshelpermacros.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtcoreexports.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/qiterator.h:
+
+/usr/include/c++/14/tr1/gamma.tcc:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollArea:
 
 /usr/include/c++/14/exception:
 
@@ -4380,8 +4400,6 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qtransform.h:
 
-/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigVersion.cmake:
-
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qvalidator.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qtnetworkglobal.h:
@@ -4442,7 +4460,7 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit:
 
-/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QTabWidget:
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QStackedWidget:
 
 /usr/include/c++/14/ext/numeric_traits.h:
 
@@ -4515,5 +4533,3 @@ src/Piper_autogen/DQCCZ5YITF/qrc_resources.cpp:
 /usr/lib/linux/uapi/x86/asm/bitsperlong.h:
 
 /usr/lib/linux/uapi/x86/asm/posix_types.h:
-
-/usr/lib/x86_64-linux-gnu/cmake/Qt6/Qt6ConfigExtras.cmake:
