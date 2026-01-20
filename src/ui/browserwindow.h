@@ -21,6 +21,7 @@
 #include <QMap>
 #include <QMenu>
 #include <QScrollArea>
+#include <QGridLayout>
 
 class HomeView : public QWidget {
     Q_OBJECT
@@ -62,6 +63,8 @@ private slots:
 
 protected:
     void resizeEvent(QResizeEvent *event) override;
+    // Esta é a linha que estava faltando e causou o erro:
+    bool eventFilter(QObject *obj, QEvent *event) override;
 
 private:
     QWidget *centralWidget;
@@ -95,9 +98,9 @@ private:
 
     void updateIconsStyle();
     void setupWebView(QWebEngineView* view);
-    void refreshTabGrid();
     void updateCurrentThumbnail();
+    void refreshTabGrid();
     void updateUrlBar(int index);
 };
 
-#endif
+#endif // BROWSERWINDOW_H

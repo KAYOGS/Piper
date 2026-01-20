@@ -7,6 +7,7 @@
 #include <QFileInfo>
 #include <QAction>
 #include <QScrollBar>
+#include <QMouseEvent>
 
 HomeView::HomeView(QWidget *parent) : QWidget(parent) { this->setObjectName("HomeView"); }
 void HomeView::paintEvent(QPaintEvent *) {
@@ -31,17 +32,24 @@ BrowserWindow::BrowserWindow(QWebEngineProfile *profile, QWidget *parent)
     rootLayout->setSpacing(0);
 
     topBar = new QWidget();
-    topBar->setFixedHeight(45);
+    topBar->setFixedHeight(42); 
     QHBoxLayout *topLayout = new QHBoxLayout(topBar);
+    topLayout->setContentsMargins(8, 0, 8, 0);
+    topLayout->setSpacing(4);
     
     auto styleBtn = [](QPushButton* b, QString t, QString tip) {
-        b->setText(t); b->setToolTip(tip); b->setFixedSize(34, 34); b->setCursor(Qt::PointingHandCursor);
+        b->setText(t); 
+        b->setToolTip(tip); 
+        b->setFixedSize(30, 30); 
+        b->setCursor(Qt::PointingHandCursor);
     };
 
     backButton = new QPushButton(); styleBtn(backButton, "←", "Voltar");
     refreshButton = new QPushButton(); styleBtn(refreshButton, "↻", "Atualizar");
     homeButton = new QPushButton(); styleBtn(homeButton, "🏠", "Home");
-    urlEdit = new QLineEdit(); urlEdit->setFixedHeight(30);
+    urlEdit = new QLineEdit(); 
+    urlEdit->setFixedHeight(28);
+    
     favAddButton = new QPushButton(); styleBtn(favAddButton, "⭐", "Favoritar");
     tabsButton = new QPushButton("0"); styleBtn(tabsButton, "0", "Abas");
     addTabButton = new QPushButton(); styleBtn(addTabButton, "+", "Nova Aba");
@@ -69,6 +77,7 @@ BrowserWindow::BrowserWindow(QWebEngineProfile *profile, QWidget *parent)
     tabScrollArea->setFrameShape(QFrame::NoFrame);
     tabGridContainer = new QWidget();
     tabGridLayout = new QGridLayout(tabGridContainer);
+    tabGridLayout->setSpacing(20); // Mais espaço entre os cards maiores
     tabScrollArea->setWidget(tabGridContainer);
     
     QPushButton *clearTabsBtn = new QPushButton("🗑️ Limpar Todas as Abas");
@@ -175,32 +184,51 @@ void BrowserWindow::refreshTabGrid() {
 
     for (int i = 0; i < m_tabs.size(); ++i) {
         QWidget *card = new QWidget();
-        card->setFixedSize(280, 200); // Aumentado conforme solicitado
-        card->setStyleSheet("background: #252525; border-radius: 10px; border: 1px solid #333;");
+        card->setFixedSize(350, 260); // Tamanho aumentado conforme solicitado
+        card->setObjectName(QString("card_%1").arg(i));
+        card->setCursor(Qt::PointingHandCursor);
+        card->setProperty("tabIndex", i);
+        
+        // Estilo inicial com hover de leve (borda muda de #333 para #4169E1)
+        card->setStyleSheet("QWidget { background: #252525; border-radius: 12px; border: 2px solid #333; } "
+                            "QWidget:hover { border: 2px solid #4169E1; background: #2a2a2a; }");
+        
         QVBoxLayout *l = new QVBoxLayout(card);
+        l->setContentsMargins(10, 10, 10, 10);
         
         QLabel *img = new QLabel();
-        img->setFixedSize(260, 140);
-        img->setStyleSheet("background: #000;");
+        img->setFixedSize(330, 200); // Proporção ajustada para o card maior
+        img->setStyleSheet("background: #000; border-radius: 6px; border: none;");
+        img->setScaledContents(true);
         if(!m_tabs[i].thumbnail.isNull()) 
-            img->setPixmap(m_tabs[i].thumbnail.scaled(260, 140, Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation));
+            img->setPixmap(m_tabs[i].thumbnail.scaled(330, 200, Qt::KeepAspectRatioByExpanding, Qt::SmoothTransformation));
         
-        QPushButton *btn = new QPushButton(m_tabs[i].title.left(30));
-        btn->setStyleSheet("color: white; border: none; text-align: left; font-weight: bold; padding: 5px;");
-        btn->setCursor(Qt::PointingHandCursor);
+        QLabel *titleLbl = new QLabel(m_tabs[i].title.left(40));
+        titleLbl->setStyleSheet("color: white; border: none; font-weight: bold; padding: 5px; background: transparent;");
 
         l->addWidget(img);
-        l->addWidget(btn);
+        l->addWidget(titleLbl);
 
-        // Correção da troca de aba (capturando i por valor)
-        connect(btn, &QPushButton::clicked, [this, i](){
-            stackedWidget->setCurrentIndex(i);
-            updateUrlBar(i);
-            toggleTabSwitcher();
-        });
+        // Filtro de Evento para capturar clique no card INTEIRO (incluindo a imagem)
+        card->installEventFilter(this);
 
         tabGridLayout->addWidget(card, i / 3, i % 3);
     }
+}
+
+// Implementação do EventFilter para detectar clique no card
+bool BrowserWindow::eventFilter(QObject *obj, QEvent *event) {
+    if (event->type() == QEvent::MouseButtonPress) {
+        QWidget *clickedCard = qobject_cast<QWidget*>(obj);
+        if (clickedCard && clickedCard->property("tabIndex").isValid()) {
+            int index = clickedCard->property("tabIndex").toInt();
+            stackedWidget->setCurrentIndex(index);
+            updateUrlBar(index);
+            toggleTabSwitcher();
+            return true;
+        }
+    }
+    return QMainWindow::eventFilter(obj, event);
 }
 
 void BrowserWindow::updateUrlBar(int index) {
@@ -228,7 +256,6 @@ void BrowserWindow::handleUrlEntered() {
     if(input.isEmpty()) return;
 
     QUrl url;
-    // Lógica de Busca Inteligente (DuckDuckGo)
     if (input.contains(".") && !input.contains(" ")) {
         url = QUrl::fromUserInput(input);
     } else {
@@ -259,9 +286,8 @@ void BrowserWindow::addFavorite() {
             favoritesList.append(f);
             saveSettings();
             
-            // Feedback visual de sucesso
             favAddButton->setText("✅");
-            favAddButton->setStyleSheet("color: #F1C40F; border: none; font-size: 19px;");
+            favAddButton->setStyleSheet("color: #F1C40F; border: none; font-size: 16px;");
             QTimer::singleShot(2000, this, [this](){
                 updateIconsStyle();
                 favAddButton->setText("⭐");
@@ -286,18 +312,18 @@ void BrowserWindow::goHome() {
 void BrowserWindow::applyDarkTheme() {
     this->setStyleSheet("QMainWindow { background: #121212; }");
     topBar->setStyleSheet("background: #1f1f1f; border-bottom: 1px solid #333;");
-    urlEdit->setStyleSheet("background: #2c2c2c; color: white; border: 1px solid #444; border-radius: 8px; padding: 0 12px;");
+    urlEdit->setStyleSheet("background: #2c2c2c; color: white; border: 1px solid #444; border-radius: 6px; padding: 0 10px; font-size: 13px;");
     tabSwitcherWidget->setStyleSheet("background: rgba(15, 15, 15, 252);");
     updateIconsStyle();
 }
 
 void BrowserWindow::updateIconsStyle() {
-    QString style = "QPushButton { color: white; border: none; font-size: 19px; border-radius: 8px; background: transparent; } "
+    QString style = "QPushButton { color: white; border: none; font-size: 16px; border-radius: 6px; background: transparent; } "
                     "QPushButton:hover { background: rgba(128,128,128,0.2); }";
     backButton->setStyleSheet(style); refreshButton->setStyleSheet(style);
     homeButton->setStyleSheet(style); favAddButton->setStyleSheet(style); menuButton->setStyleSheet(style);
-    tabsButton->setStyleSheet("color: #4169E1; font-weight: bold; border: 1px solid #4169E1; border-radius: 4px;");
-    addTabButton->setStyleSheet("background: #333; color: white; font-weight: bold; border-radius: 4px;");
+    tabsButton->setStyleSheet("color: #4169E1; font-weight: bold; border: 1px solid #4169E1; border-radius: 4px; font-size: 12px;");
+    addTabButton->setStyleSheet("background: #333; color: white; font-weight: bold; border-radius: 4px; font-size: 16px;");
 }
 
 void BrowserWindow::showMainMenu() {

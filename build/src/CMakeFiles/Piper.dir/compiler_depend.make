@@ -489,6 +489,7 @@ src/Piper_autogen/timestamp: src/Piper_autogen/moc_predefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qtwebenginewidgetsglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWebEngineWidgets/qwebengineview.h \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QDialog \
+  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGridLayout \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QHBoxLayout \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLabel \
   /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QLineEdit \
@@ -2213,7 +2214,9 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QList \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QMap \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QObject \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QRect \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSettings \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/QSize \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QSizeF \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/QStringList \
@@ -2255,14 +2258,20 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainerinfo.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontainertools_impl.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcontiguouscache.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreapplication_platform.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qcoreevent.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qcryptographichash.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qdarwinhelpers.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatastream.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qdatetime.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qdeadlinetimer.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qdebug.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qdir.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qdirlisting.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qelapsedtimer.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qendian.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qeventloop.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qexceptionhandling.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qfile.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qfiledevice.h \
@@ -2296,6 +2305,7 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qmetatype.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qminmax.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qnamespace.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtCore/qnativeinterface.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qnumeric.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject.h \
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qobject_impl.h \
@@ -2364,18 +2374,26 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtCore/qyieldcpu.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QAction \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QIcon \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/QMouseEvent \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QPageLayout \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/QPainter \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/QTransform \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qaction.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qbitmap.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qbrush.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qcolor.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qcursor.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/qevent.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/qeventpoint.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qfont.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qfontinfo.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qfontmetrics.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/qguiapplication.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/qguiapplication_platform.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qicon.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qimage.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/qinputdevice.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/qinputmethod.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qkeysequence.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpagelayout.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpageranges.h \
@@ -2387,10 +2405,13 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpicture.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixelformat.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpixmap.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/qpointingdevice.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qpolygon.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qregion.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qrgb.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qrgba64.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/qscreen.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/qscreen_platform.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextcursor.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextdocument.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtextformat.h \
@@ -2400,6 +2421,8 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o: /home/kayogs/Piper/src/ui/brows
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtguiglobal.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qtransform.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qvalidator.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/qvector2d.h \
+  /usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h \
   /usr/include/x86_64-linux-gnu/qt6/QtGui/qwindowdefs.h \
   /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qssl.h \
   /usr/include/x86_64-linux-gnu/qt6/QtNetwork/qsslcertificate.h \
@@ -2914,7 +2937,21 @@ src/CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.o: /home/kayogs/Piper/src/ui/urli
 
 /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qfiledialog.h:
 
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qvector2d.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qscreen_platform.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qscreen.h:
+
 /usr/include/x86_64-linux-gnu/qt6/QtGui/qpainter.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qinputdevice.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qevent.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtGui/QTransform:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QSize:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QFileInfo:
 
@@ -3188,6 +3225,8 @@ src/CMakeFiles/Piper.dir/ui/urlinterceptor.cpp.o:
 
 /lib/x86_64-linux-gnu/libGLdispatch.so.0:
 
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qpointingdevice.h:
+
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicToolHelpers.cmake:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicTestHelpers.cmake:
@@ -3272,6 +3311,8 @@ src/Piper_autogen/moc_predefs.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QSet:
 
+/usr/include/x86_64-linux-gnu/qt6/QtGui/QMouseEvent:
+
 /usr/include/x86_64-linux-gnu/bits/struct_mutex.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtWebEngineCore/qwebengineframe.h:
@@ -3333,6 +3374,10 @@ src/Piper_autogen/moc_predefs.h:
 /lib/x86_64-linux-gnu/libXtst.so.6:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/QUrl:
+
+/usr/lib/linux/uapi/x86/asm/types.h:
+
+/usr/include/ctype.h:
 
 /usr/include/x86_64-linux-gnu/bits/uio_lim.h:
 
@@ -3518,7 +3563,11 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qsettings.h:
 
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qvectornd.h:
+
 /usr/include/c++/14/bits/stl_multimap.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtCore/QRect:
 
 /usr/include/c++/14/bits/functional_hash.h:
 
@@ -4004,10 +4053,6 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/atomic_word.h:
 
-/usr/include/ctype.h:
-
-/usr/lib/linux/uapi/x86/asm/types.h:
-
 /lib/x86_64-linux-gnu/libopus.so.0:
 
 /usr/include/x86_64-linux-gnu/c++/14/bits/c++allocator.h:
@@ -4069,6 +4114,8 @@ src/CMakeFiles/Piper.dir/Piper_autogen/mocs_compilation.cpp.o:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/q20iterator.h:
 
 /usr/lib/x86_64-linux-gnu/cmake/Qt6/QtPublicWalkLibsHelpers.cmake:
+
+/usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGridLayout:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/q20memory.h:
 
@@ -4317,6 +4364,8 @@ src/CMakeFiles/Piper.dir/ui/browserwindow.cpp.o:
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qtversionchecks.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/qutf8stringview.h:
+
+/usr/include/x86_64-linux-gnu/qt6/QtGui/qeventpoint.h:
 
 /usr/include/x86_64-linux-gnu/qt6/QtCore/quuid.h:
 

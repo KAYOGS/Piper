@@ -548,4 +548,6 @@ src/CMakeFiles/Piper.dir/main.cpp.o: /home/kayogs/Piper/src/main.cpp \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QMenu \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qmenu.h \
  /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QScrollArea \
- /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qscrollarea.h \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/QGridLayout \
+ /usr/include/x86_64-linux-gnu/qt6/QtWidgets/qgridlayout.h
